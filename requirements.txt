@@ -1,0 +1,10 @@
+streamlit
+pandas
+yfinance
+plotly
+pyarrow
+fastparquet
+requests
+beautifulsoup4
+lxml
+xgboost
