@@ -694,7 +694,7 @@ elif side_valg == "Teknisk Analyse":
             "Golden_Cross": "Golden Cross",
             "Ichimoku_Breakout": "Ichimoku Breakout",
             "Wyckoff_Spring": "Wyckoff Spring",
-            "Bull_Race_Prep": "Bollinger Squeeze",
+            "Bull_Race_Prep": "Bull Race Prep",
             "VCP_Pattern": "VCP (Minervini)"
         }
         
