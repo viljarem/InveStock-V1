@@ -1,0 +1,100 @@
+name: 📈 Automatisk Markedsdata Oppdatering
+
+on:
+  schedule:
+    # Kjører hver dag kl 17:00 CET (16:00 UTC vintertid, 15:00 UTC sommertid)
+    - cron: '0 16 * * 1-5'  # Mandag til fredag kl 16:00 UTC (17:00 CET vintertid)
+    - cron: '0 15 * * 1-5'  # Mandag til fredag kl 15:00 UTC (17:00 CEST sommertid)
+  
+  # Tillat manuell kjøring
+  workflow_dispatch:
+    inputs:
+      force_all:
+        description: 'Tving oppdatering av alle data (ignorer cache)'
+        required: false
+        default: 'false'
+        type: boolean
+
+env:
+  # Sett miljøvariabler for PyTorch kompatibilitet
+  PYTORCH_ENABLE_MPS_FALLBACK: '1'
+  CUDA_VISIBLE_DEVICES: ''
+  PYTORCH_MPS_DISABLE: '1'
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Hent kode
+      uses: actions/checkout@v4
+      with:
+        # Hent full git historie for å kunne committe tilbake
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+    
+    - name: 🐍 Sett opp Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: 📦 Installer avhengigheter
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: 🕐 Vis norsk tid
+      run: |
+        echo "UTC tid: $(date -u)"
+        echo "Norsk tid: $(TZ='Europe/Oslo' date)"
+    
+    - name: 📈 Oppdater markedsdata
+      run: |
+        echo "🤖 Starter automatisk dataoppdatering..."
+        python update_market_data.py
+    
+    - name: 📋 Sjekk endringer
+      id: check_changes
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+          echo "📝 Endringer funnet:"
+          git status --porcelain
+        else
+          echo "changes=false" >> $GITHUB_OUTPUT
+          echo "✅ Ingen nye endringer"
+        fi
+    
+    - name: 💾 Commit og push endringer
+      if: steps.check_changes.outputs.changes == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # Legg til alle endrede filer i data_storage mappen
+        git add data_storage/
+        
+        # Commit med tidsstempel
+        NORSK_TID=$(TZ='Europe/Oslo' date '+%Y-%m-%d %H:%M:%S')
+        git commit -m "🤖 Automatisk dataoppdatering - $NORSK_TID" || exit 0
+        
+        # Push endringene
+        git push
+    
+    - name: 🎉 Oppsummering
+      if: always()
+      run: |
+        echo "================================================="
+        echo "📋 OPPSUMMERING AV GITHUB ACTIONS KJØRING"
+        echo "================================================="
+        echo "Tidspunkt: $(TZ='Europe/Oslo' date)"
+        echo "Status: ${{ job.status }}"
+        echo "Endringer: ${{ steps.check_changes.outputs.changes || 'ukjent' }}"
+        echo "================================================="
+        
+        # Vis siste commit hvis det ble gjort endringer
+        if [ "${{ steps.check_changes.outputs.changes }}" = "true" ]; then
+          echo "📝 Siste commit:"
+          git log -1 --oneline
+        fi
