@@ -1,0 +1,3395 @@
+{
+  "timestamp": 1771844050.281643,
+  "handler": [
+    {
+      "ticker": "PEXIP.OL",
+      "issuer_sign": "PEXIP",
+      "issuer_name": "Pexip Holding ASA",
+      "tittel": "Mandatory notification of trade by Primary Insiders",
+      "dato": "2026-02-23",
+      "dato_tid": "2026-02-23T09:31:31.667000+00:00",
+      "message_id": 666456,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VEI.OL",
+      "issuer_sign": "VEI",
+      "issuer_name": "Veidekke ASA",
+      "tittel": "Veidekke: Aksjer til alle ansatte 2026 og opsjonsinnløsning ledende ansatte",
+      "dato": "2026-02-23",
+      "dato_tid": "2026-02-23T07:00:18.023000+00:00",
+      "message_id": 666438,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VEI.OL",
+      "issuer_sign": "VEI",
+      "issuer_name": "Veidekke ASA",
+      "tittel": "Veidekke: Shares purchased by employees in 2026 and Exercise of employee share options by Key employees",
+      "dato": "2026-02-23",
+      "dato_tid": "2026-02-23T07:00:17.986000+00:00",
+      "message_id": 666437,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "VISTN.OL",
+      "issuer_sign": "VISTN",
+      "issuer_name": "Vistin Pharma ASA",
+      "tittel": "Vistin Pharma ASA: Mandatory notification of trade",
+      "dato": "2026-02-20",
+      "dato_tid": "2026-02-20T18:31:26.236000+00:00",
+      "message_id": 666416,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PEXIP.OL",
+      "issuer_sign": "PEXIP",
+      "issuer_name": "Pexip Holding ASA",
+      "tittel": "Mandatory notification of trade by Primary Insiders",
+      "dato": "2026-02-20",
+      "dato_tid": "2026-02-20T13:55:31.941000+00:00",
+      "message_id": 666403,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "RING.OL",
+      "issuer_sign": "RING",
+      "issuer_name": "SpareBank 1 Ringerike Hadeland",
+      "tittel": "RING: Meldepliktig handel for primærinnsidere",
+      "dato": "2026-02-20",
+      "dato_tid": "2026-02-20T13:48:32.964000+00:00",
+      "message_id": 666402,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NONG.OL",
+      "issuer_sign": "NONG",
+      "issuer_name": "SpareBank 1 Nord-Norge",
+      "tittel": "NONG: Meldepliktig handel - primærinnsider",
+      "dato": "2026-02-20",
+      "dato_tid": "2026-02-20T12:35:33.786000+00:00",
+      "message_id": 666390,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NONG.OL",
+      "issuer_sign": "NONG",
+      "issuer_name": "SpareBank 1 Nord-Norge",
+      "tittel": "NONG: Mandatory notification of trade - primary insider",
+      "dato": "2026-02-20",
+      "dato_tid": "2026-02-20T12:35:33.778000+00:00",
+      "message_id": 666389,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ABG.OL",
+      "issuer_sign": "ABG",
+      "issuer_name": "ABG Sundal Collier Holding ASA",
+      "tittel": "ABG - Share transactions",
+      "dato": "2026-02-20",
+      "dato_tid": "2026-02-20T07:00:00+00:00",
+      "message_id": 666346,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ENSU.OL",
+      "issuer_sign": "ENSU",
+      "issuer_name": "Ensurge Micropower ASA",
+      "tittel": "Ensurge Micropower ASA - Mandatory Notice of Trade for Primary Insiders",
+      "dato": "2026-02-19",
+      "dato_tid": "2026-02-19T19:40:00+00:00",
+      "message_id": 666330,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TEL.OL",
+      "issuer_sign": "TEL",
+      "issuer_name": "Telenor ASA",
+      "tittel": "TRADE BY PRIMARY INSIDER",
+      "dato": "2026-02-19",
+      "dato_tid": "2026-02-19T10:06:33.787000+00:00",
+      "message_id": 666202,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TEL.OL",
+      "issuer_sign": "TEL",
+      "issuer_name": "Telenor ASA",
+      "tittel": "MELDEPLIKTIG HANDEL - PRIMÆRINNSIDER",
+      "dato": "2026-02-19",
+      "dato_tid": "2026-02-19T10:06:33.785000+00:00",
+      "message_id": 666201,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "GENT.OL",
+      "issuer_sign": "GENT",
+      "issuer_name": "Gentian Diagnostics ASA",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2026-02-19",
+      "dato_tid": "2026-02-19T09:21:08.313000+00:00",
+      "message_id": 666196,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SPIR.OL",
+      "issuer_sign": "SPIR",
+      "issuer_name": "Spir Group ASA",
+      "tittel": "Mandatory Notification of Trade",
+      "dato": "2026-02-18",
+      "dato_tid": "2026-02-18T20:09:18.487000+00:00",
+      "message_id": 666158,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "STB.OL",
+      "issuer_sign": "STB",
+      "issuer_name": "Storebrand ASA",
+      "tittel": "STOREBRAND ASA: Notice of transactions by PDMRs",
+      "dato": "2026-02-18",
+      "dato_tid": "2026-02-18T19:32:51.523000+00:00",
+      "message_id": 666157,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "STB.OL",
+      "issuer_sign": "STB",
+      "issuer_name": "Storebrand ASA",
+      "tittel": "STOREBRAND ASA: Meldepliktig handel for primærinnsidere",
+      "dato": "2026-02-18",
+      "dato_tid": "2026-02-18T19:32:51.512000+00:00",
+      "message_id": 666156,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ABTEC.OL",
+      "issuer_sign": "ABTEC",
+      "issuer_name": "Aqua Bio Technology ASA",
+      "tittel": "Aqua Bio Technology ASA: Primary insider notification",
+      "dato": "2026-02-18",
+      "dato_tid": "2026-02-18T16:40:03.509000+00:00",
+      "message_id": 666145,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOD.OL",
+      "issuer_sign": "NOD",
+      "issuer_name": "Nordic Semiconductor ASA",
+      "tittel": "NOD: Reporting of transactions made by persons discharging managerial responsibilities in Nordic Semiconductor ASA’s shares",
+      "dato": "2026-02-18",
+      "dato_tid": "2026-02-18T11:35:26.795000+00:00",
+      "message_id": 666097,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "BRG.OL",
+      "issuer_sign": "BRG",
+      "issuer_name": "Borregaard ASA",
+      "tittel": "Borregaard ASA: Reporting of transactions in Borregaard ASA's share options by person discharging managerial responsibilities",
+      "dato": "2026-02-16",
+      "dato_tid": "2026-02-16T16:39:15.766000+00:00",
+      "message_id": 665997,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NAS.OL",
+      "issuer_sign": "NAS",
+      "issuer_name": "Norwegian Air Shuttle ASA",
+      "tittel": "Norwegian Air Shuttle ASA (NAS) – Mandatory notification of trade, Employee Share Savings Plan",
+      "dato": "2026-02-16",
+      "dato_tid": "2026-02-16T16:10:00+00:00",
+      "message_id": 665994,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ZAP.OL",
+      "issuer_sign": "ZAP",
+      "issuer_name": "Zaptec ASA",
+      "tittel": "Zaptec ASA: Allocation of shares to primary insiders",
+      "dato": "2026-02-16",
+      "dato_tid": "2026-02-16T15:44:19.080000+00:00",
+      "message_id": 665993,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "NORCO.OL",
+      "issuer_sign": "NORCO",
+      "issuer_name": "Norconsult ASA",
+      "tittel": "Norconsult: Mandatory notification of trade by primary insider",
+      "dato": "2026-02-16",
+      "dato_tid": "2026-02-16T13:39:54.372000+00:00",
+      "message_id": 665986,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "BRG.OL",
+      "issuer_sign": "BRG",
+      "issuer_name": "Borregaard ASA",
+      "tittel": "Borregaard ASA: Reporting of transactions in Borregaard ASA's shares made by person discharging managerial responsibilities",
+      "dato": "2026-02-16",
+      "dato_tid": "2026-02-16T11:31:03.215000+00:00",
+      "message_id": 665959,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ATEA.OL",
+      "issuer_sign": "ATEA",
+      "issuer_name": "Atea ASA",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2026-02-16",
+      "dato_tid": "2026-02-16T08:46:41.526000+00:00",
+      "message_id": 665945,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "B2I.OL",
+      "issuer_sign": "B2I",
+      "issuer_name": "B2 Impact ASA",
+      "tittel": "B2 Impact ASA: Exercise of Employee Share Options",
+      "dato": "2026-02-16",
+      "dato_tid": "2026-02-16T05:00:03.814000+00:00",
+      "message_id": 665896,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "CRNA.OL",
+      "issuer_sign": "CRNA",
+      "issuer_name": "Circio Holding ASA",
+      "tittel": "Circio announces allocation of stock options to key employees",
+      "dato": "2026-02-14",
+      "dato_tid": "2026-02-14T08:57:03.116000+00:00",
+      "message_id": 665891,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "QEC.OL",
+      "issuer_sign": "QEC",
+      "issuer_name": "Questerre Energy Corporation",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2026-02-14",
+      "dato_tid": "2026-02-14T03:26:07.371000+00:00",
+      "message_id": 665890,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ROGS.OL",
+      "issuer_sign": "ROGS",
+      "issuer_name": "Rogaland Sparebank",
+      "tittel": "Meldepliktig handel - Viderefordeling av egenkapitalbevis i spareprogram for ansatte",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T17:55:16.576000+00:00",
+      "message_id": 665885,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ROGS.OL",
+      "issuer_sign": "ROGS",
+      "issuer_name": "Rogaland Sparebank",
+      "tittel": "Meldepliktig handel - Viderefordeling av egenkapitalbevis i spareprogram for ansatte",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T17:30:00+00:00",
+      "message_id": 665884,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PEXIP.OL",
+      "issuer_sign": "PEXIP",
+      "issuer_name": "Pexip Holding ASA",
+      "tittel": "Mandatory notification of trade by Primary Insider",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T14:51:27.379000+00:00",
+      "message_id": 665874,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SCATC.OL",
+      "issuer_sign": "SCATC",
+      "issuer_name": "Scatec ASA",
+      "tittel": "Exercise of employee share options and share capital increase",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T12:08:04.505000+00:00",
+      "message_id": 665837,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EQNR.OL",
+      "issuer_sign": "EQNR",
+      "issuer_name": "Equinor ASA",
+      "tittel": "Equinor ASA: Meldepliktig handel",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T10:51:47.798000+00:00",
+      "message_id": 665827,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EQNR.OL",
+      "issuer_sign": "EQNR",
+      "issuer_name": "Equinor ASA",
+      "tittel": "Equinor ASA: Notifiable trading",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T10:51:47.729000+00:00",
+      "message_id": 665826,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SPOL.OL",
+      "issuer_sign": "SPOL",
+      "issuer_name": "SpareBank 1 Østlandet",
+      "tittel": "SPOL: Acquisition of equity certificates by primary insider",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T10:04:15.181000+00:00",
+      "message_id": 665823,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "SPOL.OL",
+      "issuer_sign": "SPOL",
+      "issuer_name": "SpareBank 1 Østlandet",
+      "tittel": "SPOL: Kjøp av egenkapitalbevis av primærinnsider",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T10:03:51.418000+00:00",
+      "message_id": 665822,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "MORG.OL",
+      "issuer_sign": "MORG",
+      "issuer_name": "Sparebanken Møre",
+      "tittel": "Sparebanken Møre – Allocation of equity capital certificates to primary insiders/ closely associated persons",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T10:03:15.098000+00:00",
+      "message_id": 665821,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "MORG.OL",
+      "issuer_sign": "MORG",
+      "issuer_name": "Sparebanken Møre",
+      "tittel": "Sparebanken Møre – Tildeling av egenkapitalbevis til primærinnsidere/nærstående",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T10:03:15.027000+00:00",
+      "message_id": 665820,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "SPOL.OL",
+      "issuer_sign": "SPOL",
+      "issuer_name": "SpareBank 1 Østlandet",
+      "tittel": "SPOL: Acquisition of equity certificates by primary insider",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T10:01:46.873000+00:00",
+      "message_id": 665819,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "SPOL.OL",
+      "issuer_sign": "SPOL",
+      "issuer_name": "SpareBank 1 Østlandet",
+      "tittel": "SPOL: Kjøp av egenkapitalbevis av primærinnsider",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T10:01:46.848000+00:00",
+      "message_id": 665818,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "EAM.OL",
+      "issuer_sign": "EAM",
+      "issuer_name": "EAM Solar AS",
+      "tittel": "Meldepliktig handel for primærinnsider",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T08:41:44.508000+00:00",
+      "message_id": 665814,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EAM.OL",
+      "issuer_sign": "EAM",
+      "issuer_name": "EAM Solar AS",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T08:41:44.508000+00:00",
+      "message_id": 665813,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "GENT.OL",
+      "issuer_sign": "GENT",
+      "issuer_name": "Gentian Diagnostics ASA",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T08:26:47.238000+00:00",
+      "message_id": 665812,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "GOD.OL",
+      "issuer_sign": "GOD",
+      "issuer_name": "Goodtech ASA",
+      "tittel": "Goodtech ASA: Employee share purchase program",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T06:39:36.069000+00:00",
+      "message_id": 665780,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "ABTEC.OL",
+      "issuer_sign": "ABTEC",
+      "issuer_name": "Aqua Bio Technology ASA",
+      "tittel": "Aqua Bio Technology ASA: Primary insider notifications",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T06:30:06.200000+00:00",
+      "message_id": 665779,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "QEC.OL",
+      "issuer_sign": "QEC",
+      "issuer_name": "Questerre Energy Corporation",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2026-02-13",
+      "dato_tid": "2026-02-13T00:34:50.414000+00:00",
+      "message_id": 665739,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PEXIP.OL",
+      "issuer_sign": "PEXIP",
+      "issuer_name": "Pexip Holding ASA",
+      "tittel": "Exercise of RSUs and Share Options including primary insiders",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T19:14:20.694000+00:00",
+      "message_id": 665732,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "KIT.OL",
+      "issuer_sign": "KIT",
+      "issuer_name": "Kitron ASA",
+      "tittel": "Kitron: Allocation of options",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T16:38:18.760000+00:00",
+      "message_id": 665728,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "KIT.OL",
+      "issuer_sign": "KIT",
+      "issuer_name": "Kitron ASA",
+      "tittel": "Kitron: Allokering av opsjoner",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T16:38:18.597000+00:00",
+      "message_id": 665727,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "B2I.OL",
+      "issuer_sign": "B2I",
+      "issuer_name": "B2 Impact ASA",
+      "tittel": "B2 Impact ASA: Exercise of Employee Share Options",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T15:55:03.037000+00:00",
+      "message_id": 665716,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NORCO.OL",
+      "issuer_sign": "NORCO",
+      "issuer_name": "Norconsult ASA",
+      "tittel": "Norconsult: Mandatory notification of trade by primary insider",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T15:48:23.469000+00:00",
+      "message_id": 665714,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "GENT.OL",
+      "issuer_sign": "GENT",
+      "issuer_name": "Gentian Diagnostics ASA",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T15:09:05.843000+00:00",
+      "message_id": 665709,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ORK.OL",
+      "issuer_sign": "ORK",
+      "issuer_name": "Orkla ASA",
+      "tittel": "Orkla ASA: Mandatory notification of trade   primary insiders",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T14:50:03.369000+00:00",
+      "message_id": 665708,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "KOG.OL",
+      "issuer_sign": "KOG",
+      "issuer_name": "Kongsberg Gruppen ASA",
+      "tittel": "Mandatory notification of trade ",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T14:30:00+00:00",
+      "message_id": 665704,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "KOG.OL",
+      "issuer_sign": "KOG",
+      "issuer_name": "Kongsberg Gruppen ASA",
+      "tittel": "Meldepliktig handel primærinnsider",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T14:30:00+00:00",
+      "message_id": 665703,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TEL.OL",
+      "issuer_sign": "TEL",
+      "issuer_name": "Telenor ASA",
+      "tittel": "MELDEPLIKTIG HANDEL - PRIMÆRINNSIDER",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T13:14:16.916000+00:00",
+      "message_id": 665689,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TEL.OL",
+      "issuer_sign": "TEL",
+      "issuer_name": "Telenor ASA",
+      "tittel": "TRADE BY PRIMARY INSIDER",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T13:14:16.891000+00:00",
+      "message_id": 665688,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NTG.OL",
+      "issuer_sign": "NTG",
+      "issuer_name": "Nordic Technology Group AS",
+      "tittel": "NORDIC TECHNOLOGY GROUP AS   Mandatory notifications of trade in connection with Private Placement",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T11:45:04.312000+00:00",
+      "message_id": 665674,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SBNOR.OL",
+      "issuer_sign": "SBNOR",
+      "issuer_name": "Sparebanken Norge",
+      "tittel": "SBNOR: Mandatory notification of trade for primary insider",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T11:36:09.700000+00:00",
+      "message_id": 665672,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SBNOR.OL",
+      "issuer_sign": "SBNOR",
+      "issuer_name": "Sparebanken Norge",
+      "tittel": "SBNOR: Meldepliktig handel for primærinnsider",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T11:36:09.673000+00:00",
+      "message_id": 665671,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NORBT.OL",
+      "issuer_sign": "NORBT",
+      "issuer_name": "NORBIT ASA",
+      "tittel": "NORBIT - Transaction by Primary Insider",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T11:17:19.572000+00:00",
+      "message_id": 665602,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ATEA.OL",
+      "issuer_sign": "ATEA",
+      "issuer_name": "Atea ASA",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T07:59:02.649000+00:00",
+      "message_id": 665576,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "MVW.OL",
+      "issuer_sign": "MVW",
+      "issuer_name": "M Vest Water AS",
+      "tittel": "M Vest Water Secures NOK 10 million Convertible Loan",
+      "dato": "2026-02-12",
+      "dato_tid": "2026-02-12T06:31:03.058000+00:00",
+      "message_id": 665548,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SBO.OL",
+      "issuer_sign": "SBO",
+      "issuer_name": "Selvaag Bolig ASA",
+      "tittel": "Selvaag Bolig ASA: Mandatory notification of trades by primary insiders",
+      "dato": "2026-02-11",
+      "dato_tid": "2026-02-11T14:15:03.730000+00:00",
+      "message_id": 665423,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SBO.OL",
+      "issuer_sign": "SBO",
+      "issuer_name": "Selvaag Bolig ASA",
+      "tittel": "Selvaag Bolig ASA: Meldepliktig handel for primærinnsidere",
+      "dato": "2026-02-11",
+      "dato_tid": "2026-02-11T14:15:03.493000+00:00",
+      "message_id": 665422,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "MULTI.OL",
+      "issuer_sign": "MULTI",
+      "issuer_name": "Multiconsult ASA",
+      "tittel": "Mandatory notification of trade - primary insider",
+      "dato": "2026-02-11",
+      "dato_tid": "2026-02-11T12:04:52.741000+00:00",
+      "message_id": 665398,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "OSUN.OL",
+      "issuer_sign": "OSUN",
+      "issuer_name": "Ocean Sun AS",
+      "tittel": "Ocean Sun AS – Long term incentive program",
+      "dato": "2026-02-09",
+      "dato_tid": "2026-02-09T14:36:54.662000+00:00",
+      "message_id": 665191,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VEND.OL",
+      "issuer_sign": "VEND",
+      "issuer_name": "Vend Marketplaces ASA",
+      "tittel": "Vend Marketplaces ASA: Mandatory notification of trade by close associate of primary insider",
+      "dato": "2026-02-09",
+      "dato_tid": "2026-02-09T14:15:53.314000+00:00",
+      "message_id": 665190,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "DNO.OL",
+      "issuer_sign": "DNO",
+      "issuer_name": "DNO ASA",
+      "tittel": "Mandatory Notification of Trade",
+      "dato": "2026-02-09",
+      "dato_tid": "2026-02-09T11:41:18.787000+00:00",
+      "message_id": 665163,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TEL.OL",
+      "issuer_sign": "TEL",
+      "issuer_name": "Telenor ASA",
+      "tittel": "Meldepliktig handel - primærinnsider",
+      "dato": "2026-02-06",
+      "dato_tid": "2026-02-06T17:36:24.959000+00:00",
+      "message_id": 665104,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TEL.OL",
+      "issuer_sign": "TEL",
+      "issuer_name": "Telenor ASA",
+      "tittel": "Trade by primary insider",
+      "dato": "2026-02-06",
+      "dato_tid": "2026-02-06T17:36:24.929000+00:00",
+      "message_id": 665103,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TEL.OL",
+      "issuer_sign": "TEL",
+      "issuer_name": "Telenor ASA",
+      "tittel": "TRADE BY PRIMARY INSIDER",
+      "dato": "2026-02-06",
+      "dato_tid": "2026-02-06T13:48:58.471000+00:00",
+      "message_id": 665095,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TEL.OL",
+      "issuer_sign": "TEL",
+      "issuer_name": "Telenor ASA",
+      "tittel": "MELDEPLIKTIG HANDEL - PRIMÆRINNSIDER",
+      "dato": "2026-02-06",
+      "dato_tid": "2026-02-06T13:48:58.466000+00:00",
+      "message_id": 665094,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "INSTA.OL",
+      "issuer_sign": "INSTA",
+      "issuer_name": "Instabank ASA",
+      "tittel": "Mandatory notification of trade by close associate of primary insider",
+      "dato": "2026-02-06",
+      "dato_tid": "2026-02-06T12:52:10.683000+00:00",
+      "message_id": 665087,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "INSTA.OL",
+      "issuer_sign": "INSTA",
+      "issuer_name": "Instabank ASA",
+      "tittel": "Mandatory notification of trade by close associate of primary insider",
+      "dato": "2026-02-06",
+      "dato_tid": "2026-02-06T11:12:32.984000+00:00",
+      "message_id": 665058,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "INSTA.OL",
+      "issuer_sign": "INSTA",
+      "issuer_name": "Instabank ASA",
+      "tittel": "Mandatory notification of trade by primary insider",
+      "dato": "2026-02-06",
+      "dato_tid": "2026-02-06T10:50:07.127000+00:00",
+      "message_id": 665057,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "INSTA.OL",
+      "issuer_sign": "INSTA",
+      "issuer_name": "Instabank ASA",
+      "tittel": "Mandatory notification of trade by primary insider",
+      "dato": "2026-02-06",
+      "dato_tid": "2026-02-06T09:00:06.399000+00:00",
+      "message_id": 665050,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOD.OL",
+      "issuer_sign": "NOD",
+      "issuer_name": "Nordic Semiconductor ASA",
+      "tittel": "NOD: Reporting of transactions made by persons discharging managerial responsibilities in Nordic Semiconductor ASA’s shares",
+      "dato": "2026-02-05",
+      "dato_tid": "2026-02-05T14:18:21.418000+00:00",
+      "message_id": 665004,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "DNB.OL",
+      "issuer_sign": "DNB",
+      "issuer_name": "DNB Bank ASA",
+      "tittel": "DNB Bank ASA - Acquisition of shares by primary insiders",
+      "dato": "2026-02-05",
+      "dato_tid": "2026-02-05T13:48:38.956000+00:00",
+      "message_id": 664994,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "DNB.OL",
+      "issuer_sign": "DNB",
+      "issuer_name": "DNB Bank ASA",
+      "tittel": "DNB Bank ASA - Kjøp av aksjer av primærinnsidere",
+      "dato": "2026-02-05",
+      "dato_tid": "2026-02-05T13:48:38.938000+00:00",
+      "message_id": 664993,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "EXTX.OL",
+      "issuer_sign": "EXTX",
+      "issuer_name": "EXACT Therapeutics AS",
+      "tittel": "EXACT Therapeutics: Warrants exercise by leading shareholders and primary insiders",
+      "dato": "2026-02-05",
+      "dato_tid": "2026-02-05T08:17:16.551000+00:00",
+      "message_id": 664908,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EQNR.OL",
+      "issuer_sign": "EQNR",
+      "issuer_name": "Equinor ASA",
+      "tittel": "Equinor ASA: Meldepliktig handel",
+      "dato": "2026-02-05",
+      "dato_tid": "2026-02-05T06:45:00.899000+00:00",
+      "message_id": 664889,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EQNR.OL",
+      "issuer_sign": "EQNR",
+      "issuer_name": "Equinor ASA",
+      "tittel": "Equinor ASA: Notifiable trading",
+      "dato": "2026-02-05",
+      "dato_tid": "2026-02-05T06:45:00.879000+00:00",
+      "message_id": 664888,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ENSU.OL",
+      "issuer_sign": "ENSU",
+      "issuer_name": "Ensurge Micropower ASA",
+      "tittel": "Ensurge Micropower ASA - Mandatory Notice of Trade for Primary Insiders",
+      "dato": "2026-02-04",
+      "dato_tid": "2026-02-04T15:15:00+00:00",
+      "message_id": 664864,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "DNB.OL",
+      "issuer_sign": "DNB",
+      "issuer_name": "DNB Bank ASA",
+      "tittel": "Trade subject to notification for primary insiders",
+      "dato": "2026-02-04",
+      "dato_tid": "2026-02-04T10:51:25.343000+00:00",
+      "message_id": 664830,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "DNB.OL",
+      "issuer_sign": "DNB",
+      "issuer_name": "DNB Bank ASA",
+      "tittel": "Meldepliktig handel for primærinnsidere",
+      "dato": "2026-02-04",
+      "dato_tid": "2026-02-04T10:51:25.302000+00:00",
+      "message_id": 664829,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "CADLR.OL",
+      "issuer_sign": "CADLR",
+      "issuer_name": "Cadeler A/S",
+      "tittel": "CADELER A/S: REPORTING ON TRANSACTIONS IN CADELER A/S SHARES BY PERSONS DISCHARGING MANAGERIAL RESPONSIBILITIES AND PERSONS CLOSELY ASSOCIATED WITH THEM",
+      "dato": "2026-02-03",
+      "dato_tid": "2026-02-03T17:14:29.328000+00:00",
+      "message_id": 664776,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "DFDS.OL",
+      "issuer_sign": "DFDS",
+      "issuer_name": "DFDS A/S",
+      "tittel": "MANAGERS' TRANSACTIONS",
+      "dato": "2026-02-03",
+      "dato_tid": "2026-02-03T16:00:00.908000+00:00",
+      "message_id": 664774,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "DNO.OL",
+      "issuer_sign": "DNO",
+      "issuer_name": "DNO ASA",
+      "tittel": "Mandatory Notification of Trade",
+      "dato": "2026-02-03",
+      "dato_tid": "2026-02-03T11:58:39.689000+00:00",
+      "message_id": 664731,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ENDUR.OL",
+      "issuer_sign": "ENDUR",
+      "issuer_name": "Endúr ASA",
+      "tittel": "Endúr ASA – Employee share purchase program, share capital increase and mandatory notifications of trade",
+      "dato": "2026-02-03",
+      "dato_tid": "2026-02-03T11:42:12.615000+00:00",
+      "message_id": 664730,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "BRUT.OL",
+      "issuer_sign": "BRUT",
+      "issuer_name": "Bruton Limited",
+      "tittel": "Bruton Limited (BRUT)   Mandatory notification of trades",
+      "dato": "2026-02-03",
+      "dato_tid": "2026-02-03T10:00:03.843000+00:00",
+      "message_id": 664720,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PARB.OL",
+      "issuer_sign": "PARB",
+      "issuer_name": "Pareto Bank ASA",
+      "tittel": "Meldepliktig handel",
+      "dato": "2026-02-02",
+      "dato_tid": "2026-02-02T11:20:03.813000+00:00",
+      "message_id": 664618,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ANDF.OL",
+      "issuer_sign": "ANDF",
+      "issuer_name": "Andfjord Salmon Group AS",
+      "tittel": "Andfjord Salmon - Grant of options to primary insiders",
+      "dato": "2026-02-02",
+      "dato_tid": "2026-02-02T07:42:07.240000+00:00",
+      "message_id": 664591,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NYKD.OL",
+      "issuer_sign": "NYKD",
+      "issuer_name": "Nykode Therapeutics ASA",
+      "tittel": "Nykode Therapeutics - Grant of share options",
+      "dato": "2026-01-30",
+      "dato_tid": "2026-01-30T21:44:48.879000+00:00",
+      "message_id": 664566,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "CRNA.OL",
+      "issuer_sign": "CRNA",
+      "issuer_name": "Circio Holding ASA",
+      "tittel": "Circio Holding ASA   Mandatory notification of trade by primary insiders and close associates related to the rights issue and private placement",
+      "dato": "2026-01-30",
+      "dato_tid": "2026-01-30T18:44:03.391000+00:00",
+      "message_id": 664562,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "GJF.OL",
+      "issuer_sign": "GJF",
+      "issuer_name": "Gjensidige Forsikring ASA",
+      "tittel": "Acquisition of own shares / primary insider trades",
+      "dato": "2026-01-30",
+      "dato_tid": "2026-01-30T18:03:19.198000+00:00",
+      "message_id": 664561,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "STRO.OL",
+      "issuer_sign": "STRO",
+      "issuer_name": "StrongPoint ASA",
+      "tittel": "StrongPoint ASA: Mandatory notification of trade",
+      "dato": "2026-01-30",
+      "dato_tid": "2026-01-30T09:00:05.835000+00:00",
+      "message_id": 664520,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "INIFY.OL",
+      "issuer_sign": "INIFY",
+      "issuer_name": "INIFY Laboratories AB",
+      "tittel": "Correction: Inify Laboratories - mandatory notification of trade",
+      "dato": "2026-01-30",
+      "dato_tid": "2026-01-30T08:30:37.728000+00:00",
+      "message_id": 664518,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AKSO.OL",
+      "issuer_sign": "AKSO",
+      "issuer_name": "Aker Solutions ASA",
+      "tittel": "Aker Solutions ASA: Mandatory notification of trade by primary insiders and close associates",
+      "dato": "2026-01-29",
+      "dato_tid": "2026-01-29T17:53:13.229000+00:00",
+      "message_id": 664484,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade",
+      "dato": "2026-01-29",
+      "dato_tid": "2026-01-29T16:04:02.870000+00:00",
+      "message_id": 664475,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade - allocation of Underwriting Commission Shares and Warrants",
+      "dato": "2026-01-29",
+      "dato_tid": "2026-01-29T13:45:03.673000+00:00",
+      "message_id": 664460,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade - allocation of Underwriting Commission Shares and Warrants",
+      "dato": "2026-01-29",
+      "dato_tid": "2026-01-29T13:45:03.534000+00:00",
+      "message_id": 664459,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "DFENS.OL",
+      "issuer_sign": "DFENS",
+      "issuer_name": "Fjord Defence Group ASA",
+      "tittel": "Fjord Defence Group ASA – Mandatory notification of trade ",
+      "dato": "2026-01-29",
+      "dato_tid": "2026-01-29T07:36:45.618000+00:00",
+      "message_id": 664405,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ENVIP.OL",
+      "issuer_sign": "ENVIP",
+      "issuer_name": "Envipco Holding N.V.",
+      "tittel": "Envipco Mandatory Notification of Trade",
+      "dato": "2026-01-28",
+      "dato_tid": "2026-01-28T16:27:03.050000+00:00",
+      "message_id": 664366,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "QEC.OL",
+      "issuer_sign": "QEC",
+      "issuer_name": "Questerre Energy Corporation",
+      "tittel": "Insider ownership post corporate reorganization",
+      "dato": "2026-01-28",
+      "dato_tid": "2026-01-28T07:00:00+00:00",
+      "message_id": 664316,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EISP.OL",
+      "issuer_sign": "EISP",
+      "issuer_name": "Eiendomsspar AS",
+      "tittel": "Eiendomsspar – meldepliktig handel og salg av aksjeopsjon",
+      "dato": "2026-01-27",
+      "dato_tid": "2026-01-27T19:40:16.523000+00:00",
+      "message_id": 664310,
+      "type": "salg"
+    },
+    {
+      "ticker": "INIFY.OL",
+      "issuer_sign": "INIFY",
+      "issuer_name": "INIFY Laboratories AB",
+      "tittel": "Inify Laboratories - mandatory notification of trade",
+      "dato": "2026-01-27",
+      "dato_tid": "2026-01-27T17:51:31.797000+00:00",
+      "message_id": 664304,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ENVIP.OL",
+      "issuer_sign": "ENVIP",
+      "issuer_name": "Envipco Holding N.V.",
+      "tittel": "Envipco Mandatory Notification of Trade",
+      "dato": "2026-01-27",
+      "dato_tid": "2026-01-27T17:34:03.403000+00:00",
+      "message_id": 664302,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOFIN.OL",
+      "issuer_sign": "NOFIN",
+      "issuer_name": "Nordic Financials ASA",
+      "tittel": "Mandatory Notification of Trading by Primary Insiders",
+      "dato": "2026-01-27",
+      "dato_tid": "2026-01-27T16:11:56.174000+00:00",
+      "message_id": 664299,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOFIN.OL",
+      "issuer_sign": "NOFIN",
+      "issuer_name": "Nordic Financials ASA",
+      "tittel": "Meldepliktig handel av primærinnsidere",
+      "dato": "2026-01-27",
+      "dato_tid": "2026-01-27T16:11:56.120000+00:00",
+      "message_id": 664298,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AKSO.OL",
+      "issuer_sign": "AKSO",
+      "issuer_name": "Aker Solutions ASA",
+      "tittel": "Aker Solutions ASA: Reporting of transactions made by persons discharging managerial responsibilities",
+      "dato": "2026-01-26",
+      "dato_tid": "2026-01-26T20:03:37.611000+00:00",
+      "message_id": 664229,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "IDEX.OL",
+      "issuer_sign": "IDEX",
+      "issuer_name": "IDEX Biometrics ASA",
+      "tittel": "Mandatory disclosure of trade by primary insiders or close associates in IDEX Biometrics",
+      "dato": "2026-01-26",
+      "dato_tid": "2026-01-26T18:30:03.491000+00:00",
+      "message_id": 664226,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOFIN.OL",
+      "issuer_sign": "NOFIN",
+      "issuer_name": "Nordic Financials ASA",
+      "tittel": "Mandatory Notification of Trading by Primary Insiders",
+      "dato": "2026-01-26",
+      "dato_tid": "2026-01-26T15:35:31.148000+00:00",
+      "message_id": 664219,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOFIN.OL",
+      "issuer_sign": "NOFIN",
+      "issuer_name": "Nordic Financials ASA",
+      "tittel": "Meldepliktig handel av primærinnsidere",
+      "dato": "2026-01-26",
+      "dato_tid": "2026-01-26T15:35:31.099000+00:00",
+      "message_id": 664218,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "QEC.OL",
+      "issuer_sign": "QEC",
+      "issuer_name": "Questerre Energy Corporation",
+      "tittel": "Questerre reports option exercise and annual grant of stock options to directors and employees",
+      "dato": "2026-01-26",
+      "dato_tid": "2026-01-26T07:10:00+00:00",
+      "message_id": 664163,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PYRUM.OL",
+      "issuer_sign": "PYRUM",
+      "issuer_name": "Pyrum Innovations AG",
+      "tittel": "Pyrum Innovations AG: Mandatory notification of trades by primary insiders",
+      "dato": "2026-01-23",
+      "dato_tid": "2026-01-23T17:00:00+00:00",
+      "message_id": 664148,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOFIN.OL",
+      "issuer_sign": "NOFIN",
+      "issuer_name": "Nordic Financials ASA",
+      "tittel": "Mandatory Notification of Trading by Primary Insiders",
+      "dato": "2026-01-23",
+      "dato_tid": "2026-01-23T15:54:08.202000+00:00",
+      "message_id": 664147,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOFIN.OL",
+      "issuer_sign": "NOFIN",
+      "issuer_name": "Nordic Financials ASA",
+      "tittel": "Meldepliktig handel av primærinnsidere",
+      "dato": "2026-01-23",
+      "dato_tid": "2026-01-23T15:54:08.153000+00:00",
+      "message_id": 664146,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade",
+      "dato": "2026-01-23",
+      "dato_tid": "2026-01-23T13:55:02.877000+00:00",
+      "message_id": 664138,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "QEC.OL",
+      "issuer_sign": "QEC",
+      "issuer_name": "Questerre Energy Corporation",
+      "tittel": "Questerre officer acquire shares on the exercise of stock options",
+      "dato": "2026-01-23",
+      "dato_tid": "2026-01-23T07:00:00+00:00",
+      "message_id": 664110,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "MPCC.OL",
+      "issuer_sign": "MPCC",
+      "issuer_name": "MPC Container Ships ASA",
+      "tittel": "Mandatory notification of trade of primary insider",
+      "dato": "2026-01-22",
+      "dato_tid": "2026-01-22T13:01:02.964000+00:00",
+      "message_id": 664087,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade   subscription of shares in rights issue",
+      "dato": "2026-01-22",
+      "dato_tid": "2026-01-22T09:12:03.156000+00:00",
+      "message_id": 664044,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TRMED.OL",
+      "issuer_sign": "TRMED",
+      "issuer_name": "Thor Medical ASA",
+      "tittel": "Thor Medical ASA - Share Option grant",
+      "dato": "2026-01-21",
+      "dato_tid": "2026-01-21T17:42:48.446000+00:00",
+      "message_id": 664018,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NORG.OL",
+      "issuer_sign": "NORG",
+      "issuer_name": "NorgesGruppen ASA",
+      "tittel": "NorgesGruppen ASA: Melding om handel av primærinnsider",
+      "dato": "2026-01-21",
+      "dato_tid": "2026-01-21T16:34:34.676000+00:00",
+      "message_id": 664014,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NBX.OL",
+      "issuer_sign": "NBX",
+      "issuer_name": "Norwegian Block Exchange AS",
+      "tittel": "Norwegian Block Exchange AS – Mandatory notification of transaction by close associate ",
+      "dato": "2026-01-21",
+      "dato_tid": "2026-01-21T14:35:00+00:00",
+      "message_id": 664010,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "CRNA.OL",
+      "issuer_sign": "CRNA",
+      "issuer_name": "Circio Holding ASA",
+      "tittel": "Circio Holding ASA   Exercise of subscription rights in the rights issue by primary insiders",
+      "dato": "2026-01-21",
+      "dato_tid": "2026-01-21T14:12:03.012000+00:00",
+      "message_id": 664008,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "QEC.OL",
+      "issuer_sign": "QEC",
+      "issuer_name": "Questerre Energy Corporation",
+      "tittel": "Questerre officers acquire shares on the exercise of stock options",
+      "dato": "2026-01-21",
+      "dato_tid": "2026-01-21T07:00:00+00:00",
+      "message_id": 663941,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ENVIP.OL",
+      "issuer_sign": "ENVIP",
+      "issuer_name": "Envipco Holding N.V.",
+      "tittel": "Envipco Mandatory Notification of Trade",
+      "dato": "2026-01-20",
+      "dato_tid": "2026-01-20T16:31:02.903000+00:00",
+      "message_id": 663926,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AKSO.OL",
+      "issuer_sign": "AKSO",
+      "issuer_name": "Aker Solutions ASA",
+      "tittel": "Correction: Aker Solutions ASA: Mandatory notification of trade by primary insider",
+      "dato": "2026-01-19",
+      "dato_tid": "2026-01-19T19:17:57.814000+00:00",
+      "message_id": 663872,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ENVIP.OL",
+      "issuer_sign": "ENVIP",
+      "issuer_name": "Envipco Holding N.V.",
+      "tittel": "Envipco Mandatory Notification of Trade",
+      "dato": "2026-01-19",
+      "dato_tid": "2026-01-19T18:39:03.143000+00:00",
+      "message_id": 663871,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "DNO.OL",
+      "issuer_sign": "DNO",
+      "issuer_name": "DNO ASA",
+      "tittel": "Mandatory Notification of Trade",
+      "dato": "2026-01-19",
+      "dato_tid": "2026-01-19T14:15:15.629000+00:00",
+      "message_id": 663860,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AKAST.OL",
+      "issuer_sign": "AKAST",
+      "issuer_name": "Akastor ASA",
+      "tittel": "Akastor ASA: Award of shares under variable pay program",
+      "dato": "2026-01-19",
+      "dato_tid": "2026-01-19T06:30:03.847000+00:00",
+      "message_id": 663800,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "NTI.OL",
+      "issuer_sign": "NTI",
+      "issuer_name": "Norsk Titanium AS",
+      "tittel": "Norsk Titanium AS: Exercise of RSUs and share capital increase",
+      "dato": "2026-01-19",
+      "dato_tid": "2026-01-19T06:00:00+00:00",
+      "message_id": 663794,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "CRNA.OL",
+      "issuer_sign": "CRNA",
+      "issuer_name": "Circio Holding ASA",
+      "tittel": "Circio Holding ASA   Exercise of subscription rights in the rights issue by primary insiders",
+      "dato": "2026-01-16",
+      "dato_tid": "2026-01-16T13:06:03.040000+00:00",
+      "message_id": 663774,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "CODE.OL",
+      "issuer_sign": "CODE",
+      "issuer_name": "CodeLab Capital AS",
+      "tittel": "Primary insider notification - purchase of shares",
+      "dato": "2026-01-16",
+      "dato_tid": "2026-01-16T10:28:24.925000+00:00",
+      "message_id": 663759,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "HAUTO.OL",
+      "issuer_sign": "HAUTO",
+      "issuer_name": "Höegh Autoliners ASA",
+      "tittel": "Höegh Autoliners ASA – Mandatory notification of trade from primary insider",
+      "dato": "2026-01-16",
+      "dato_tid": "2026-01-16T06:30:00+00:00",
+      "message_id": 663737,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SCATC.OL",
+      "issuer_sign": "SCATC",
+      "issuer_name": "Scatec ASA",
+      "tittel": "Scatec ASA: Long term incentive programme",
+      "dato": "2026-01-15",
+      "dato_tid": "2026-01-15T16:21:24.791000+00:00",
+      "message_id": 663720,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "OTOVO.OL",
+      "issuer_sign": "OTOVO",
+      "issuer_name": "Otovo ASA",
+      "tittel": "Notification of primary insider trade",
+      "dato": "2026-01-14",
+      "dato_tid": "2026-01-14T18:09:58.378000+00:00",
+      "message_id": 663629,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade   subscription of shares in rights issue",
+      "dato": "2026-01-14",
+      "dato_tid": "2026-01-14T13:05:02.952000+00:00",
+      "message_id": 663615,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "OLT.OL",
+      "issuer_sign": "OLT",
+      "issuer_name": "Olav Thon Eiendomsselskap ASA",
+      "tittel": "Olav Thon Eiendomsselskap ASA (OLT) – Mandatory Notification of Trade – Acceptance of Voluntary Offer  ",
+      "dato": "2026-01-14",
+      "dato_tid": "2026-01-14T11:10:24.836000+00:00",
+      "message_id": 663585,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AKRBP.OL",
+      "issuer_sign": "AKRBP",
+      "issuer_name": "Aker BP ASA",
+      "tittel": "Mandatory notification of trade for close associate",
+      "dato": "2026-01-14",
+      "dato_tid": "2026-01-14T10:43:59.530000+00:00",
+      "message_id": 663578,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "MVW.OL",
+      "issuer_sign": "MVW",
+      "issuer_name": "M Vest Water AS",
+      "tittel": "Mandatory Notification of Trade by Primary Insiders",
+      "dato": "2026-01-13",
+      "dato_tid": "2026-01-13T18:41:03.072000+00:00",
+      "message_id": 663557,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOFIN.OL",
+      "issuer_sign": "NOFIN",
+      "issuer_name": "Nordic Financials ASA",
+      "tittel": "Mandatory Notification of Trading by Primary Insiders",
+      "dato": "2026-01-13",
+      "dato_tid": "2026-01-13T15:40:02.109000+00:00",
+      "message_id": 663554,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOFIN.OL",
+      "issuer_sign": "NOFIN",
+      "issuer_name": "Nordic Financials ASA",
+      "tittel": "Meldepliktig handel av primærinnsidere",
+      "dato": "2026-01-13",
+      "dato_tid": "2026-01-13T15:40:02.019000+00:00",
+      "message_id": 663553,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ONCIN.OL",
+      "issuer_sign": "ONCIN",
+      "issuer_name": "Oncoinvent ASA",
+      "tittel": "Oncoinvent ASA: Grant of share options to new CFO",
+      "dato": "2026-01-13",
+      "dato_tid": "2026-01-13T07:13:09.218000+00:00",
+      "message_id": 663505,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "MORLD.OL",
+      "issuer_sign": "MORLD",
+      "issuer_name": "Moreld ASA",
+      "tittel": "Moreld ASA: Mandatory notification of trade",
+      "dato": "2026-01-12",
+      "dato_tid": "2026-01-12T17:30:03.009000+00:00",
+      "message_id": 663492,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SMCRT.OL",
+      "issuer_sign": "SMCRT",
+      "issuer_name": "SmartCraft ASA",
+      "tittel": "SmartCraft ASA (SMCRT) - Mandatory notification of trade from primary insiders",
+      "dato": "2026-01-12",
+      "dato_tid": "2026-01-12T14:00:07.226000+00:00",
+      "message_id": 663484,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "BAKKA.OL",
+      "issuer_sign": "BAKKA",
+      "issuer_name": "Bakkafrost P/f",
+      "tittel": "Allocation of matching shares in Bakkafrost Share Savings Plan",
+      "dato": "2026-01-12",
+      "dato_tid": "2026-01-12T13:18:35.178000+00:00",
+      "message_id": 663480,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "AKER.OL",
+      "issuer_sign": "AKER",
+      "issuer_name": "Aker ASA",
+      "tittel": "Aker ASA: Mandatory notification of trade",
+      "dato": "2026-01-12",
+      "dato_tid": "2026-01-12T10:03:02.650000+00:00",
+      "message_id": 663459,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "HYPRO.OL",
+      "issuer_sign": "HYPRO",
+      "issuer_name": "HydrogenPro ASA",
+      "tittel": "HydrogenPro ASA: Grant of share options",
+      "dato": "2026-01-12",
+      "dato_tid": "2026-01-12T06:00:06.092000+00:00",
+      "message_id": 663434,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "OET.OL",
+      "issuer_sign": "OET",
+      "issuer_name": "Okeanis Eco Tankers Corp.",
+      "tittel": " Okeanis Eco Tankers Corp.: Mandatory notification of trade",
+      "dato": "2026-01-09",
+      "dato_tid": "2026-01-09T21:15:00+00:00",
+      "message_id": 663427,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PROXI.OL",
+      "issuer_sign": "PROXI",
+      "issuer_name": "Proximar Seafood AS",
+      "tittel": "Proximar Seafood AS - Option allocation to primary insiders and employees",
+      "dato": "2026-01-09",
+      "dato_tid": "2026-01-09T14:55:39.773000+00:00",
+      "message_id": 663416,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "LYTIX.OL",
+      "issuer_sign": "LYTIX",
+      "issuer_name": "Lytix Biopharma AS",
+      "tittel": "Lytix Biopharma AS – Mandatory notification of trade by close associate of primary insider",
+      "dato": "2026-01-09",
+      "dato_tid": "2026-01-09T10:50:00.121000+00:00",
+      "message_id": 663387,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "DVD.OL",
+      "issuer_sign": "DVD",
+      "issuer_name": "Deep Value Driller AS",
+      "tittel": " Deep Value Driller AS – Mandatory notification of trades",
+      "dato": "2026-01-08",
+      "dato_tid": "2026-01-08T14:20:00+00:00",
+      "message_id": 663338,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ITERA.OL",
+      "issuer_sign": "ITERA",
+      "issuer_name": "Itera ASA",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2026-01-08",
+      "dato_tid": "2026-01-08T12:07:06.582000+00:00",
+      "message_id": 663277,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ITERA.OL",
+      "issuer_sign": "ITERA",
+      "issuer_name": "Itera ASA",
+      "tittel": "Meldepliktig handel",
+      "dato": "2026-01-08",
+      "dato_tid": "2026-01-08T12:07:06.571000+00:00",
+      "message_id": 663276,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SPOL.OL",
+      "issuer_sign": "SPOL",
+      "issuer_name": "SpareBank 1 Østlandet",
+      "tittel": "SPOL: PDMR notification – board member",
+      "dato": "2026-01-07",
+      "dato_tid": "2026-01-07T13:00:00+00:00",
+      "message_id": 663224,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SPOL.OL",
+      "issuer_sign": "SPOL",
+      "issuer_name": "SpareBank 1 Østlandet",
+      "tittel": "SPOL: Meldepliktig handel utført av styremedlem",
+      "dato": "2026-01-07",
+      "dato_tid": "2026-01-07T13:00:00+00:00",
+      "message_id": 663223,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SPOL.OL",
+      "issuer_sign": "SPOL",
+      "issuer_name": "SpareBank 1 Østlandet",
+      "tittel": "SPOL: PDMR notification – deputy board member",
+      "dato": "2026-01-07",
+      "dato_tid": "2026-01-07T13:00:00+00:00",
+      "message_id": 663222,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SPOL.OL",
+      "issuer_sign": "SPOL",
+      "issuer_name": "SpareBank 1 Østlandet",
+      "tittel": "SPOL: Meldepliktig handel utført av varamedlem til styret",
+      "dato": "2026-01-07",
+      "dato_tid": "2026-01-07T13:00:00+00:00",
+      "message_id": 663221,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TOM.OL",
+      "issuer_sign": "TOM",
+      "issuer_name": "Tomra Systems ASA",
+      "tittel": "TOMRA: Mandatory notification of trade by PDMR",
+      "dato": "2026-01-07",
+      "dato_tid": "2026-01-07T10:23:34.359000+00:00",
+      "message_id": 663199,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade   allocation of subscription rights",
+      "dato": "2026-01-07",
+      "dato_tid": "2026-01-07T08:44:02.237000+00:00",
+      "message_id": 663191,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "INSTA.OL",
+      "issuer_sign": "INSTA",
+      "issuer_name": "Instabank ASA",
+      "tittel": "Mandatory notification of trade by close associate of primary insider",
+      "dato": "2026-01-06",
+      "dato_tid": "2026-01-06T20:16:51.633000+00:00",
+      "message_id": 663173,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOSN.OL",
+      "issuer_sign": "NOSN",
+      "issuer_name": "NOS Nova AS",
+      "tittel": "Mandatory notification of trade in NOS Nova AS",
+      "dato": "2026-01-06",
+      "dato_tid": "2026-01-06T16:44:04.427000+00:00",
+      "message_id": 663167,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VAR.OL",
+      "issuer_sign": "VAR",
+      "issuer_name": "Vår Energi ASA",
+      "tittel": "Vår Energi ASA: Mandatory notification of trade by primary insiders in connection with allocation of bonus shares",
+      "dato": "2026-01-06",
+      "dato_tid": "2026-01-06T16:04:44.504000+00:00",
+      "message_id": 663165,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "CLCO.OL",
+      "issuer_sign": "CLCO",
+      "issuer_name": "Cool Company Ltd.",
+      "tittel": "Cool Company Ltd. – Mandatory Notification of Trade relating to Merger with Wholly Owned Subsidiary of EPS Ventures Ltd.",
+      "dato": "2026-01-06",
+      "dato_tid": "2026-01-06T16:03:34.152000+00:00",
+      "message_id": 663164,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LOKO.OL",
+      "issuer_sign": "LOKO",
+      "issuer_name": "Lokotech Group AS",
+      "tittel": "Mandatory Notification of Trade by Primary Insider",
+      "dato": "2026-01-06",
+      "dato_tid": "2026-01-06T16:00:00+00:00",
+      "message_id": 663162,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TRMED.OL",
+      "issuer_sign": "TRMED",
+      "issuer_name": "Thor Medical ASA",
+      "tittel": "Thor Medical - Issuance of shares to executive member under incentive program",
+      "dato": "2026-01-06",
+      "dato_tid": "2026-01-06T07:52:19.193000+00:00",
+      "message_id": 663120,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AFK.OL",
+      "issuer_sign": "AFK",
+      "issuer_name": "Arendals Fossekompani ASA",
+      "tittel": "Trade primary insiders",
+      "dato": "2026-01-05",
+      "dato_tid": "2026-01-05T18:29:43.293000+00:00",
+      "message_id": 663104,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ROGS.OL",
+      "issuer_sign": "ROGS",
+      "issuer_name": "Rogaland Sparebank",
+      "tittel": "Meldepliktig handel - tildeling av bonusbevis i spareprogram for ansatte",
+      "dato": "2026-01-05",
+      "dato_tid": "2026-01-05T17:56:53.422000+00:00",
+      "message_id": 663103,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "EIOF.OL",
+      "issuer_sign": "EIOF",
+      "issuer_name": "Eidesvik Offshore ASA",
+      "tittel": "EIOF – Mandatory notification of trade",
+      "dato": "2026-01-05",
+      "dato_tid": "2026-01-05T09:22:42.411000+00:00",
+      "message_id": 663072,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LOKO.OL",
+      "issuer_sign": "LOKO",
+      "issuer_name": "Lokotech Group AS",
+      "tittel": "Mandatory Notification of Trade by Primary Insider",
+      "dato": "2026-01-01",
+      "dato_tid": "2026-01-01T19:00:00+00:00",
+      "message_id": 663005,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "QEC.OL",
+      "issuer_sign": "QEC",
+      "issuer_name": "Questerre Energy Corporation",
+      "tittel": "Insider acquisition of common shares following closing of Red Leaf transaction",
+      "dato": "2025-12-31",
+      "dato_tid": "2025-12-31T00:25:00.675000+00:00",
+      "message_id": 662959,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "PYRUM.OL",
+      "issuer_sign": "PYRUM",
+      "issuer_name": "Pyrum Innovations AG",
+      "tittel": "Pyrum Innovations AG: Mandatory notification of trades by close associates of primary insiders",
+      "dato": "2025-12-30",
+      "dato_tid": "2025-12-30T21:00:00+00:00",
+      "message_id": 662958,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PYRUM.OL",
+      "issuer_sign": "PYRUM",
+      "issuer_name": "Pyrum Innovations AG",
+      "tittel": "Pyrum Innovations AG: Mandatory notification of trades by primary insiders",
+      "dato": "2025-12-30",
+      "dato_tid": "2025-12-30T21:00:00+00:00",
+      "message_id": 662957,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PYRUM.OL",
+      "issuer_sign": "PYRUM",
+      "issuer_name": "Pyrum Innovations AG",
+      "tittel": "Pyrum Innovations AG: Mandatory notification of trades by close associates of primary insiders",
+      "dato": "2025-12-30",
+      "dato_tid": "2025-12-30T21:00:00+00:00",
+      "message_id": 662956,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PYRUM.OL",
+      "issuer_sign": "PYRUM",
+      "issuer_name": "Pyrum Innovations AG",
+      "tittel": "Pyrum Innovations AG: Mandatory notification of trades by primary insiders",
+      "dato": "2025-12-30",
+      "dato_tid": "2025-12-30T21:00:00+00:00",
+      "message_id": 662955,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOAP.OL",
+      "issuer_sign": "NOAP",
+      "issuer_name": "Nordic Aqua Partners AS",
+      "tittel": "Mandatory notification of trade by Primary Insiders and close associates",
+      "dato": "2025-12-30",
+      "dato_tid": "2025-12-30T18:55:03.859000+00:00",
+      "message_id": 662953,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ORK.OL",
+      "issuer_sign": "ORK",
+      "issuer_name": "Orkla ASA",
+      "tittel": "Orkla ASA: Mandatory notification of trade   primary insiders",
+      "dato": "2025-12-30",
+      "dato_tid": "2025-12-30T17:15:02.651000+00:00",
+      "message_id": 662950,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "OTOVO.OL",
+      "issuer_sign": "OTOVO",
+      "issuer_name": "Otovo ASA",
+      "tittel": "Otovo ASA - Option allocation to primary insiders and employees",
+      "dato": "2025-12-30",
+      "dato_tid": "2025-12-30T15:30:09.231000+00:00",
+      "message_id": 662946,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "BAKKA.OL",
+      "issuer_sign": "BAKKA",
+      "issuer_name": "Bakkafrost P/f",
+      "tittel": "Correction: Share Savings Plan Transaction",
+      "dato": "2025-12-30",
+      "dato_tid": "2025-12-30T13:52:42.263000+00:00",
+      "message_id": 662945,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PUBLI.OL",
+      "issuer_sign": "PUBLI",
+      "issuer_name": "Public Property Invest ASA",
+      "tittel": "Mandatory Notification of Trade",
+      "dato": "2025-12-30",
+      "dato_tid": "2025-12-30T13:50:02.323000+00:00",
+      "message_id": 662944,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "BAKKA.OL",
+      "issuer_sign": "BAKKA",
+      "issuer_name": "Bakkafrost P/f",
+      "tittel": "Share Savings Plan Transaction",
+      "dato": "2025-12-30",
+      "dato_tid": "2025-12-30T12:42:39.261000+00:00",
+      "message_id": 662939,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SMCRT.OL",
+      "issuer_sign": "SMCRT",
+      "issuer_name": "SmartCraft ASA",
+      "tittel": "SmartCraft ASA (SMCRT) - Mandatory notification of trade from primary insiders",
+      "dato": "2025-12-30",
+      "dato_tid": "2025-12-30T10:33:33.809000+00:00",
+      "message_id": 662919,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ZAP.OL",
+      "issuer_sign": "ZAP",
+      "issuer_name": "Zaptec ASA",
+      "tittel": "Zaptec ASA: Exercise of share options ",
+      "dato": "2025-12-29",
+      "dato_tid": "2025-12-29T19:33:12.169000+00:00",
+      "message_id": 662902,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "GEOS.OL",
+      "issuer_sign": "GEOS",
+      "issuer_name": "Golden Energy Offshore Services ASA",
+      "tittel": "Mandatory notification of trade in connection with Private Placement ",
+      "dato": "2025-12-29",
+      "dato_tid": "2025-12-29T10:16:01.402000+00:00",
+      "message_id": 662877,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ZAP.OL",
+      "issuer_sign": "ZAP",
+      "issuer_name": "Zaptec ASA",
+      "tittel": "Zaptec ASA: Purchase of shares by a Primary Insider ",
+      "dato": "2025-12-23",
+      "dato_tid": "2025-12-23T18:50:33.672000+00:00",
+      "message_id": 662837,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "CLOUD.OL",
+      "issuer_sign": "CLOUD",
+      "issuer_name": "Cloudberry Clean Energy ASA",
+      "tittel": "Cloudberry Clean Energy ASA | Mandatory notification of trade",
+      "dato": "2025-12-23",
+      "dato_tid": "2025-12-23T17:45:14.349000+00:00",
+      "message_id": 662833,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "HUNT.OL",
+      "issuer_sign": "HUNT",
+      "issuer_name": "Hunter Group ASA",
+      "tittel": "Hunter Group ASA - PDMR notification",
+      "dato": "2025-12-23",
+      "dato_tid": "2025-12-23T16:33:55.947000+00:00",
+      "message_id": 662830,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VOW.OL",
+      "issuer_sign": "VOW",
+      "issuer_name": "Vow ASA",
+      "tittel": "Vow ASA: Mandatory notification of trade by primary insiders and close associates",
+      "dato": "2025-12-23",
+      "dato_tid": "2025-12-23T15:57:39.762000+00:00",
+      "message_id": 662826,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "DELIA.OL",
+      "issuer_sign": "DELIA",
+      "issuer_name": "Dellia Group ASA",
+      "tittel": "Dellia Group ASA: Mandatory notification of trade by primary insiders",
+      "dato": "2025-12-23",
+      "dato_tid": "2025-12-23T14:22:26.152000+00:00",
+      "message_id": 662822,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AIRX.OL",
+      "issuer_sign": "AIRX",
+      "issuer_name": "Airthings ASA",
+      "tittel": "Airthings ASA – Mandatory notification of trade",
+      "dato": "2025-12-23",
+      "dato_tid": "2025-12-23T12:42:33.638000+00:00",
+      "message_id": 662799,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "DDRIL.OL",
+      "issuer_sign": "DDRIL",
+      "issuer_name": "Dolphin Drilling AS",
+      "tittel": "Dolphin Drilling AS   Mandatory notification of trade",
+      "dato": "2025-12-23",
+      "dato_tid": "2025-12-23T12:20:02.572000+00:00",
+      "message_id": 662798,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AURG.OL",
+      "issuer_sign": "AURG",
+      "issuer_name": "Aurskog Sparebank",
+      "tittel": "Meldepliktig handel for primærinnsider",
+      "dato": "2025-12-23",
+      "dato_tid": "2025-12-23T09:51:08.910000+00:00",
+      "message_id": 662790,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "BORR.OL",
+      "issuer_sign": "BORR",
+      "issuer_name": "Borr Drilling Limited",
+      "tittel": "Borr Drilling Limited – Mandatory notification of trade",
+      "dato": "2025-12-22",
+      "dato_tid": "2025-12-22T21:57:15.970000+00:00",
+      "message_id": 662763,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ONCIN.OL",
+      "issuer_sign": "ONCIN",
+      "issuer_name": "Oncoinvent ASA",
+      "tittel": "Oncoinvent ASA: Grant of share options - mandatory notification of trade",
+      "dato": "2025-12-22",
+      "dato_tid": "2025-12-22T17:10:00.360000+00:00",
+      "message_id": 662758,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SAGA.OL",
+      "issuer_sign": "SAGA",
+      "issuer_name": "Saga Pure ASA",
+      "tittel": "Saga Pure ASA - Mandatory notification of trade",
+      "dato": "2025-12-22",
+      "dato_tid": "2025-12-22T15:36:10.878000+00:00",
+      "message_id": 662751,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PRYME.OL",
+      "issuer_sign": "PRYME",
+      "issuer_name": "Pryme N.V.",
+      "tittel": "Notification of transactions by primary insiders and their close associates",
+      "dato": "2025-12-22",
+      "dato_tid": "2025-12-22T14:45:56.769000+00:00",
+      "message_id": 662748,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AKSO.OL",
+      "issuer_sign": "AKSO",
+      "issuer_name": "Aker Solutions ASA",
+      "tittel": "Aker Solutions ASA: Reporting of transactions made by persons discharging managerial responsibilities",
+      "dato": "2025-12-22",
+      "dato_tid": "2025-12-22T13:56:50.935000+00:00",
+      "message_id": 662744,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "INSTA.OL",
+      "issuer_sign": "INSTA",
+      "issuer_name": "Instabank ASA",
+      "tittel": "Mandatory notification of trade by primary insider",
+      "dato": "2025-12-22",
+      "dato_tid": "2025-12-22T13:40:19.570000+00:00",
+      "message_id": 662739,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "B2I.OL",
+      "issuer_sign": "B2I",
+      "issuer_name": "B2 Impact ASA",
+      "tittel": "B2 Impact ASA: mandatory notification of trade",
+      "dato": "2025-12-22",
+      "dato_tid": "2025-12-22T11:00:03.288000+00:00",
+      "message_id": 662642,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ENDUR.OL",
+      "issuer_sign": "ENDUR",
+      "issuer_name": "Endúr ASA",
+      "tittel": "Endúr ASA – Mandatory notifications of trade",
+      "dato": "2025-12-22",
+      "dato_tid": "2025-12-22T09:06:52.088000+00:00",
+      "message_id": 662629,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ANDF.OL",
+      "issuer_sign": "ANDF",
+      "issuer_name": "Andfjord Salmon Group AS",
+      "tittel": "Andfjord Salmon AS - Primary insider notification",
+      "dato": "2025-12-22",
+      "dato_tid": "2025-12-22T08:48:19.959000+00:00",
+      "message_id": 662624,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ABTEC.OL",
+      "issuer_sign": "ABTEC",
+      "issuer_name": "Aqua Bio Technology ASA",
+      "tittel": "Aqua Bio Technology ASA: Meldepliktig handel",
+      "dato": "2025-12-22",
+      "dato_tid": "2025-12-22T08:30:03.334000+00:00",
+      "message_id": 662623,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TORM.OL",
+      "issuer_sign": "TORM",
+      "issuer_name": "TORM plc",
+      "tittel": "Report of transactions in TORM plc securities by directors and executive officers and their closely associated persons",
+      "dato": "2025-12-20",
+      "dato_tid": "2025-12-20T11:46:51.546000+00:00",
+      "message_id": 662591,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SAGA.OL",
+      "issuer_sign": "SAGA",
+      "issuer_name": "Saga Pure ASA",
+      "tittel": "Saga Pure ASA - Major shareholding notification and mandatory notification of trade",
+      "dato": "2025-12-19",
+      "dato_tid": "2025-12-19T17:15:12.793000+00:00",
+      "message_id": 662583,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LOKO.OL",
+      "issuer_sign": "LOKO",
+      "issuer_name": "Lokotech Group AS",
+      "tittel": "Mandatory Notification of Trade by Primary Insider",
+      "dato": "2025-12-19",
+      "dato_tid": "2025-12-19T17:00:00+00:00",
+      "message_id": 662581,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SOAG.OL",
+      "issuer_sign": "SOAG",
+      "issuer_name": "SpareBank 1 Østfold Akershus",
+      "tittel": "Viderefordeling av egenkapitalbevis i spareprogrammet",
+      "dato": "2025-12-19",
+      "dato_tid": "2025-12-19T15:15:00+00:00",
+      "message_id": 662577,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VEND.OL",
+      "issuer_sign": "VEND",
+      "issuer_name": "Vend Marketplaces ASA",
+      "tittel": "Vend Marketplaces ASA: Mandatory notification of trade",
+      "dato": "2025-12-19",
+      "dato_tid": "2025-12-19T13:22:52.979000+00:00",
+      "message_id": 662564,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "INIFY.OL",
+      "issuer_sign": "INIFY",
+      "issuer_name": "INIFY Laboratories AB",
+      "tittel": "Inify Laboratories - mandatory notification of trade",
+      "dato": "2025-12-19",
+      "dato_tid": "2025-12-19T12:25:14.322000+00:00",
+      "message_id": 662544,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "WEST.OL",
+      "issuer_sign": "WEST",
+      "issuer_name": "Western Bulk Chartering AS",
+      "tittel": "Mandatory notification of trade – Western Bulk Chartering AS",
+      "dato": "2025-12-19",
+      "dato_tid": "2025-12-19T11:53:41.682000+00:00",
+      "message_id": 662539,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LINK.OL",
+      "issuer_sign": "LINK",
+      "issuer_name": "Link Mobility Group Holding ASA",
+      "tittel": "LINK Mobility – Mandatory notification of trade in connection with incentive programs",
+      "dato": "2025-12-19",
+      "dato_tid": "2025-12-19T11:52:05.458000+00:00",
+      "message_id": 662538,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "CODE.OL",
+      "issuer_sign": "CODE",
+      "issuer_name": "CodeLab Capital AS",
+      "tittel": "Primary insider notification - purchase of shares",
+      "dato": "2025-12-19",
+      "dato_tid": "2025-12-19T11:22:43.289000+00:00",
+      "message_id": 662528,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "VEND.OL",
+      "issuer_sign": "VEND",
+      "issuer_name": "Vend Marketplaces ASA",
+      "tittel": "Vend Marketplaces ASA: Mandatory notification of trade",
+      "dato": "2025-12-19",
+      "dato_tid": "2025-12-19T09:49:59.751000+00:00",
+      "message_id": 662514,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "INIFY.OL",
+      "issuer_sign": "INIFY",
+      "issuer_name": "INIFY Laboratories AB",
+      "tittel": "Inify Laboratories - mandatory notification of trade",
+      "dato": "2025-12-19",
+      "dato_tid": "2025-12-19T07:37:01.155000+00:00",
+      "message_id": 662503,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "HAUTO.OL",
+      "issuer_sign": "HAUTO",
+      "issuer_name": "Höegh Autoliners ASA",
+      "tittel": "Mandatory notification of transactions by primary insiders",
+      "dato": "2025-12-19",
+      "dato_tid": "2025-12-19T06:00:00+00:00",
+      "message_id": 662488,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "HUNT.OL",
+      "issuer_sign": "HUNT",
+      "issuer_name": "Hunter Group ASA",
+      "tittel": "Hunter Group ASA - PDMR notification",
+      "dato": "2025-12-18",
+      "dato_tid": "2025-12-18T16:22:29.042000+00:00",
+      "message_id": 662478,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "DFENS.OL",
+      "issuer_sign": "DFENS",
+      "issuer_name": "Fjord Defence Group ASA",
+      "tittel": "Fjord Defence Group ASA – Mandatory notifications of trade ",
+      "dato": "2025-12-18",
+      "dato_tid": "2025-12-18T15:07:13.030000+00:00",
+      "message_id": 662471,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ANDF.OL",
+      "issuer_sign": "ANDF",
+      "issuer_name": "Andfjord Salmon Group AS",
+      "tittel": "Andfjord Salmon Group AS: Primary insider notification",
+      "dato": "2025-12-18",
+      "dato_tid": "2025-12-18T14:41:51.157000+00:00",
+      "message_id": 662464,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EAM.OL",
+      "issuer_sign": "EAM",
+      "issuer_name": "EAM Solar AS",
+      "tittel": "Meldepliktig handel for primærinnsider",
+      "dato": "2025-12-18",
+      "dato_tid": "2025-12-18T09:33:24.209000+00:00",
+      "message_id": 662356,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EAM.OL",
+      "issuer_sign": "EAM",
+      "issuer_name": "EAM Solar AS",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2025-12-18",
+      "dato_tid": "2025-12-18T09:33:24.209000+00:00",
+      "message_id": 662355,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "XPLRA.OL",
+      "issuer_sign": "XPLRA",
+      "issuer_name": "Xplora Technologies AS",
+      "tittel": "Xplora Technologies AS: Grant of share options to primary insiders",
+      "dato": "2025-12-17",
+      "dato_tid": "2025-12-17T16:00:03.470000+00:00",
+      "message_id": 662303,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PUBLI.OL",
+      "issuer_sign": "PUBLI",
+      "issuer_name": "Public Property Invest ASA",
+      "tittel": "Mandatory notification of trade and disclosure of large shareholding",
+      "dato": "2025-12-17",
+      "dato_tid": "2025-12-17T15:06:02.769000+00:00",
+      "message_id": 662293,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PUBLI.OL",
+      "issuer_sign": "PUBLI",
+      "issuer_name": "Public Property Invest ASA",
+      "tittel": "Public Property Invest ASA - Mandatory notification of trade",
+      "dato": "2025-12-17",
+      "dato_tid": "2025-12-17T14:58:02.918000+00:00",
+      "message_id": 662291,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EISP.OL",
+      "issuer_sign": "EISP",
+      "issuer_name": "Eiendomsspar AS",
+      "tittel": "Eiendomsspar - meldepliktig handel",
+      "dato": "2025-12-17",
+      "dato_tid": "2025-12-17T14:42:12.999000+00:00",
+      "message_id": 662289,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SALM.OL",
+      "issuer_sign": "SALM",
+      "issuer_name": "SalMar ASA",
+      "tittel": "SalMar - 2025 share-based incentive scheme for senior executives and key personnel",
+      "dato": "2025-12-17",
+      "dato_tid": "2025-12-17T14:05:00.682000+00:00",
+      "message_id": 662287,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SALM.OL",
+      "issuer_sign": "SALM",
+      "issuer_name": "SalMar ASA",
+      "tittel": "SalMar - Aksjebasert incentivprogram 2025 for ledende ansatte og nøkkelpersoner",
+      "dato": "2025-12-17",
+      "dato_tid": "2025-12-17T14:05:00.656000+00:00",
+      "message_id": 662286,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TOM.OL",
+      "issuer_sign": "TOM",
+      "issuer_name": "Tomra Systems ASA",
+      "tittel": "TOMRA: Mandatory notification of trade by PDMR",
+      "dato": "2025-12-17",
+      "dato_tid": "2025-12-17T12:32:52.287000+00:00",
+      "message_id": 662249,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VOW.OL",
+      "issuer_sign": "VOW",
+      "issuer_name": "Vow ASA",
+      "tittel": "Vow ASA: Mandatory notification of trade by primary insiders and their close associates",
+      "dato": "2025-12-17",
+      "dato_tid": "2025-12-17T08:38:34.905000+00:00",
+      "message_id": 662228,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PUBLI.OL",
+      "issuer_sign": "PUBLI",
+      "issuer_name": "Public Property Invest ASA",
+      "tittel": "Mandatory notification of trade and disclosure of large shareholding",
+      "dato": "2025-12-16",
+      "dato_tid": "2025-12-16T15:49:03.086000+00:00",
+      "message_id": 662196,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NORDH.OL",
+      "issuer_sign": "NORDH",
+      "issuer_name": "Nordhealth AS",
+      "tittel": "Mandatory Notification of Trade by Primary Insider in connection with conversion of shares",
+      "dato": "2025-12-16",
+      "dato_tid": "2025-12-16T13:58:58.933000+00:00",
+      "message_id": 662188,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "INIFY.OL",
+      "issuer_sign": "INIFY",
+      "issuer_name": "INIFY Laboratories AB",
+      "tittel": "Inify Laboratories - notification of trade",
+      "dato": "2025-12-16",
+      "dato_tid": "2025-12-16T13:11:57.038000+00:00",
+      "message_id": 662176,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AURG.OL",
+      "issuer_sign": "AURG",
+      "issuer_name": "Aurskog Sparebank",
+      "tittel": "Meldepliktig handel for primærinnsider",
+      "dato": "2025-12-16",
+      "dato_tid": "2025-12-16T10:37:42.321000+00:00",
+      "message_id": 662116,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VEND.OL",
+      "issuer_sign": "VEND",
+      "issuer_name": "Vend Marketplaces ASA",
+      "tittel": "Vend Marketplaces ASA: Vend Employee Share Saving Plan 2026",
+      "dato": "2025-12-15",
+      "dato_tid": "2025-12-15T22:00:48.306000+00:00",
+      "message_id": 662084,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "GEOS.OL",
+      "issuer_sign": "GEOS",
+      "issuer_name": "Golden Energy Offshore Services ASA",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2025-12-15",
+      "dato_tid": "2025-12-15T19:59:05.163000+00:00",
+      "message_id": 662083,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EAM.OL",
+      "issuer_sign": "EAM",
+      "issuer_name": "EAM Solar AS",
+      "tittel": "Meldepliktig handel for primærinnsider",
+      "dato": "2025-12-15",
+      "dato_tid": "2025-12-15T13:24:01.142000+00:00",
+      "message_id": 662068,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EAM.OL",
+      "issuer_sign": "EAM",
+      "issuer_name": "EAM Solar AS",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2025-12-15",
+      "dato_tid": "2025-12-15T13:24:01.135000+00:00",
+      "message_id": 662067,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "MOBA.OL",
+      "issuer_sign": "MOBA",
+      "issuer_name": "Morrow Bank ASA",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2025-12-15",
+      "dato_tid": "2025-12-15T11:24:41.804000+00:00",
+      "message_id": 661990,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "XPLRA.OL",
+      "issuer_sign": "XPLRA",
+      "issuer_name": "Xplora Technologies AS",
+      "tittel": "Xplora Technologies AS: Employee Share Purchase Program",
+      "dato": "2025-12-15",
+      "dato_tid": "2025-12-15T11:05:03.475000+00:00",
+      "message_id": 661988,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "MOBA.OL",
+      "issuer_sign": "MOBA",
+      "issuer_name": "Morrow Bank ASA",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2025-12-15",
+      "dato_tid": "2025-12-15T09:45:47.808000+00:00",
+      "message_id": 661976,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "MING.OL",
+      "issuer_sign": "MING",
+      "issuer_name": "SpareBank 1 SMN",
+      "tittel": "SpareBank 1 SMN: Mandatory notification of trade ",
+      "dato": "2025-12-15",
+      "dato_tid": "2025-12-15T07:30:00+00:00",
+      "message_id": 661967,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "MING.OL",
+      "issuer_sign": "MING",
+      "issuer_name": "SpareBank 1 SMN",
+      "tittel": "SpareBank 1 SMN: Meldepliktig handel for primærinnsidere",
+      "dato": "2025-12-15",
+      "dato_tid": "2025-12-15T07:30:00+00:00",
+      "message_id": 661966,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PUBLI.OL",
+      "issuer_sign": "PUBLI",
+      "issuer_name": "Public Property Invest ASA",
+      "tittel": "Public Property Invest ASA - Mandatory notification of trade and disclosure of large shareholding",
+      "dato": "2025-12-12",
+      "dato_tid": "2025-12-12T18:50:03.015000+00:00",
+      "message_id": 661939,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "RING.OL",
+      "issuer_sign": "RING",
+      "issuer_name": "SpareBank 1 Ringerike Hadeland",
+      "tittel": "SpareBank 1 Ringerike Hadeland viderefører spareprogram for ansatte",
+      "dato": "2025-12-12",
+      "dato_tid": "2025-12-12T14:36:36.682000+00:00",
+      "message_id": 661924,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AKER.OL",
+      "issuer_sign": "AKER",
+      "issuer_name": "Aker ASA",
+      "tittel": "Aker ASA: Mandatory notification of trade",
+      "dato": "2025-12-12",
+      "dato_tid": "2025-12-12T11:58:02.298000+00:00",
+      "message_id": 661885,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AURG.OL",
+      "issuer_sign": "AURG",
+      "issuer_name": "Aurskog Sparebank",
+      "tittel": "Meldepliktig handel for primærinnsider",
+      "dato": "2025-12-12",
+      "dato_tid": "2025-12-12T11:02:44.986000+00:00",
+      "message_id": 661881,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EPR.OL",
+      "issuer_sign": "EPR",
+      "issuer_name": "Europris ASA",
+      "tittel": "Europris ASA: Mandatory notification of trade",
+      "dato": "2025-12-11",
+      "dato_tid": "2025-12-11T20:02:26.701000+00:00",
+      "message_id": 661842,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ZAL.OL",
+      "issuer_sign": "ZAL",
+      "issuer_name": "Zalaris ASA",
+      "tittel": "Employee share purchase program",
+      "dato": "2025-12-11",
+      "dato_tid": "2025-12-11T16:18:55.007000+00:00",
+      "message_id": 661838,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "LYTIX.OL",
+      "issuer_sign": "LYTIX",
+      "issuer_name": "Lytix Biopharma AS",
+      "tittel": "LYTIX BIOPHARMA AS – MANDATORY NOTIFICATION OF TRADE BY PRIMARY INSIDER",
+      "dato": "2025-12-11",
+      "dato_tid": "2025-12-11T12:39:46.587000+00:00",
+      "message_id": 661716,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SNOR.OL",
+      "issuer_sign": "SNOR",
+      "issuer_name": "SpareBank 1 Nordmøre",
+      "tittel": "SNOR: SpareBank 1 Nordmøre – Meldepliktige handler for primærinnsidere",
+      "dato": "2025-12-10",
+      "dato_tid": "2025-12-10T21:30:00+00:00",
+      "message_id": 661680,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TINDE.OL",
+      "issuer_sign": "TINDE",
+      "issuer_name": "Tinde Sparebank",
+      "tittel": "Meldepliktig handel spareprogram for ansatte",
+      "dato": "2025-12-10",
+      "dato_tid": "2025-12-10T13:32:53.734000+00:00",
+      "message_id": 661661,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "MULTI.OL",
+      "issuer_sign": "MULTI",
+      "issuer_name": "Multiconsult ASA",
+      "tittel": "Correction: Mandatory notification of trade - primary insider",
+      "dato": "2025-12-10",
+      "dato_tid": "2025-12-10T13:14:25.302000+00:00",
+      "message_id": 661657,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "HAUTO.OL",
+      "issuer_sign": "HAUTO",
+      "issuer_name": "Höegh Autoliners ASA",
+      "tittel": "Höegh Autoliners ASA: Mandatory notification of trade from primary insiders",
+      "dato": "2025-12-10",
+      "dato_tid": "2025-12-10T06:30:00+00:00",
+      "message_id": 661591,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "MOBA.OL",
+      "issuer_sign": "MOBA",
+      "issuer_name": "Morrow Bank ASA",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2025-12-09",
+      "dato_tid": "2025-12-09T14:01:00+00:00",
+      "message_id": 661572,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NORBT.OL",
+      "issuer_sign": "NORBT",
+      "issuer_name": "NORBIT ASA",
+      "tittel": "NORBIT - Results of the 2025 employee incentive program and mandatory trade notification",
+      "dato": "2025-12-09",
+      "dato_tid": "2025-12-09T09:52:38.575000+00:00",
+      "message_id": 661539,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PEXIP.OL",
+      "issuer_sign": "PEXIP",
+      "issuer_name": "Pexip Holding ASA",
+      "tittel": "Mandatory notification of trade by Primary Insider",
+      "dato": "2025-12-09",
+      "dato_tid": "2025-12-09T08:21:05.752000+00:00",
+      "message_id": 661535,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "IDEX.OL",
+      "issuer_sign": "IDEX",
+      "issuer_name": "IDEX Biometrics ASA",
+      "tittel": "Mandatory disclosure of trade by primary insiders or close associates in IDEX Biometrics",
+      "dato": "2025-12-08",
+      "dato_tid": "2025-12-08T22:30:02.985000+00:00",
+      "message_id": 661521,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ENH.OL",
+      "issuer_sign": "ENH",
+      "issuer_name": "SED Energy Holdings Plc",
+      "tittel": "SED Energy Holdings Plc - Grant of Share Options to Primary Insiders",
+      "dato": "2025-12-08",
+      "dato_tid": "2025-12-08T20:00:03.095000+00:00",
+      "message_id": 661519,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TEKNA.OL",
+      "issuer_sign": "TEKNA",
+      "issuer_name": "Tekna Holding ASA",
+      "tittel": "Tekna Holding ASA: Granting of share options to executive management and key employees",
+      "dato": "2025-12-08",
+      "dato_tid": "2025-12-08T16:00:00+00:00",
+      "message_id": 661512,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "KOA.OL",
+      "issuer_sign": "KOA",
+      "issuer_name": "Kongsberg Automotive ASA",
+      "tittel": "Mandatory Notification of Trade - Primary Insiders",
+      "dato": "2025-12-08",
+      "dato_tid": "2025-12-08T12:11:28.850000+00:00",
+      "message_id": 661468,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ODL.OL",
+      "issuer_sign": "ODL",
+      "issuer_name": "Odfjell Drilling Ltd",
+      "tittel": "Odfjell Drilling Limited: Customary notification of trade by close associate of primary insider",
+      "dato": "2025-12-08",
+      "dato_tid": "2025-12-08T11:00:16.251000+00:00",
+      "message_id": 661466,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ONCIN.OL",
+      "issuer_sign": "ONCIN",
+      "issuer_name": "Oncoinvent ASA",
+      "tittel": "Oncoinvent ASA: Notification of trade - primary insider/close associate",
+      "dato": "2025-12-08",
+      "dato_tid": "2025-12-08T05:55:11.642000+00:00",
+      "message_id": 661415,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AKSO.OL",
+      "issuer_sign": "AKSO",
+      "issuer_name": "Aker Solutions ASA",
+      "tittel": "Aker Solutions ASA: Mandatory notification of trade by primary insider",
+      "dato": "2025-12-07",
+      "dato_tid": "2025-12-07T18:16:32.745000+00:00",
+      "message_id": 661413,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOSN.OL",
+      "issuer_sign": "NOSN",
+      "issuer_name": "NOS Nova AS",
+      "tittel": "Horisont Energi AS: Mandatory notification of trade",
+      "dato": "2025-12-06",
+      "dato_tid": "2025-12-06T17:27:27.300000+00:00",
+      "message_id": 661412,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "OTOVO.OL",
+      "issuer_sign": "OTOVO",
+      "issuer_name": "Otovo ASA",
+      "tittel": "OTOVO ASA – Mandatory Notification of Trade ",
+      "dato": "2025-12-05",
+      "dato_tid": "2025-12-05T18:53:07.396000+00:00",
+      "message_id": 661404,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOHAL.OL",
+      "issuer_sign": "NOHAL",
+      "issuer_name": "Nordic Halibut AS",
+      "tittel": "Nordic Halibut AS – Mandatory notification of trade ",
+      "dato": "2025-12-05",
+      "dato_tid": "2025-12-05T16:05:41.697000+00:00",
+      "message_id": 661400,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PUBLI.OL",
+      "issuer_sign": "PUBLI",
+      "issuer_name": "Public Property Invest ASA",
+      "tittel": "Mandatory notification of trade by primary insider",
+      "dato": "2025-12-05",
+      "dato_tid": "2025-12-05T15:37:01.932000+00:00",
+      "message_id": 661399,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "DFDS.OL",
+      "issuer_sign": "DFDS",
+      "issuer_name": "DFDS A/S",
+      "tittel": "MANAGERS' AND CLOSELY RELATED PARTIES' TRANSACTIONS WITH DFDS SHARES",
+      "dato": "2025-12-05",
+      "dato_tid": "2025-12-05T13:50:00.585000+00:00",
+      "message_id": 661393,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PEXIP.OL",
+      "issuer_sign": "PEXIP",
+      "issuer_name": "Pexip Holding ASA",
+      "tittel": "Mandatory notification of trade by Primary Insiders",
+      "dato": "2025-12-05",
+      "dato_tid": "2025-12-05T13:20:21.965000+00:00",
+      "message_id": 661392,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PEXIP.OL",
+      "issuer_sign": "PEXIP",
+      "issuer_name": "Pexip Holding ASA",
+      "tittel": "Mandatory notification of trade by Primary Insiders",
+      "dato": "2025-12-05",
+      "dato_tid": "2025-12-05T12:59:44.264000+00:00",
+      "message_id": 661390,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SBO.OL",
+      "issuer_sign": "SBO",
+      "issuer_name": "Selvaag Bolig ASA",
+      "tittel": "Selvaag Bolig ASA: Mandatory notification of trades by primary insider",
+      "dato": "2025-12-05",
+      "dato_tid": "2025-12-05T12:20:03.733000+00:00",
+      "message_id": 661388,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SBO.OL",
+      "issuer_sign": "SBO",
+      "issuer_name": "Selvaag Bolig ASA",
+      "tittel": "Selvaag Bolig ASA: Meldepliktig handel for primærinnsider",
+      "dato": "2025-12-05",
+      "dato_tid": "2025-12-05T12:20:03.692000+00:00",
+      "message_id": 661387,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PEXIP.OL",
+      "issuer_sign": "PEXIP",
+      "issuer_name": "Pexip Holding ASA",
+      "tittel": "Mandatory notification of trade by Primary Insiders",
+      "dato": "2025-12-05",
+      "dato_tid": "2025-12-05T11:11:57.067000+00:00",
+      "message_id": 661356,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PEXIP.OL",
+      "issuer_sign": "PEXIP",
+      "issuer_name": "Pexip Holding ASA",
+      "tittel": "Mandatory notification of trade by Primary Insiders",
+      "dato": "2025-12-05",
+      "dato_tid": "2025-12-05T10:08:01.614000+00:00",
+      "message_id": 661350,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AIRX.OL",
+      "issuer_sign": "AIRX",
+      "issuer_name": "Airthings ASA",
+      "tittel": "Airthings ASA – Mandatory notification of trade",
+      "dato": "2025-12-05",
+      "dato_tid": "2025-12-05T08:18:52.186000+00:00",
+      "message_id": 661342,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "HAUTO.OL",
+      "issuer_sign": "HAUTO",
+      "issuer_name": "Höegh Autoliners ASA",
+      "tittel": "Höegh Autoliners ASA: Mandatory notification of transaction by closely associated person to a primary insider",
+      "dato": "2025-12-05",
+      "dato_tid": "2025-12-05T08:16:17.259000+00:00",
+      "message_id": 661341,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TRE.OL",
+      "issuer_sign": "TRE",
+      "issuer_name": "Treasure ASA",
+      "tittel": "Treasure ASA: Final results of cash offer by Wilh. Wilhelmsen Holding ASA and holdings following compulsory acquisition",
+      "dato": "2025-12-05",
+      "dato_tid": "2025-12-05T06:30:00+00:00",
+      "message_id": 661329,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "SBO.OL",
+      "issuer_sign": "SBO",
+      "issuer_name": "Selvaag Bolig ASA",
+      "tittel": "Selvaag Bolig ASA: Mandatory notification of trades by primary insiders",
+      "dato": "2025-12-04",
+      "dato_tid": "2025-12-04T15:52:03.267000+00:00",
+      "message_id": 661317,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SBO.OL",
+      "issuer_sign": "SBO",
+      "issuer_name": "Selvaag Bolig ASA",
+      "tittel": "Selvaag Bolig ASA: Meldepliktig handel for primærinnsidere",
+      "dato": "2025-12-04",
+      "dato_tid": "2025-12-04T15:52:03.266000+00:00",
+      "message_id": 661316,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TRE.OL",
+      "issuer_sign": "TRE",
+      "issuer_name": "Treasure ASA",
+      "tittel": "Treasure ASA: Wilh. Wilhelmsen Holding ASA completes cash offer in Treasure ASA and resolves compulsory acquisition of remaining shares",
+      "dato": "2025-12-04",
+      "dato_tid": "2025-12-04T15:50:00+00:00",
+      "message_id": 661314,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "SAGA.OL",
+      "issuer_sign": "SAGA",
+      "issuer_name": "Saga Pure ASA",
+      "tittel": "Saga Pure ASA - Major shareholding notifications and mandatory notification of trade",
+      "dato": "2025-12-04",
+      "dato_tid": "2025-12-04T12:43:25.851000+00:00",
+      "message_id": 661293,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TEKNA.OL",
+      "issuer_sign": "TEKNA",
+      "issuer_name": "Tekna Holding ASA",
+      "tittel": "Tekna Holding ASA: Final subscription and allocation of shares to primary insiders in the rights issue ",
+      "dato": "2025-12-04",
+      "dato_tid": "2025-12-04T08:29:14.589000+00:00",
+      "message_id": 661207,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "AZT.OL",
+      "issuer_sign": "AZT",
+      "issuer_name": "ArcticZymes Technologies ASA",
+      "tittel": "ArcticZymes Technologies Sell Shares to Support Employee Share Purchase Program",
+      "dato": "2025-12-04",
+      "dato_tid": "2025-12-04T06:30:10.211000+00:00",
+      "message_id": 661195,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "OSUN.OL",
+      "issuer_sign": "OSUN",
+      "issuer_name": "Ocean Sun AS",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2025-12-03",
+      "dato_tid": "2025-12-03T21:40:25.944000+00:00",
+      "message_id": 661191,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TRE.OL",
+      "issuer_sign": "TRE",
+      "issuer_name": "Treasure ASA",
+      "tittel": "Treasure ASA: Acceptances received under cash offer of NOK 39.50 per share in Treasure ASA",
+      "dato": "2025-12-03",
+      "dato_tid": "2025-12-03T15:36:10.312000+00:00",
+      "message_id": 661185,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AURG.OL",
+      "issuer_sign": "AURG",
+      "issuer_name": "Aurskog Sparebank",
+      "tittel": "Meldepliktig handel for primærinnsider",
+      "dato": "2025-12-03",
+      "dato_tid": "2025-12-03T14:39:12.665000+00:00",
+      "message_id": 661181,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PROT.OL",
+      "issuer_sign": "PROT",
+      "issuer_name": "Protector Forsikring ASA",
+      "tittel": "Mandatory notification of trade - Protector Forsikring ASA",
+      "dato": "2025-12-03",
+      "dato_tid": "2025-12-03T14:14:02.918000+00:00",
+      "message_id": 661178,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ELO.OL",
+      "issuer_sign": "ELO",
+      "issuer_name": "Elopak ASA",
+      "tittel": "Elopak ASA: Mandatory notification of trade - sale of shares",
+      "dato": "2025-12-03",
+      "dato_tid": "2025-12-03T10:00:03.441000+00:00",
+      "message_id": 661133,
+      "type": "salg"
+    },
+    {
+      "ticker": "MULTI.OL",
+      "issuer_sign": "MULTI",
+      "issuer_name": "Multiconsult ASA",
+      "tittel": "Mandatory notification of trade - primary insiders",
+      "dato": "2025-12-03",
+      "dato_tid": "2025-12-03T09:41:19.975000+00:00",
+      "message_id": 661131,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PRYME.OL",
+      "issuer_sign": "PRYME",
+      "issuer_name": "Pryme N.V.",
+      "tittel": "Subscription by and conditional allocation to primary insiders in Pryme N.V. in a private placement",
+      "dato": "2025-12-02",
+      "dato_tid": "2025-12-02T21:45:00+00:00",
+      "message_id": 661107,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "SAGA.OL",
+      "issuer_sign": "SAGA",
+      "issuer_name": "Saga Pure ASA",
+      "tittel": "Saga Pure ASA - Mandatory notification of trade",
+      "dato": "2025-12-02",
+      "dato_tid": "2025-12-02T18:48:31.456000+00:00",
+      "message_id": 661101,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VAR.OL",
+      "issuer_sign": "VAR",
+      "issuer_name": "Vår Energi ASA",
+      "tittel": "Vår Energi ASA's share saving plan allocates shares",
+      "dato": "2025-12-02",
+      "dato_tid": "2025-12-02T18:05:59.753000+00:00",
+      "message_id": 661099,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AIRX.OL",
+      "issuer_sign": "AIRX",
+      "issuer_name": "Airthings ASA",
+      "tittel": "Airthings ASA – Mandatory notification of trade",
+      "dato": "2025-12-02",
+      "dato_tid": "2025-12-02T17:05:12.494000+00:00",
+      "message_id": 661093,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TRE.OL",
+      "issuer_sign": "TRE",
+      "issuer_name": "Treasure ASA",
+      "tittel": "Treasure ASA: Acceptances received under cash offer of NOK 39.50 per share in Treasure ASA",
+      "dato": "2025-12-02",
+      "dato_tid": "2025-12-02T15:50:00+00:00",
+      "message_id": 661090,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NTG.OL",
+      "issuer_sign": "NTG",
+      "issuer_name": "Nordic Technology Group AS",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2025-12-02",
+      "dato_tid": "2025-12-02T15:34:02.766000+00:00",
+      "message_id": 661089,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ONCIN.OL",
+      "issuer_sign": "ONCIN",
+      "issuer_name": "Oncoinvent ASA",
+      "tittel": "Oncoinvent ASA: Notification of trade - primary insider/close associate",
+      "dato": "2025-12-02",
+      "dato_tid": "2025-12-02T14:17:19.025000+00:00",
+      "message_id": 661083,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ORK.OL",
+      "issuer_sign": "ORK",
+      "issuer_name": "Orkla ASA",
+      "tittel": "Orkla ASA: Mandatory notification of trade   primary insiders",
+      "dato": "2025-12-02",
+      "dato_tid": "2025-12-02T11:24:02.975000+00:00",
+      "message_id": 661052,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "BAKKA.OL",
+      "issuer_sign": "BAKKA",
+      "issuer_name": "Bakkafrost P/f",
+      "tittel": "Share Savings Plan Transaction",
+      "dato": "2025-12-02",
+      "dato_tid": "2025-12-02T08:41:48.087000+00:00",
+      "message_id": 661038,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TRE.OL",
+      "issuer_sign": "TRE",
+      "issuer_name": "Treasure ASA",
+      "tittel": "Acceptances received under cash offer of NOK 39.50 per share in Treasure ASA",
+      "dato": "2025-12-02",
+      "dato_tid": "2025-12-02T08:20:19.781000+00:00",
+      "message_id": 661037,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NORSE.OL",
+      "issuer_sign": "NORSE",
+      "issuer_name": "Norse Atlantic ASA",
+      "tittel": "Norse Atlantic ASA: Mandatory notifications of trade - granting of share options to new CEO",
+      "dato": "2025-12-02",
+      "dato_tid": "2025-12-02T07:55:01.385000+00:00",
+      "message_id": 661036,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AIRX.OL",
+      "issuer_sign": "AIRX",
+      "issuer_name": "Airthings ASA",
+      "tittel": "Airthings ASA – Mandatory notification of trade",
+      "dato": "2025-12-01",
+      "dato_tid": "2025-12-01T18:04:00+00:00",
+      "message_id": 661014,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "GENEF.OL",
+      "issuer_sign": "GENEF",
+      "issuer_name": "Genel Energy Finance 4 plc",
+      "tittel": "Genel Energy PLC: Director/PDMR Shareholding",
+      "dato": "2025-12-01",
+      "dato_tid": "2025-12-01T16:30:15.730000+00:00",
+      "message_id": 661011,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TRE.OL",
+      "issuer_sign": "TRE",
+      "issuer_name": "Treasure ASA",
+      "tittel": "Treasure ASA: Acceptances received under cash offer of NOK 39.50 per share in Treasure ASA",
+      "dato": "2025-12-01",
+      "dato_tid": "2025-12-01T16:10:08.770000+00:00",
+      "message_id": 661009,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOFIN.OL",
+      "issuer_sign": "NOFIN",
+      "issuer_name": "Nordic Financials ASA",
+      "tittel": "Mandatory Notification of Trading by Primary Insiders",
+      "dato": "2025-12-01",
+      "dato_tid": "2025-12-01T15:44:50.971000+00:00",
+      "message_id": 661006,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOFIN.OL",
+      "issuer_sign": "NOFIN",
+      "issuer_name": "Nordic Financials ASA",
+      "tittel": "Meldepliktig handel av primærinnsidere",
+      "dato": "2025-12-01",
+      "dato_tid": "2025-12-01T15:44:50.970000+00:00",
+      "message_id": 661005,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PROT.OL",
+      "issuer_sign": "PROT",
+      "issuer_name": "Protector Forsikring ASA",
+      "tittel": "Mandatory notification of trade - Protector Forsikring ASA",
+      "dato": "2025-12-01",
+      "dato_tid": "2025-12-01T14:15:02.704000+00:00",
+      "message_id": 660998,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NKR.OL",
+      "issuer_sign": "NKR",
+      "issuer_name": "Nekkar ASA",
+      "tittel": "Nekkar ASA: Sale of shares under the Employee and Board Member Share Program",
+      "dato": "2025-12-01",
+      "dato_tid": "2025-12-01T13:35:40.751000+00:00",
+      "message_id": 660994,
+      "type": "salg"
+    },
+    {
+      "ticker": "CADLR.OL",
+      "issuer_sign": "CADLR",
+      "issuer_name": "Cadeler A/S",
+      "tittel": "CADELER A/S: REPORTING ON TRANSACTIONS IN CADELER A/S SHARES BY PERSONS DISCHARGING MANAGERIAL RESPONSIBILITIES AND PERSONS CLOSELY ASSOCIATED WITH THEM",
+      "dato": "2025-12-01",
+      "dato_tid": "2025-12-01T13:00:00+00:00",
+      "message_id": 660992,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TRE.OL",
+      "issuer_sign": "TRE",
+      "issuer_name": "Treasure ASA",
+      "tittel": "Treasure ASA: Acceptances received under cash offer of NOK 39.50 per share in Treasure ASA",
+      "dato": "2025-12-01",
+      "dato_tid": "2025-12-01T12:25:00+00:00",
+      "message_id": 660965,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NRC.OL",
+      "issuer_sign": "NRC",
+      "issuer_name": "NRC Group ASA",
+      "tittel": "Mandatory notification of trade - Primary insider",
+      "dato": "2025-12-01",
+      "dato_tid": "2025-12-01T09:24:36.909000+00:00",
+      "message_id": 660957,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EISP.OL",
+      "issuer_sign": "EISP",
+      "issuer_name": "Eiendomsspar AS",
+      "tittel": "Eiendomsspar – Videreføring av aksjebasert incentivordning og meldepliktig handel",
+      "dato": "2025-12-01",
+      "dato_tid": "2025-12-01T08:31:38.863000+00:00",
+      "message_id": 660948,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PEN.OL",
+      "issuer_sign": "PEN",
+      "issuer_name": "Panoro Energy ASA",
+      "tittel": "Mandatory Notification of Trades - COO and President Buys Shares in Panoro Energy ASA",
+      "dato": "2025-12-01",
+      "dato_tid": "2025-12-01T06:30:13.018000+00:00",
+      "message_id": 660922,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "CLCO.OL",
+      "issuer_sign": "CLCO",
+      "issuer_name": "Cool Company Ltd.",
+      "tittel": "COOL COMPANY LTD - VESTING OF RESTRICTED STOCK UNITS TO PRIMARY INSIDERS AND MANDATORY NOTIFICATION OF TRADES",
+      "dato": "2025-12-01",
+      "dato_tid": "2025-12-01T06:00:00+00:00",
+      "message_id": 660912,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SATS.OL",
+      "issuer_sign": "SATS",
+      "issuer_name": "SATS ASA",
+      "tittel": "SATS ASA: Mandatory notification of trade",
+      "dato": "2025-11-28",
+      "dato_tid": "2025-11-28T19:50:02.853000+00:00",
+      "message_id": 660903,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AIRX.OL",
+      "issuer_sign": "AIRX",
+      "issuer_name": "Airthings ASA",
+      "tittel": "Airthings ASA – Mandatory notification of trade",
+      "dato": "2025-11-28",
+      "dato_tid": "2025-11-28T16:52:41.624000+00:00",
+      "message_id": 660901,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOFIN.OL",
+      "issuer_sign": "NOFIN",
+      "issuer_name": "Nordic Financials ASA",
+      "tittel": "Meldepliktig handel av primærinnsidere",
+      "dato": "2025-11-28",
+      "dato_tid": "2025-11-28T15:45:12.902000+00:00",
+      "message_id": 660888,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOFIN.OL",
+      "issuer_sign": "NOFIN",
+      "issuer_name": "Nordic Financials ASA",
+      "tittel": "Mandatory Notification of Trading by Primary Insiders",
+      "dato": "2025-11-28",
+      "dato_tid": "2025-11-28T15:45:12.901000+00:00",
+      "message_id": 660887,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AKSO.OL",
+      "issuer_sign": "AKSO",
+      "issuer_name": "Aker Solutions ASA",
+      "tittel": "Aker Solutions ASA: Reporting of transactions made by persons discharging managerial responsibilities",
+      "dato": "2025-11-28",
+      "dato_tid": "2025-11-28T15:35:58.846000+00:00",
+      "message_id": 660884,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ARR.OL",
+      "issuer_sign": "ARR",
+      "issuer_name": "Arribatec Group ASA",
+      "tittel": "Arribatec Group ASA: Mandatory notification of trade",
+      "dato": "2025-11-28",
+      "dato_tid": "2025-11-28T14:49:16.646000+00:00",
+      "message_id": 660876,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ARR.OL",
+      "issuer_sign": "ARR",
+      "issuer_name": "Arribatec Group ASA",
+      "tittel": "Arribatec Group ASA: Mandatory notification of trade",
+      "dato": "2025-11-28",
+      "dato_tid": "2025-11-28T14:48:08.120000+00:00",
+      "message_id": 660875,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ARR.OL",
+      "issuer_sign": "ARR",
+      "issuer_name": "Arribatec Group ASA",
+      "tittel": "Arribatec Group ASA: Employee Share Purchase Program (ESPP) mandatory notification",
+      "dato": "2025-11-28",
+      "dato_tid": "2025-11-28T14:35:35.906000+00:00",
+      "message_id": 660872,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "VOW.OL",
+      "issuer_sign": "VOW",
+      "issuer_name": "Vow ASA",
+      "tittel": "Vow ASA: Mandatory notification of trade by primary insiders and their close associates",
+      "dato": "2025-11-27",
+      "dato_tid": "2025-11-27T19:49:55.516000+00:00",
+      "message_id": 660795,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ELO.OL",
+      "issuer_sign": "ELO",
+      "issuer_name": "Elopak ASA",
+      "tittel": "Elopak ASA: Mandatory notification of trade - sale of shares",
+      "dato": "2025-11-27",
+      "dato_tid": "2025-11-27T16:15:03.307000+00:00",
+      "message_id": 660790,
+      "type": "salg"
+    },
+    {
+      "ticker": "AIRX.OL",
+      "issuer_sign": "AIRX",
+      "issuer_name": "Airthings ASA",
+      "tittel": "Airthings ASA – Mandatory notification of trade",
+      "dato": "2025-11-27",
+      "dato_tid": "2025-11-27T16:09:03.432000+00:00",
+      "message_id": 660789,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TEKNA.OL",
+      "issuer_sign": "TEKNA",
+      "issuer_name": "Tekna Holding ASA",
+      "tittel": "Tekna Holding ASA: Disposal and Subscription by primary insider in the rights issue",
+      "dato": "2025-11-27",
+      "dato_tid": "2025-11-27T15:57:19.322000+00:00",
+      "message_id": 660787,
+      "type": "salg"
+    },
+    {
+      "ticker": "AURG.OL",
+      "issuer_sign": "AURG",
+      "issuer_name": "Aurskog Sparebank",
+      "tittel": "Meldepliktig handel for primærinnsider",
+      "dato": "2025-11-27",
+      "dato_tid": "2025-11-27T13:00:48.760000+00:00",
+      "message_id": 660771,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ONCIN.OL",
+      "issuer_sign": "ONCIN",
+      "issuer_name": "Oncoinvent ASA",
+      "tittel": "Oncoinvent ASA: Notification of trade - primary insider/close associate",
+      "dato": "2025-11-27",
+      "dato_tid": "2025-11-27T11:59:36.849000+00:00",
+      "message_id": 660766,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "HAV.OL",
+      "issuer_sign": "HAV",
+      "issuer_name": "HAV Group ASA",
+      "tittel": "Notification of trade",
+      "dato": "2025-11-27",
+      "dato_tid": "2025-11-27T11:30:21.220000+00:00",
+      "message_id": 660733,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "BOUV.OL",
+      "issuer_sign": "BOUV",
+      "issuer_name": "Bouvet ASA",
+      "tittel": "Bouvet ASA – Mandatory Notification of Trade",
+      "dato": "2025-11-27",
+      "dato_tid": "2025-11-27T10:34:37.889000+00:00",
+      "message_id": 660727,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "BOUV.OL",
+      "issuer_sign": "BOUV",
+      "issuer_name": "Bouvet ASA",
+      "tittel": " Bouvet ASA – Meldepliktig handel",
+      "dato": "2025-11-27",
+      "dato_tid": "2025-11-27T10:34:37.849000+00:00",
+      "message_id": 660726,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "HAUTO.OL",
+      "issuer_sign": "HAUTO",
+      "issuer_name": "Höegh Autoliners ASA",
+      "tittel": "Höegh Autoliners ASA – Mandatory notification of transaction from a primary insider",
+      "dato": "2025-11-27",
+      "dato_tid": "2025-11-27T08:00:00+00:00",
+      "message_id": 660713,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SHLF.OL",
+      "issuer_sign": "SHLF",
+      "issuer_name": "Shelf Drilling, Ltd.",
+      "tittel": "Shelf Drilling, Ltd. - Mandatory notification of trade by primary insiders",
+      "dato": "2025-11-26",
+      "dato_tid": "2025-11-26T21:03:56.980000+00:00",
+      "message_id": 660690,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "MOWI.OL",
+      "issuer_sign": "MOWI",
+      "issuer_name": "Mowi ASA",
+      "tittel": "Mowi (OSE:MOWI): Share purchase program for employees in Mowi",
+      "dato": "2025-11-26",
+      "dato_tid": "2025-11-26T20:51:44.806000+00:00",
+      "message_id": 660689,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "AIRX.OL",
+      "issuer_sign": "AIRX",
+      "issuer_name": "Airthings ASA",
+      "tittel": "Airthings ASA – Mandatory notification of trade",
+      "dato": "2025-11-26",
+      "dato_tid": "2025-11-26T15:30:00+00:00",
+      "message_id": 660671,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VAR.OL",
+      "issuer_sign": "VAR",
+      "issuer_name": "Vår Energi ASA",
+      "tittel": "Vår Energi ASA: Notification of trade by primary insider",
+      "dato": "2025-11-26",
+      "dato_tid": "2025-11-26T14:49:00.902000+00:00",
+      "message_id": 660668,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "KIT.OL",
+      "issuer_sign": "KIT",
+      "issuer_name": "Kitron ASA",
+      "tittel": "KITRON ASA: MELDEPLIKTIG HANDEL PRIMÆRINNSIDERE",
+      "dato": "2025-11-25",
+      "dato_tid": "2025-11-25T22:38:10.679000+00:00",
+      "message_id": 660559,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "KIT.OL",
+      "issuer_sign": "KIT",
+      "issuer_name": "Kitron ASA",
+      "tittel": "KITRON ASA: PRIMARY INSIDER NOTIFICATION",
+      "dato": "2025-11-25",
+      "dato_tid": "2025-11-25T22:38:10.639000+00:00",
+      "message_id": 660558,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TEKNA.OL",
+      "issuer_sign": "TEKNA",
+      "issuer_name": "Tekna Holding ASA",
+      "tittel": "Tekna Holding ASA: Acquisition and Subscription by primary insiders in the rights issue",
+      "dato": "2025-11-25",
+      "dato_tid": "2025-11-25T15:39:39.574000+00:00",
+      "message_id": 660546,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "GOD.OL",
+      "issuer_sign": "GOD",
+      "issuer_name": "Goodtech ASA",
+      "tittel": "Mandatory notification of trade by primary insider",
+      "dato": "2025-11-25",
+      "dato_tid": "2025-11-25T15:20:45.287000+00:00",
+      "message_id": 660539,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NAS.OL",
+      "issuer_sign": "NAS",
+      "issuer_name": "Norwegian Air Shuttle ASA",
+      "tittel": "Norwegian Air Shuttle ASA (NAS) - Mandatory notification of trade",
+      "dato": "2025-11-25",
+      "dato_tid": "2025-11-25T10:55:00+00:00",
+      "message_id": 660486,
+      "type": "ukjent"
+    }
+  ]
+}

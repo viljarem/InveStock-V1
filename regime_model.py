@@ -1,6 +1,18 @@
 """
-Gaussian Mixture Model for Market Regime Detection
+Hidden Markov Model for Market Regime Detection
 Inspirert av Two Sigma: https://www.twosigma.com/articles/a-machine-learning-approach-to-regime-modeling/
+
+HMM er bedre enn GMM for regimedeteksjon fordi:
+- Modellerer tidsavhengighet mellom regimer
+- Gir naturlige overgangsmatriser
+- Unngår urealistisk hyppige regimeskifter
+
+Features (utvidet v2):
+- rolling_return: annualisert 20-dagers avkastning
+- volatility: annualisert 20-dagers volatilitet
+- volume_trend: volum vs 50-dagers snitt (institusjonell aktivitet)
+- momentum_roc: 60-dagers rate of change (trendstyrke)
+- breadth: % av daglige avkastninger > 0 siste 20d (proxy for bredde)
 
 Regimer basert på avkastning og volatilitet:
 - "Steady Bull": Høy avkastning, lav volatilitet (ideelt marked)
@@ -9,66 +21,80 @@ Regimer basert på avkastning og volatilitet:
 - "Correction": Negativ avkastning, moderat volatilitet
 - "Crisis": Negativ avkastning, høy volatilitet (panikk/krasj)
 """
+from log_config import get_logger
+logger = get_logger(__name__)
 
+import os
+import json
+import hashlib
 import numpy as np
 import pandas as pd
-from sklearn.mixture import GaussianMixture
+from hmmlearn import hmm
 from sklearn.preprocessing import StandardScaler
 import warnings
 warnings.filterwarnings('ignore')
 
+import config
 
-# Regime-definisjoner med beskrivende navn, emoji og farger
+# Cache-sti for modellparametere
+MODEL_CACHE_DIR = os.path.join(config.DATA_DIR, "regime_cache")
+os.makedirs(MODEL_CACHE_DIR, exist_ok=True)
+
+
+# Regime-definisjoner - kun disse 5 finnes
 REGIME_DEFINITIONS = {
-    'steady_bull': {
-        'name': 'Steady Bull',
-        'description': 'Stabil oppgang med lav volatilitet - ideelle forhold',
+    'bull': {
+        'name': 'Bull Market',
+        'description': 'Sterk oppgang - ideelle forhold for aksjer',
         'emoji': '🚀',
         'color': '#00C805',
         'action': 'Aggressiv posisjonering'
     },
-    'volatile_bull': {
-        'name': 'Volatile Rally',
-        'description': 'Oppgang med høy usikkerhet - vær forberedt på svingninger',
-        'emoji': '🎢',
+    'mild_bull': {
+        'name': 'Mild Bull',
+        'description': 'Moderat oppgang med lav risiko',
+        'emoji': '📈',
         'color': '#90EE90',
-        'action': 'Moderat posisjonering med tett stop-loss'
+        'action': 'Normal eksponering'
     },
-    'walking_on_ice': {
-        'name': 'Walking on Ice',
-        'description': 'Rolig marked uten klar retning - avvent bedre muligheter',
-        'emoji': '🧊',
+    'neutral': {
+        'name': 'Nøytral',
+        'description': 'Sidelengs marked - avvent bedre muligheter',
+        'emoji': '➡️',
         'color': '#87CEEB',
         'action': 'Reduser eksponering, vent på signal'
     },
-    'correction': {
-        'name': 'Correction',
-        'description': 'Moderat nedgang - normal markedskorreksjon',
+    'mild_bear': {
+        'name': 'Mild Bear',
+        'description': 'Moderat nedgang - vær forsiktig',
         'emoji': '📉',
         'color': '#FFA500',
-        'action': 'Defensiv, vurder hedging'
+        'action': 'Defensiv posisjonering'
     },
-    'crisis': {
-        'name': 'Crisis Mode',
-        'description': 'Høy volatilitet og negativ avkastning - beskyttelsesmodus',
+    'bear': {
+        'name': 'Bear Market',
+        'description': 'Sterk nedgang - beskyttelsesmodus',
         'emoji': '🔥',
         'color': '#FF5252',
-        'action': 'Maksimer kontanter, strengt risikostyring'
+        'action': 'Maksimer kontanter, unngå risiko'
     }
 }
 
 
 def beregn_regime_features(df_market: pd.DataFrame, lookback: int = 20) -> pd.DataFrame:
     """
-    Beregner features for regimemodellering fra markedsindeks-data.
+    Beregner utvidede features for regimemodellering.
+    
+    Nye features (v2):
+    - volume_trend: relativ volum vs 50d snitt (fanger institusjonell aktivitet)
+    - momentum_roc: 60-dagers Rate of Change (trendstyrke)
+    - breadth: andel positive daglige avkastninger siste 20d (proxy for markedsbredde)
     """
     df = df_market.copy()
     
-    # Håndter MultiIndex kolonner (fra yfinance)
     if isinstance(df.columns, pd.MultiIndex):
         df.columns = df.columns.get_level_values(0)
     
-    # Finn Close-kolonnen
     if 'Close' not in df.columns:
         close_candidates = [c for c in df.columns if 'close' in str(c).lower()]
         if close_candidates:
@@ -76,7 +102,6 @@ def beregn_regime_features(df_market: pd.DataFrame, lookback: int = 20) -> pd.Da
         else:
             raise ValueError(f"Finner ikke 'Close'-kolonnen. Tilgjengelige: {df.columns.tolist()}")
     
-    # Konverter og rens data
     df['Close'] = pd.to_numeric(df['Close'], errors='coerce')
     df = df[~df.index.duplicated(keep='first')]
     df = df.sort_index()
@@ -85,199 +110,305 @@ def beregn_regime_features(df_market: pd.DataFrame, lookback: int = 20) -> pd.Da
     if len(df) < lookback * 3:
         raise ValueError(f"For lite data: {len(df)} rader, trenger minst {lookback * 3}")
     
-    # Beregn features
+    # Originale features
     df['returns'] = df['Close'].pct_change()
-    
     min_periods = max(5, lookback // 2)
-    
-    # Annualisert volatilitet (standardavvik * sqrt(252))
     df['volatility'] = df['returns'].rolling(lookback, min_periods=min_periods).std() * np.sqrt(252)
-    
-    # Annualisert rullerende avkastning (gjennomsnitt * 252)
     df['rolling_return'] = df['returns'].rolling(lookback, min_periods=min_periods).mean() * 252
     
-    # Ekstra features for bedre regime-separasjon
-    df['vol_of_vol'] = df['volatility'].rolling(lookback, min_periods=min_periods).std()
-    df['momentum'] = df['Close'].pct_change(lookback)
-    df['drawdown'] = df['Close'] / df['Close'].rolling(lookback * 2, min_periods=lookback).max() - 1
+    # Nye features v2
+    # 1. Volum-trend: relativ volum vs 50-dagers snitt
+    if 'Volume' in df.columns:
+        vol_ma50 = df['Volume'].rolling(50, min_periods=20).mean()
+        df['volume_trend'] = (df['Volume'].rolling(lookback).mean() / vol_ma50).fillna(1.0)
+        # Clip ekstremverdier
+        df['volume_trend'] = df['volume_trend'].clip(0.2, 5.0)
+    else:
+        df['volume_trend'] = 1.0
     
-    # Fjern NaN - kun i de kritiske kolonnene
+    # 2. Momentum: 60-dagers Rate of Change
+    roc_period = 60
+    df['momentum_roc'] = df['Close'].pct_change(roc_period) * 100  # i prosent
+    df['momentum_roc'] = df['momentum_roc'].clip(-50, 50)  # Clip ekstremverdier
+    
+    # 3. Bredde-proxy: andel positive dager siste 20d
+    df['breadth'] = (df['returns'] > 0).rolling(lookback, min_periods=min_periods).mean()
+    
     df = df.dropna(subset=['volatility', 'rolling_return'])
     
     return df
 
 
-def klassifiser_regime_type(avg_return: float, avg_vol: float, 
-                            all_returns: np.ndarray, all_vols: np.ndarray) -> str:
-    """
-    Klassifiserer et regime basert på gjennomsnittlig avkastning og volatilitet.
-    Bruker percentiler fra datasettet for dynamiske terskler.
-    """
-    # Beregn percentiler for dynamiske terskler
-    ret_median = np.median(all_returns)
-    vol_median = np.median(all_vols)
-    ret_75 = np.percentile(all_returns, 75)
-    ret_25 = np.percentile(all_returns, 25)
-    vol_75 = np.percentile(all_vols, 75)
-    vol_25 = np.percentile(all_vols, 25)
-    
-    high_return = avg_return > ret_75
-    positive_return = avg_return > ret_median
-    negative_return = avg_return < ret_25
-    high_vol = avg_vol > vol_75
-    low_vol = avg_vol < vol_25
-    
-    # Klassifiser basert på kombinasjoner
-    if high_return and low_vol:
-        return 'steady_bull'
-    elif high_return and high_vol:
-        return 'volatile_bull'
-    elif positive_return and not high_vol:
-        return 'walking_on_ice'  # Moderat positiv, ikke høy vol
-    elif negative_return and high_vol:
-        return 'crisis'
-    elif negative_return:
-        return 'correction'
-    else:
-        return 'walking_on_ice'  # Default for nøytrale tilstander
+def get_regime_config(n_regimes: int) -> list:
+    """Returnerer regime-typer basert på antall valgte regimer."""
+    configs = {
+        2: ['bull', 'bear'],
+        3: ['bull', 'neutral', 'bear'],
+        4: ['bull', 'mild_bull', 'mild_bear', 'bear'],
+        5: ['bull', 'mild_bull', 'neutral', 'mild_bear', 'bear']
+    }
+    return configs.get(n_regimes, configs[3])
 
 
-def tren_gmm_model(df_features: pd.DataFrame, n_regimes: int = 3, 
-                   feature_cols: list = None) -> tuple:
+def _data_hash(X: np.ndarray) -> str:
+    """Genererer hash av feature-data for cache-nøkkel."""
+    return hashlib.md5(X.tobytes()[:4096]).hexdigest()[:12]
+
+
+def _cache_path(data_hash: str, n_regimes: int) -> str:
+    """Returnerer filsti for cached modell."""
+    return os.path.join(MODEL_CACHE_DIR, f"hmm_{n_regimes}r_{data_hash}.json")
+
+
+def _save_model_cache(path: str, model, scaler, feature_cols: list, bic_score: float):
+    """Lagrer modellparametere til disk (JSON-serialiserbart)."""
+    try:
+        cache_data = {
+            'means': model.means_.tolist(),
+            'covars': model.covars_.tolist(),
+            'transmat': model.transmat_.tolist(),
+            'startprob': model.startprob_.tolist(),
+            'n_components': model.n_components,
+            'scaler_mean': scaler.mean_.tolist(),
+            'scaler_scale': scaler.scale_.tolist(),
+            'feature_cols': feature_cols,
+            'bic_score': bic_score
+        }
+        with open(path, 'w') as f:
+            json.dump(cache_data, f)
+        logger.info(f"Regime-modell cached: {path}")
+    except Exception as e:
+        logger.warning(f"Kunne ikke cache regime-modell: {e}")
+
+
+def _load_model_cache(path: str):
+    """Laster modellparametere fra disk. Returnerer (model, scaler, feature_cols, bic) eller None."""
+    try:
+        if not os.path.exists(path):
+            return None
+        with open(path, 'r') as f:
+            cache_data = json.load(f)
+        
+        n = cache_data['n_components']
+        model = hmm.GaussianHMM(n_components=n, covariance_type='full')
+        model.means_ = np.array(cache_data['means'])
+        model.covars_ = np.array(cache_data['covars'])
+        model.transmat_ = np.array(cache_data['transmat'])
+        model.startprob_ = np.array(cache_data['startprob'])
+        model.n_features = len(cache_data['feature_cols'])
+        
+        scaler = StandardScaler()
+        scaler.mean_ = np.array(cache_data['scaler_mean'])
+        scaler.scale_ = np.array(cache_data['scaler_scale'])
+        scaler.var_ = scaler.scale_ ** 2
+        scaler.n_features_in_ = len(cache_data['feature_cols'])
+        
+        logger.info(f"Regime-modell lastet fra cache: {path}")
+        return model, scaler, cache_data['feature_cols'], cache_data.get('bic_score', 0)
+    except Exception as e:
+        logger.warning(f"Kunne ikke laste regime-cache: {e}")
+        return None
+
+
+def _beregn_bic(model, X_scaled: np.ndarray) -> float:
     """
-    Trener en Gaussian Mixture Model for å identifisere markedsregimer.
+    Beregner Bayesian Information Criterion (BIC) for modellvalg.
+    BIC = -2 * log_likelihood + k * ln(n)
+    Lavere BIC = bedre modell (balanserer fit vs kompleksitet).
+    """
+    n_samples = X_scaled.shape[0]
+    n_features = X_scaled.shape[1]
+    n_components = model.n_components
+    
+    log_likelihood = model.score(X_scaled) * n_samples
+    
+    # Antall frie parametere i GaussianHMM med full covariance
+    k = (n_components - 1)  # startprob
+    k += n_components * (n_components - 1)  # transmat
+    k += n_components * n_features  # means
+    k += n_components * n_features * (n_features + 1) // 2  # full covariance
+    
+    bic = -2 * log_likelihood + k * np.log(n_samples)
+    return bic
+
+
+def velg_optimalt_antall_regimer(df_features: pd.DataFrame,
+                                  feature_cols: list = None,
+                                  max_regimer: int = 6) -> dict:
+    """
+    Evaluerer BIC for 2-max_regimer og returnerer optimal modell.
+    
+    Returns:
+        dict med 'optimal_n', 'bic_scores', 'modeller'
     """
     if feature_cols is None:
-        feature_cols = ['rolling_return', 'volatility']
+        feature_cols = _get_available_features(df_features)
     
-    # Verifiser kolonner
-    missing_cols = [col for col in feature_cols if col not in df_features.columns]
-    if missing_cols:
-        raise ValueError(f"Manglende kolonner: {missing_cols}")
+    X = df_features[feature_cols].copy()
+    valid_mask = X.notna().all(axis=1) & np.isfinite(X).all(axis=1)
+    X = X[valid_mask].values
     
-    # Hent data og fjern NaN/Inf
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
+    
+    bic_scores = {}
+    modeller = {}
+    
+    for n in range(2, max_regimer + 1):
+        if len(X) < n * 20:
+            continue
+        try:
+            model = hmm.GaussianHMM(
+                n_components=n, covariance_type='full',
+                n_iter=200, random_state=42, tol=1e-4, verbose=False
+            )
+            model.fit(X_scaled)
+            bic = _beregn_bic(model, X_scaled)
+            bic_scores[n] = bic
+            modeller[n] = model
+            logger.info(f"BIC for {n} regimer: {bic:.0f}")
+        except Exception as e:
+            logger.warning(f"BIC-eval feilet for {n} regimer: {e}")
+    
+    if not bic_scores:
+        return {'optimal_n': 3, 'bic_scores': {}, 'modeller': {}}
+    
+    optimal_n = min(bic_scores, key=bic_scores.get)
+    logger.info(f"Optimalt antall regimer (BIC): {optimal_n}")
+    
+    return {
+        'optimal_n': optimal_n,
+        'bic_scores': bic_scores,
+        'modeller': modeller
+    }
+
+
+def _get_available_features(df: pd.DataFrame) -> list:
+    """Returnerer tilgjengelige feature-kolonner fra DataFrame."""
+    all_features = ['rolling_return', 'volatility', 'volume_trend', 'momentum_roc', 'breadth']
+    return [f for f in all_features if f in df.columns and df[f].notna().sum() > 50]
+
+
+def tren_hmm_model(df_features: pd.DataFrame, n_regimes: int = 3, 
+                   feature_cols: list = None, use_cache: bool = True) -> tuple:
+    """
+    Trener HMM for regimedeteksjon.
+    
+    Forbedringer v2:
+    - Bruker utvidede features (volum, momentum, bredde)
+    - Cacher modellparametere til disk
+    - Returnerer BIC-score
+    """
+    if feature_cols is None:
+        feature_cols = _get_available_features(df_features)
+    
     X = df_features[feature_cols].copy()
     valid_mask = X.notna().all(axis=1) & np.isfinite(X).all(axis=1)
     X = X[valid_mask].values
     
     if len(X) < n_regimes * 20:
-        raise ValueError(f"For lite gyldig data for {n_regimes} regimer: {len(X)} rader")
+        raise ValueError(f"For lite data for {n_regimes} regimer: {len(X)} rader")
     
-    # Standardiser
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
     
-    # Tren GMM med flere initialiseringer for stabilitet
-    gmm = GaussianMixture(
+    # Sjekk cache
+    data_hash = _data_hash(X_scaled)
+    cache_file = _cache_path(data_hash, n_regimes)
+    
+    if use_cache:
+        cached = _load_model_cache(cache_file)
+        if cached is not None:
+            model, cached_scaler, cached_cols, bic = cached
+            return model, cached_scaler, cached_cols, bic
+    
+    model = hmm.GaussianHMM(
         n_components=n_regimes,
         covariance_type='full',
-        n_init=20,
+        n_iter=200,
         random_state=42,
-        max_iter=300,
-        tol=1e-4
+        tol=1e-4,
+        verbose=False
     )
-    gmm.fit(X_scaled)
+    model.fit(X_scaled)
     
-    return gmm, scaler, feature_cols
+    bic = _beregn_bic(model, X_scaled)
+    
+    # Cache til disk
+    _save_model_cache(cache_file, model, scaler, feature_cols, bic)
+    
+    return model, scaler, feature_cols, bic
 
 
-def klassifiser_regimer(gmm, scaler, feature_cols: list, 
+def klassifiser_regimer(hmm_model, scaler, feature_cols: list, 
                         df_features: pd.DataFrame) -> tuple:
-    """
-    Klassifiserer hver dag inn i et regime med beskrivende navn.
-    """
-    # Forbered data
+    """Klassifiserer regimer med konsistente navn."""
+    n_regimes = hmm_model.n_components
+    regime_types = get_regime_config(n_regimes)
+    
     X = df_features[feature_cols].copy()
     valid_mask = X.notna().all(axis=1) & np.isfinite(X).all(axis=1)
     
-    # Lag resultat-DataFrame
     df_result = df_features.copy()
-    df_result['regime'] = -1  # Default verdi
+    df_result['regime'] = -1
     
-    # Bare prosesser gyldige rader
     X_valid = X[valid_mask].values
     X_scaled = scaler.transform(X_valid)
     
-    # Prediker for gyldige rader
-    regimes_valid = gmm.predict(X_scaled)
-    probs_valid = gmm.predict_proba(X_scaled)
+    regimes_valid = hmm_model.predict(X_scaled)
+    probs_valid = hmm_model.predict_proba(X_scaled)
     
-    # Sett verdier for gyldige rader
     df_result.loc[valid_mask, 'regime'] = regimes_valid
     
-    # Legg til sannsynligheter
-    for i in range(gmm.n_components):
+    for i in range(n_regimes):
         df_result[f'prob_regime_{i}'] = 0.0
         df_result.loc[valid_mask, f'prob_regime_{i}'] = probs_valid[:, i]
     
-    # Fjern rader uten gyldig regime
     df_result = df_result[df_result['regime'] >= 0]
     
-    # Beregn statistikk per regime
+    # Beregn snitt per regime og ranger fra best til verst
     regime_stats = df_result.groupby('regime').agg({
         'rolling_return': 'mean',
         'volatility': 'mean'
     })
     
-    # Hent alle returns og vols for dynamisk klassifisering
-    all_returns = regime_stats['rolling_return'].values
-    all_vols = regime_stats['volatility'].values
+    # Score: høy avkastning bra, høy volatilitet dårlig
+    regime_stats['score'] = regime_stats['rolling_return'] - 0.3 * regime_stats['volatility']
+    sorted_regimes = regime_stats.sort_values('score', ascending=False).index.tolist()
     
-    # Klassifiser hvert regime og lag labels
+    # Map HMM regime-ID til våre regime-typer
     regime_labels = {}
-    used_types = set()
-    
-    for regime_id in regime_stats.index:
-        avg_ret = regime_stats.loc[regime_id, 'rolling_return']
-        avg_vol = regime_stats.loc[regime_id, 'volatility']
-        
-        # Finn regime-type
-        regime_type = klassifiser_regime_type(avg_ret, avg_vol, all_returns, all_vols)
-        
-        # Unngå duplikater - velg neste beste type hvis allerede brukt
-        if regime_type in used_types:
-            # Sorter alle typer etter hvor godt de passer
-            type_scores = []
-            for rtype in REGIME_DEFINITIONS.keys():
-                if rtype not in used_types:
-                    type_scores.append((rtype, 0))  # Kan forbedres med bedre scoring
-            if type_scores:
-                regime_type = type_scores[0][0]
-        
-        used_types.add(regime_type)
-        
+    for rank, regime_id in enumerate(sorted_regimes):
+        regime_type = regime_types[rank] if rank < len(regime_types) else 'neutral'
         regime_def = REGIME_DEFINITIONS[regime_type]
-        regime_labels[regime_id] = (
-            regime_def['name'],
-            regime_def['emoji'],
-            regime_def['color'],
-            regime_def['description'],
-            regime_def['action']
-        )
+        regime_labels[regime_id] = {
+            'type': regime_type,
+            'name': regime_def['name'],
+            'emoji': regime_def['emoji'],
+            'color': regime_def['color'],
+            'description': regime_def['description'],
+            'action': regime_def['action']
+        }
     
-    # Map til DataFrame
-    df_result['regime_name'] = df_result['regime'].map(
-        lambda x: regime_labels.get(x, ('Ukjent', '❓', '#808080', '', ''))[0]
-    )
-    df_result['regime_emoji'] = df_result['regime'].map(
-        lambda x: regime_labels.get(x, ('Ukjent', '❓', '#808080', '', ''))[1]
-    )
-    df_result['regime_color'] = df_result['regime'].map(
-        lambda x: regime_labels.get(x, ('Ukjent', '❓', '#808080', '', ''))[2]
-    )
-    df_result['regime_description'] = df_result['regime'].map(
-        lambda x: regime_labels.get(x, ('Ukjent', '❓', '#808080', '', ''))[3]
-    )
-    df_result['regime_action'] = df_result['regime'].map(
-        lambda x: regime_labels.get(x, ('Ukjent', '❓', '#808080', '', ''))[4]
-    )
+    # Legg til labels i DataFrame
+    df_result['regime_name'] = df_result['regime'].map(lambda x: regime_labels.get(x, {}).get('name', 'Ukjent'))
+    df_result['regime_emoji'] = df_result['regime'].map(lambda x: regime_labels.get(x, {}).get('emoji', '❓'))
+    df_result['regime_color'] = df_result['regime'].map(lambda x: regime_labels.get(x, {}).get('color', '#808080'))
+    df_result['regime_description'] = df_result['regime'].map(lambda x: regime_labels.get(x, {}).get('description', ''))
+    df_result['regime_action'] = df_result['regime'].map(lambda x: regime_labels.get(x, {}).get('action', ''))
     
     return df_result, regime_labels, regime_stats
 
 
-def get_current_regime_info(df_regimes: pd.DataFrame, regime_labels: dict) -> dict:
+def get_current_regime_info(df_regimes: pd.DataFrame, regime_labels: dict, 
+                            hmm_model=None, confidence_threshold: float = 0.60) -> dict:
     """
-    Henter detaljert informasjon om nåværende regime.
+    Henter info om nåværende regime med confidence og overgangsvarsler.
+    
+    Forbedringer v2:
+    - confidence_threshold: kun vis regime-bytte hvis P(nytt regime) > terskel
+    - overgangsvarsel: «gult lys» hvis P(nåværende regime) < 50%
+    - regime_confidence: 'high'/'medium'/'low' basert på sannsynlighet
     """
     if df_regimes.empty:
         return None
@@ -285,11 +416,10 @@ def get_current_regime_info(df_regimes: pd.DataFrame, regime_labels: dict) -> di
     latest = df_regimes.iloc[-1]
     current_regime = int(latest['regime'])
     
-    # Sannsynlighet
     prob_col = f'prob_regime_{current_regime}'
     current_prob = float(latest[prob_col]) if prob_col in df_regimes.columns else 0.0
     
-    # Regime-streak (hvor mange dager på rad med samme regime)
+    # Regime-streak
     regime_streak = 1
     for i in range(len(df_regimes) - 2, -1, -1):
         if int(df_regimes.iloc[i]['regime']) == current_regime:
@@ -297,105 +427,142 @@ def get_current_regime_info(df_regimes: pd.DataFrame, regime_labels: dict) -> di
         else:
             break
     
-    # Historisk fordeling
-    regime_distribution = df_regimes['regime_name'].value_counts(normalize=True).to_dict()
-    
-    # Alle sannsynligheter for nåværende tidspunkt
+    # Samle alle sannsynligheter (kun for aktive regimer)
     all_probs = {}
     for regime_id, label_info in regime_labels.items():
         prob_col = f'prob_regime_{regime_id}'
         if prob_col in df_regimes.columns:
-            all_probs[label_info[0]] = float(latest[prob_col])
+            all_probs[label_info['name']] = {
+                'prob': float(latest[prob_col]),
+                'color': label_info['color'],
+                'emoji': label_info['emoji']
+            }
     
-    # Hent volatilitet og avkastning med fallback
     volatility = float(latest['volatility']) if pd.notna(latest['volatility']) else 0.0
     rolling_return = float(latest['rolling_return']) if pd.notna(latest['rolling_return']) else 0.0
     
+    # Forventet varighet
+    expected_duration = None
+    if hmm_model is not None:
+        try:
+            self_prob = hmm_model.transmat_[current_regime, current_regime]
+            if self_prob < 1.0:
+                expected_duration = 1.0 / (1.0 - self_prob)
+        except Exception:
+            pass
+    
+    current_label = regime_labels.get(current_regime, {})
+    
+    # Confidence-klassifisering
+    if current_prob >= confidence_threshold:
+        regime_confidence = 'high'
+        confidence_emoji = '🟢'
+    elif current_prob >= 0.40:
+        regime_confidence = 'medium'
+        confidence_emoji = '🟡'
+    else:
+        regime_confidence = 'low'
+        confidence_emoji = '🔴'
+    
+    # Overgangsvarsel: sjekk om et ANNET regime har høyere sannsynlighet
+    transition_warning = None
+    for regime_id, label_info in regime_labels.items():
+        if regime_id == current_regime:
+            continue
+        prob_col_other = f'prob_regime_{regime_id}'
+        if prob_col_other in df_regimes.columns:
+            other_prob = float(latest[prob_col_other])
+            if other_prob > current_prob and other_prob > 0.30:
+                transition_warning = {
+                    'target_regime': label_info['name'],
+                    'target_emoji': label_info['emoji'],
+                    'target_prob': other_prob,
+                    'current_prob': current_prob,
+                    'message': f"⚠️ Mulig overgang til {label_info['emoji']} {label_info['name']} "
+                               f"(P={other_prob:.0%} vs nåværende P={current_prob:.0%})"
+                }
+                break
+    
     return {
         'regime': current_regime,
-        'name': str(latest['regime_name']),
-        'emoji': str(latest['regime_emoji']),
-        'color': str(latest['regime_color']),
-        'description': str(latest.get('regime_description', '')),
-        'action': str(latest.get('regime_action', '')),
+        'name': current_label.get('name', 'Ukjent'),
+        'emoji': current_label.get('emoji', '❓'),
+        'color': current_label.get('color', '#808080'),
+        'description': current_label.get('description', ''),
+        'action': current_label.get('action', ''),
         'probability': current_prob,
         'streak_days': regime_streak,
         'volatility': volatility,
         'rolling_return': rolling_return,
-        'distribution': regime_distribution,
-        'all_probs': all_probs
+        'all_probs': all_probs,
+        'expected_duration': expected_duration,
+        'confidence': regime_confidence,
+        'confidence_emoji': confidence_emoji,
+        'transition_warning': transition_warning
     }
 
 
-def beregn_regime_transitions(df_regimes: pd.DataFrame) -> pd.DataFrame:
-    """
-    Beregner overgangsmatrise mellom regimer.
-    """
-    if df_regimes.empty or len(df_regimes) < 2:
+def beregn_regime_transitions(df_regimes: pd.DataFrame, regime_labels: dict, 
+                              hmm_model=None) -> pd.DataFrame:
+    """Returnerer overgangsmatrise med lesbare navn."""
+    if hmm_model is None:
         return pd.DataFrame()
     
-    regimes = df_regimes['regime_name'].values
-    transitions = {}
+    n_states = hmm_model.n_components
+    names = [regime_labels.get(i, {}).get('name', f'Regime {i}') for i in range(n_states)]
     
-    for i in range(len(regimes) - 1):
-        from_regime = regimes[i]
-        to_regime = regimes[i + 1]
-        key = (from_regime, to_regime)
-        transitions[key] = transitions.get(key, 0) + 1
-    
-    unique_regimes = list(df_regimes['regime_name'].unique())
-    matrix = pd.DataFrame(0.0, index=unique_regimes, columns=unique_regimes)
-    
-    for (from_r, to_r), count in transitions.items():
-        if from_r in matrix.index and to_r in matrix.columns:
-            matrix.loc[from_r, to_r] = count
-    
-    # Normaliser rad-vis (sannsynlighet for å gå FRA et regime TIL et annet)
-    row_sums = matrix.sum(axis=1)
-    # Unngå divisjon med null
-    row_sums = row_sums.replace(0, 1)
-    matrix = matrix.div(row_sums, axis=0)
-    
-    return matrix
+    transition_matrix = pd.DataFrame(
+        hmm_model.transmat_,
+        index=names,
+        columns=names
+    )
+    return transition_matrix
 
 
-def full_regime_analyse(df_market: pd.DataFrame, n_regimes: int = 3) -> dict:
+def full_regime_analyse(df_market: pd.DataFrame, n_regimes: int = 3,
+                        auto_select_regimes: bool = False) -> dict:
     """
-    Kjører full regimeanalyse og returnerer alle resultater.
+    Kjører full HMM-basert regimeanalyse.
+    
+    Forbedringer v2:
+    - Utvidede features (volum-trend, momentum, bredde)
+    - Modellcaching til disk
+    - BIC-basert optimal regime-valg (auto_select_regimes=True)
+    - Confidence-threshold og overgangsvarsler
     """
     try:
         if df_market is None or len(df_market) == 0:
-            print("[REGIME] Ingen markedsdata mottatt")
             return None
         
-        # Beregn features
         df_features = beregn_regime_features(df_market)
         
         if len(df_features) < 50:
-            print(f"[REGIME] For få datapunkter etter feature-beregning: {len(df_features)}")
             return None
         
-        # Tren modell
-        gmm, scaler, feature_cols = tren_gmm_model(df_features, n_regimes=n_regimes)
+        # BIC-basert regime-valg
+        bic_info = None
+        if auto_select_regimes:
+            bic_result = velg_optimalt_antall_regimer(df_features)
+            n_regimes = bic_result['optimal_n']
+            bic_info = bic_result['bic_scores']
+            logger.info(f"Auto-valgt {n_regimes} regimer basert på BIC")
         
-        # Klassifiser
+        hmm_model, scaler, feature_cols, bic_score = tren_hmm_model(
+            df_features, n_regimes=n_regimes
+        )
         df_regimes, regime_labels, regime_stats = klassifiser_regimer(
-            gmm, scaler, feature_cols, df_features
+            hmm_model, scaler, feature_cols, df_features
         )
         
         if df_regimes.empty:
-            print("[REGIME] Ingen gyldige regimer funnet")
             return None
         
-        # Nåværende info
-        current_info = get_current_regime_info(df_regimes, regime_labels)
+        current_info = get_current_regime_info(df_regimes, regime_labels, hmm_model)
         
         if current_info is None:
-            print("[REGIME] Kunne ikke hente current regime info")
             return None
         
-        # Transisjoner
-        transition_matrix = beregn_regime_transitions(df_regimes)
+        transition_matrix = beregn_regime_transitions(df_regimes, regime_labels, hmm_model)
         
         return {
             'df_regimes': df_regimes,
@@ -403,12 +570,14 @@ def full_regime_analyse(df_market: pd.DataFrame, n_regimes: int = 3) -> dict:
             'regime_stats': regime_stats,
             'current_info': current_info,
             'transition_matrix': transition_matrix,
-            'gmm': gmm,
-            'scaler': scaler
+            'hmm_model': hmm_model,
+            'scaler': scaler,
+            'n_regimes': n_regimes,
+            'bic_score': bic_score,
+            'bic_info': bic_info,
+            'feature_cols': feature_cols
         }
         
     except Exception as e:
-        import traceback
-        print(f"[REGIME] Feil i regimeanalyse: {e}")
-        print(traceback.format_exc())
+        logger.error(f"Regime-analyse feilet: {e}", exc_info=True)
         return None

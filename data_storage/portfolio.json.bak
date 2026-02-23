@@ -1,0 +1,27 @@
+{
+  "positions": {
+    "KIT.OL": {
+      "quantity": 129,
+      "avg_price": 92.4,
+      "buy_date": "2026-02-13",
+      "last_added": "2026-02-13",
+      "stop_loss": 85.47,
+      "trailing_high": 107.4,
+      "notes": "Testnotat",
+      "strategy": "Manuelt"
+    },
+    "VAR.OL": {
+      "quantity": 950,
+      "avg_price": 33.39,
+      "buy_date": "2026-02-12",
+      "last_added": "2026-02-12",
+      "stop_loss": 31.05,
+      "trailing_high": 35.24,
+      "notes": "Testnotat",
+      "strategy": "Manuelt"
+    }
+  },
+  "created": "2026-02-13T19:50:49.476224",
+  "last_updated": "2026-02-23T12:47:53.118961",
+  "version": "1.0"
+}
