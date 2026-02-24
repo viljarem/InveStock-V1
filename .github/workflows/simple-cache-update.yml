@@ -1,0 +1,48 @@
+name: 📈 Enkel Markedsdata Oppdatering (Bare Cache)
+
+on:
+  schedule:
+    # Kjører hver dag kl 17:00 CET 
+    - cron: '0 16 * * 1-5'  # Vintertid
+    - cron: '0 15 * * 1-5'  # Sommertid
+  
+  workflow_dispatch:
+
+env:
+  PYTORCH_ENABLE_MPS_FALLBACK: '1'
+  CUDA_VISIBLE_DEVICES: ''
+  PYTORCH_MPS_DISABLE: '1'
+
+jobs:
+  update-cache:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Hent kode
+      uses: actions/checkout@v4
+    
+    - name: 🐍 Sett opp Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: 📦 Installer avhengigheter
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: 📈 Oppdater markedsdata (kun cache warming)
+      run: |
+        echo "🤖 Starter cache warming..."
+        python update_market_data.py
+        echo "✅ Cache warming fullført"
+    
+    - name: 📊 Vis resultat
+      run: |
+        echo "================================================="
+        echo "📋 CACHE WARMING FULLFØRT"
+        echo "================================================="
+        echo "Tidspunkt: $(TZ='Europe/Oslo' date)"
+        echo "Status: Vellykket (ingen git push nødvendig)"
+        echo "================================================="
