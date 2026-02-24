@@ -1,25 +1,11 @@
-name: 📈 Automatisk Markedsdata Oppdatering
+name: 📈 Daglig Dataoppdatering (Streamlit Cloud)
 
 on:
   schedule:
-    # Kjører hver dag kl 17:00 CET (16:00 UTC vintertid, 15:00 UTC sommertid)
-    - cron: '0 16 * * 1-5'  # Mandag til fredag kl 16:00 UTC (17:00 CET vintertid)
-    - cron: '0 15 * * 1-5'  # Mandag til fredag kl 15:00 UTC (17:00 CEST sommertid)
+    # Kjører hver dag kl 17:00 norsk tid
+    - cron: '0 16 * * 1-5'  # Mandag-fredag kl 17:00 CET
   
-  # Tillat manuell kjøring
-  workflow_dispatch:
-    inputs:
-      force_all:
-        description: 'Tving oppdatering av alle data (ignorer cache)'
-        required: false
-        default: 'false'
-        type: boolean
-
-env:
-  # Sett miljøvariabler for PyTorch kompatibilitet
-  PYTORCH_ENABLE_MPS_FALLBACK: '1'
-  CUDA_VISIBLE_DEVICES: ''
-  PYTORCH_MPS_DISABLE: '1'
+  workflow_dispatch:  # Manuell kjøring
 
 jobs:
   update-data:
@@ -29,8 +15,7 @@ jobs:
     - name: 📥 Hent kode
       uses: actions/checkout@v4
       with:
-        # VIKTIG: Bruk Personal Access Token for Streamlit Cloud
-        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN || secrets.GITHUB_TOKEN }}
         fetch-depth: 0
     
     - name: 🐍 Sett opp Python
@@ -39,75 +24,30 @@ jobs:
         python-version: '3.11'
         cache: 'pip'
     
-    - name: 📦 Installer avhengigheter
+    - name: 📦 Installer pakker
       run: |
-        python -m pip install --upgrade pip
+        pip install --upgrade pip
         pip install -r requirements.txt
     
-    - name: 🕐 Vis norsk tid
-      run: |
-        echo "UTC tid: $(date -u)"
-        echo "Norsk tid: $(TZ='Europe/Oslo' date)"
-    
     - name: 📈 Oppdater markedsdata
-      run: |
-        echo "🤖 Starter automatisk dataoppdatering..."
-        python update_market_data.py
+      run: python update_market_data.py
     
-    - name: 📋 Sjekk endringer
-      id: check_changes
+    - name: 💾 Push til Streamlit Cloud
       run: |
-        if [ -n "$(git status --porcelain)" ]; then
-          echo "changes=true" >> $GITHUB_OUTPUT
-          echo "📝 Endringer funnet:"
-          git status --porcelain
-        else
-          echo "changes=false" >> $GITHUB_OUTPUT
-          echo "✅ Ingen nye endringer"
-        fi
-    
-    - name: 💾 Commit og push for Streamlit Cloud
-      if: steps.check_changes.outputs.changes == 'true'
-      run: |
-        # Konfigurer Git med Personal Access Token
-        git config --global user.email "action@github.com"
-        git config --global user.name "GitHub Action - Streamlit Data Update"
-        
-        # Debug: Sjekk token og remote
-        echo "Git remote URL: $(git remote get-url origin)"
-        
-        # Legg til kun datafiler (unngå __pycache__)
-        git add data_storage/*.parquet data_storage/*.json
-        
-        # Sjekk om det er noe å committe
-        if git diff --staged --quiet; then
-          echo "⚠️  Ingen datafiler endret"
+        # Sjekk om det er endringer
+        if [ -z "$(git status --porcelain)" ]; then
+          echo "✅ Ingen nye data å pushe"
           exit 0
         fi
         
-        # Commit med norsk tidsstempel
-        NORSK_TID=$(TZ='Europe/Oslo' date '+%Y-%m-%d %H:%M:%S')
-        git commit -m "🤖 Streamlit Cloud: Automatisk dataoppdatering - $NORSK_TID"
+        # Konfigurer Git
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
         
-        # Push til main branch for Streamlit Cloud
-        echo "🚀 Pusher oppdaterte datafiler til Streamlit Cloud..."
-        git push origin main
+        # Add og commit kun datafiler
+        git add data_storage/*.parquet data_storage/*.json
+        git commit -m "🤖 Automatisk dataoppdatering $(TZ='Europe/Oslo' date '+%H:%M %d.%m.%Y')"
         
-        echo "✅ Streamlit Cloud vil nå ha fersk data!"
-    
-    - name: 🎉 Oppsummering
-      if: always()
-      run: |
-        echo "================================================="
-        echo "📋 OPPSUMMERING AV GITHUB ACTIONS KJØRING"
-        echo "================================================="
-        echo "Tidspunkt: $(TZ='Europe/Oslo' date)"
-        echo "Status: ${{ job.status }}"
-        echo "Endringer: ${{ steps.check_changes.outputs.changes || 'ukjent' }}"
-        echo "================================================="
-        
-        # Vis siste commit hvis det ble gjort endringer
-        if [ "${{ steps.check_changes.outputs.changes }}" = "true" ]; then
-          echo "📝 Siste commit:"
-          git log -1 --oneline
-        fi
+        # Push til Streamlit Cloud
+        git push
+        echo "🚀 Fersk data sendt til Streamlit Cloud!"
