@@ -29,10 +29,9 @@ jobs:
     - name: 📥 Hent kode
       uses: actions/checkout@v4
       with:
-        # Bruk Personal Access Token for å kunne pushe tilbake
-        token: ${{ secrets.PERSONAL_ACCESS_TOKEN || secrets.GITHUB_TOKEN }}
+        # VIKTIG: Bruk Personal Access Token for Streamlit Cloud
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         fetch-depth: 0
-        persist-credentials: true
     
     - name: 🐍 Sett opp Python
       uses: actions/setup-python@v4
@@ -67,28 +66,34 @@ jobs:
           echo "✅ Ingen nye endringer"
         fi
     
-    - name: 💾 Lagre endringer (lokal commit)
+    - name: 💾 Commit og push for Streamlit Cloud
       if: steps.check_changes.outputs.changes == 'true'
       run: |
-        # Konfigurer Git
+        # Konfigurer Git med Personal Access Token
         git config --global user.email "action@github.com"
-        git config --global user.name "GitHub Action"
+        git config --global user.name "GitHub Action - Streamlit Data Update"
         
-        # Legg til alle endrede filer i data_storage mappen
-        git add data_storage/ || echo "Ingen data_storage endringer"
+        # Debug: Sjekk token og remote
+        echo "Git remote URL: $(git remote get-url origin)"
         
-        # Sjekk om det faktisk er noe å committe
+        # Legg til kun datafiler (unngå __pycache__)
+        git add data_storage/*.parquet data_storage/*.json
+        
+        # Sjekk om det er noe å committe
         if git diff --staged --quiet; then
-          echo "⚠️  Ingen staged endringer"
+          echo "⚠️  Ingen datafiler endret"
           exit 0
         fi
         
-        # Commit med tidsstempel (kun lokalt)
+        # Commit med norsk tidsstempel
         NORSK_TID=$(TZ='Europe/Oslo' date '+%Y-%m-%d %H:%M:%S')
-        git commit -m "🤖 Automatisk dataoppdatering - $NORSK_TID"
+        git commit -m "🤖 Streamlit Cloud: Automatisk dataoppdatering - $NORSK_TID"
         
-        echo "✅ Data oppdatert og committet lokalt!"
-        echo "📝 (Push deaktivert - data er oppdatert i GitHub Actions cache)"
+        # Push til main branch for Streamlit Cloud
+        echo "🚀 Pusher oppdaterte datafiler til Streamlit Cloud..."
+        git push origin main
+        
+        echo "✅ Streamlit Cloud vil nå ha fersk data!"
     
     - name: 🎉 Oppsummering
       if: always()
