@@ -46,7 +46,10 @@ jobs:
         
         # Add og commit kun datafiler
         git add data_storage/*.parquet data_storage/*.json
-        git commit -m "🤖 Automatisk dataoppdatering $(TZ='Europe/Oslo' date '+%H:%M %d.%m.%Y')"
+        
+        # Sikre norsk tid i commit
+        NORSK_TID=$(TZ='Europe/Oslo' date '+%Y-%m-%d %H:%M')
+        git commit -m "🤖 Automatisk dataoppdatering $NORSK_TID"
         
         # Push til Streamlit Cloud
         git push
