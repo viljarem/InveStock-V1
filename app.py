@@ -174,11 +174,6 @@ with st.sidebar:
             `python -m streamlit run app.py`
             """)
 
-    # Vis sist oppdateringstid
-    last_update = st.session_state.get('last_update') or data.hent_siste_oppdateringstid()
-    if last_update:
-        st.caption(f"Sist oppdatert: {last_update.strftime('%Y-%m-%d %H:%M')}")
-
     st.markdown("---")
     if st.button("Oppdater Data"):
         progress = st.progress(0, text="Starter oppdatering...")
@@ -204,6 +199,11 @@ with st.sidebar:
             st.session_state['last_update'] = data.hent_siste_oppdateringstid() or pd.Timestamp.now()
             progress.progress(1.0, text="Fullført.")
         st.success("Data ble oppdatert")
+    
+    # Vis sist oppdateringstid rett under knappen
+    last_update = st.session_state.get('last_update') or data.hent_siste_oppdateringstid()
+    if last_update:
+        st.caption(f"Sist oppdatert: {last_update.strftime('%Y-%m-%d %H:%M')}")
 
     # AI TEST CHAT
     st.markdown("---")

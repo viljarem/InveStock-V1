@@ -29,8 +29,8 @@ jobs:
     - name: 📥 Hent kode
       uses: actions/checkout@v4
       with:
-        # Hent full git historie for å kunne committe tilbake
-        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        # Bruk Personal Access Token for å kunne pushe tilbake
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN || secrets.GITHUB_TOKEN }}
         fetch-depth: 0
     
     - name: 🐍 Sett opp Python
