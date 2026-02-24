@@ -1,0 +1,47 @@
+{
+  "scanner": {
+    "min_kvalitet": "B",
+    "max_dager": 30,
+    "min_volum_ratio": 1.1,
+    "default_strategi": "Alle strategier",
+    "vis_exit": true,
+    "vis_sektor": true,
+    "vis_stotte": false,
+    "vis_motstand": false,
+    "vis_konvergens": false,
+    "sorter_etter": "Signal (dato)",
+    "sorter_retning": "Nyeste først",
+    "filtrer_false_breakout": false,
+    "min_rr": 0.0
+  },
+  "chart": {
+    "chart_type": "candlestick",
+    "tidsperiode": "2Y",
+    "indikatorer": {
+      "sma_50": true,
+      "sma_200": true,
+      "sma_20": false,
+      "bollinger": false,
+      "rsi": false,
+      "macd": false,
+      "volum": true,
+      "ichimoku": false,
+      "atr": false
+    },
+    "vis_signaler": true,
+    "vis_insider": true,
+    "tema": "dark"
+  },
+  "teknisk_analyse": {
+    "default_ticker": null,
+    "ml_hist_days": 120
+  },
+  "portefolje": {
+    "valuta": "NOK",
+    "kurtasje_pct": 0.05,
+    "spread_pct": 0.1
+  },
+  "generelt": {
+    "min_dagsomsetning": 9000000
+  }
+}

@@ -1,0 +1,24 @@
+#!/bin/bash
+# MacOS app wrapper for InveStock
+# This script starts the Streamlit app.
+
+# Resolve the project root (3 levels up from Contents/MacOS)
+BASH_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_ROOT="$(cd "$BASH_DIR/../../.." && pwd)"
+
+# Go to project root
+cd "$PROJECT_ROOT"
+
+# Use the specific Python version where we know dependencies are installed
+# This avoids using the macOS system Python 3.9 which has broken dependencies.
+PYTHON_PATH="/Library/Frameworks/Python.framework/Versions/3.14/bin/python3"
+
+if [ -f "$PYTHON_PATH" ]; then
+    echo "🚀 Starting InveStock with Python 3.14 (forcing arm64 architecture)..."
+    # Ensure we use the arm64 slice of the universal binary
+    /usr/bin/arch -arm64 "$PYTHON_PATH" -m streamlit run app.py
+else
+    # Fallback if 3.14 is missing
+    echo "⚠️ Warning: Python 3.14 not found. Trying default python3..."
+    /usr/bin/arch -arm64 /usr/bin/env python3 -m streamlit run app.py
+fi
