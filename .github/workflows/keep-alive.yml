@@ -1,0 +1,44 @@
+name: 🔔 Hold Streamlit Cloud Våken
+
+on:
+  schedule:
+    # Ping hver 25. minutt (før 30 min timeout)
+    - cron: '*/25 * * * *'
+  
+  workflow_dispatch:  # Manuell test
+
+jobs:
+  ping-app:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 🔔 Ping Streamlit Cloud app
+      run: |
+        # Streamlit Cloud URL for InveStock V1
+        APP_URL="https://investock-v1.streamlit.app"
+        
+        echo "🔔 Pinger Streamlit Cloud app..."
+        echo "URL: $APP_URL"
+        
+        # Enkel HTTP GET request for å holde appen våken
+        response=$(curl -s -o /dev/null -w "%{http_code}" --connect-timeout 30 "$APP_URL" || echo "000")
+        
+        if [ "$response" = "200" ]; then
+          echo "✅ App er våken! (HTTP $response)"
+        elif [ "$response" = "000" ]; then
+          echo "⚠️  Timeout eller connection error"
+        else
+          echo "⚠️  App response: HTTP $response"
+        fi
+        
+        echo "🕐 Ping fullført: $(date)"
+    
+    - name: 📊 Status oppsummering
+      run: |
+        echo "================================================="
+        echo "🔔 STREAMLIT CLOUD PING STATUS"
+        echo "================================================="
+        echo "Tidspunkt: $(TZ='Europe/Oslo' date '+%Y-%m-%d %H:%M')"
+        echo "Formål: Holde Streamlit Cloud app våken"
+        echo "Neste ping: Om 25 minutter"
+        echo "================================================="
