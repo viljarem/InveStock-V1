@@ -1,0 +1,102 @@
+name: � Smart Scanner Mail-Rapporter
+
+# PROTOTYPE - Aktiveres når klar
+# on:
+#   schedule:
+#     # Daglige smarte rapporter (kun A/B signaler)
+#     - cron: '0 18 * * 1-5'    # Kl 19:00 - etter dataoppdatering
+#     # Ukesrapporter (forberedende)  
+#     - cron: '0 17 * * 0'      # Søndager kl 18:00 - forbered uken
+#     # Ukes-oppsummering
+#     - cron: '0 17 * * 5'      # Fredager kl 18:00 - ukesoppsummering
+#   
+#   workflow_dispatch:
+
+jobs:
+  smart-scanner-mail:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Hent kode
+      uses: actions/checkout@v4
+    
+    - name: 🐍 Sett opp Python  
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: 📦 Installer pakker
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+        # pip install sendgrid  # For mail
+    
+    - name: 🔍 Smart Scanner Analyse
+      run: |
+        echo "🔍 Starter smart scanner analyse..."
+        
+        # SMART FILTRERING (implementeres senere):
+        # - Min. dagsomsetning: 5,000,000 NOK (~100 aksjer)
+        # - Kun A og B signaler (sterke signaler)
+        # - Rullerende 5-dagers trend analyse
+        # - Ekskluder svake C/D/E signaler
+        
+        # python smart_scanner.py --filters:
+        #   --min-volume=5000000
+        #   --signal-grades=A,B  
+        #   --rolling-days=5
+        #   --exclude-weak-signals
+        
+        echo "📊 Smart analyse fullført"
+    
+    - name: 📅 Generer rapport-type  
+      run: |
+        # Bestem rapport-type basert på dag
+        DAY=$(date +%u)  # 1=mandag, 7=søndag
+        
+        if [ "$DAY" = "7" ]; then
+          echo "📋 Ukesforberedende rapport (søndag)"
+          REPORT_TYPE="weekly_prep"
+        elif [ "$DAY" = "5" ]; then
+          echo "📋 Ukesoppsummering (fredag)"  
+          REPORT_TYPE="weekly_summary"
+        else
+          echo "📋 Daglig smart rapport"
+          REPORT_TYPE="daily_smart"
+        fi
+        
+        echo "REPORT_TYPE=$REPORT_TYPE" >> $GITHUB_ENV
+    
+    - name: 📧 Smart Mail Utsendelse
+      run: |
+        echo "📧 Forbereder smart mail-rapport..."
+        echo "Rapport-type: $REPORT_TYPE"
+        
+        # MAIL INNHOLD (implementeres):
+        
+        # DAGLIG SMART RAPPORT:
+        # - Top 5 A-signaler (siste 5 dager)
+        # - Top 3 B-signaler med momentum
+        # - Insider aktivitet (kun betydelige handler)
+        # - Portfolio påvirkning (hvis aktuelt)
+        
+        # UKESFORBEREDENDE (søndag):
+        # - Uken som kommer: earnings, ex-dividend
+        # - Tekniske breakout-kandidater
+        # - Sektor-rotasjon signaler
+        # - Makroøkonomiske events
+        
+        # UKESOPPSUMMERING (fredag):
+        # - Ukens beste performers (A-signaler)
+        # - Portfolio performance vs marked
+        # - Neste ukes focus-aksjer
+        # - Risk warnings
+        
+        echo "✅ Smart mail-system klargjort"
+
+    # MAIL-INNSTILLINGER (legges til senere):
+    # - HTML formatert med charts  
+    # - Personalisert basert på portefølje
+    # - Signal strength thresholds
+    # - Unsubscribe/frequency settings

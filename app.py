@@ -349,7 +349,7 @@ with st.sidebar:
     
     
     st.markdown("---")
-    min_volum = st.number_input("Min. dagsomsetning (NOK)", value=500000, step=100000)
+    min_volum = st.number_input("Min. dagsomsetning (NOK)", value=5000000, step=100000)
 
 
 # ===================================================================

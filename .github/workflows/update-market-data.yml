@@ -2,8 +2,9 @@ name: 📈 Daglig Dataoppdatering (Streamlit Cloud)
 
 on:
   schedule:
-    # Kjører hver dag kl 17:00 norsk tid
-    - cron: '0 16 * * 1-5'  # Mandag-fredag kl 17:00 CET
+    # Kjører to ganger daglig: morgen og kveld
+    - cron: '0 7 * * 1-5'   # Kl 08:00 norsk tid (morgen)
+    - cron: '0 16 * * 1-5'  # Kl 17:00 norsk tid (kveld)
   
   workflow_dispatch:  # Manuell kjøring
 
