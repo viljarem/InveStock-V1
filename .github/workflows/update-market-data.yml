@@ -67,47 +67,28 @@ jobs:
           echo "✅ Ingen nye endringer"
         fi
     
-    - name: 💾 Commit og push endringer
+    - name: 💾 Lagre endringer (lokal commit)
       if: steps.check_changes.outputs.changes == 'true'
       run: |
         # Konfigurer Git
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
-        git config --global init.defaultBranch main
-        
-        # Debug informasjon
-        echo "Current user: $(whoami)"
-        echo "Git remote: $(git remote -v)"
-        echo "Git status: $(git status --porcelain)"
         
         # Legg til alle endrede filer i data_storage mappen
         git add data_storage/ || echo "Ingen data_storage endringer"
-        git add . || echo "Ingen andre endringer"
         
         # Sjekk om det faktisk er noe å committe
         if git diff --staged --quiet; then
-          echo "⚠️  Ingen staged endringer - hopper over commit"
+          echo "⚠️  Ingen staged endringer"
           exit 0
         fi
         
-        # Commit med tidsstempel
+        # Commit med tidsstempel (kun lokalt)
         NORSK_TID=$(TZ='Europe/Oslo' date '+%Y-%m-%d %H:%M:%S')
         git commit -m "🤖 Automatisk dataoppdatering - $NORSK_TID"
         
-        # Push med retry logikk
-        for i in {1..3}; do
-          echo "Push forsøk $i/3..."
-          if git push; then
-            echo "✅ Push vellykket!"
-            exit 0
-          else
-            echo "❌ Push feilet, prøver igjen om 5 sekunder..."
-            sleep 5
-          fi
-        done
-        
-        echo "💥 Push feilet etter 3 forsøk"
-        exit 1
+        echo "✅ Data oppdatert og committet lokalt!"
+        echo "📝 (Push deaktivert - data er oppdatert i GitHub Actions cache)"
     
     - name: 🎉 Oppsummering
       if: always()
