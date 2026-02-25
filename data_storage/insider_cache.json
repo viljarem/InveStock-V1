@@ -1,6 +1,76 @@
 {
-  "timestamp": 1772005924.389105,
+  "timestamp": 1772038967.4434912,
   "handler": [
+    {
+      "ticker": "PEN.OL",
+      "issuer_sign": "PEN",
+      "issuer_name": "Panoro Energy ASA",
+      "tittel": "Panoro Energy ASA: Mandatory notification of trade",
+      "dato": "2026-02-25",
+      "dato_tid": "2026-02-25T15:31:02.948000+00:00",
+      "message_id": 666819,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "STECH.OL",
+      "issuer_sign": "STECH",
+      "issuer_name": "Soiltech ASA",
+      "tittel": "Mandatory notification of Trade by Primary Insider",
+      "dato": "2026-02-25",
+      "dato_tid": "2026-02-25T14:18:30.334000+00:00",
+      "message_id": 666796,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "STECH.OL",
+      "issuer_sign": "STECH",
+      "issuer_name": "Soiltech ASA",
+      "tittel": "Mandatory notification of Trade by Primary Insider",
+      "dato": "2026-02-25",
+      "dato_tid": "2026-02-25T14:12:40.772000+00:00",
+      "message_id": 666795,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PUBLI.OL",
+      "issuer_sign": "PUBLI",
+      "issuer_name": "Public Property Invest ASA",
+      "tittel": "Mandatory Notification of Trade",
+      "dato": "2026-02-25",
+      "dato_tid": "2026-02-25T13:40:03.036000+00:00",
+      "message_id": 666790,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "FFSB.OL",
+      "issuer_sign": "FFSB",
+      "issuer_name": "Flekkefjord Sparebank",
+      "tittel": "Flekkefjord Sparebank – tildeling av egenkapitalbevis for primærinnsidere",
+      "dato": "2026-02-25",
+      "dato_tid": "2026-02-25T11:44:39.570000+00:00",
+      "message_id": 666696,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "MPCC.OL",
+      "issuer_sign": "MPCC",
+      "issuer_name": "MPC Container Ships ASA",
+      "tittel": "Mandatory notification of trade of primary insider",
+      "dato": "2026-02-25",
+      "dato_tid": "2026-02-25T10:58:02.606000+00:00",
+      "message_id": 666692,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "STECH.OL",
+      "issuer_sign": "STECH",
+      "issuer_name": "Soiltech ASA",
+      "tittel": "Mandatory notification of Trade by Primary Insider",
+      "dato": "2026-02-25",
+      "dato_tid": "2026-02-25T08:25:37.449000+00:00",
+      "message_id": 666684,
+      "type": "ukjent"
+    },
     {
       "ticker": "ENTRA.OL",
       "issuer_sign": "ENTRA",
@@ -1259,26 +1329,6 @@
       "dato": "2026-01-26",
       "dato_tid": "2026-01-26T18:30:03.491000+00:00",
       "message_id": 664226,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "NOFIN.OL",
-      "issuer_sign": "NOFIN",
-      "issuer_name": "Nordic Financials ASA",
-      "tittel": "Mandatory Notification of Trading by Primary Insiders",
-      "dato": "2026-01-26",
-      "dato_tid": "2026-01-26T15:35:31.148000+00:00",
-      "message_id": 664219,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "NOFIN.OL",
-      "issuer_sign": "NOFIN",
-      "issuer_name": "Nordic Financials ASA",
-      "tittel": "Meldepliktig handel av primærinnsidere",
-      "dato": "2026-01-26",
-      "dato_tid": "2026-01-26T15:35:31.099000+00:00",
-      "message_id": 664218,
       "type": "ukjent"
     }
   ]
