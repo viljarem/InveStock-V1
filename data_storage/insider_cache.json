@@ -1,6 +1,26 @@
 {
-  "timestamp": 1772038967.4434912,
+  "timestamp": 1772092312.8524454,
   "handler": [
+    {
+      "ticker": "IDEX.OL",
+      "issuer_sign": "IDEX",
+      "issuer_name": "IDEX Biometrics ASA",
+      "tittel": "Grant of incentive subscription rights in IDEX Biometrics",
+      "dato": "2026-02-26",
+      "dato_tid": "2026-02-26T06:30:04.348000+00:00",
+      "message_id": 666881,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "BOR.OL",
+      "issuer_sign": "BOR",
+      "issuer_name": "Borgestad ASA",
+      "tittel": "Borgestad ASA: Grant of restricted stock units to leading personnel",
+      "dato": "2026-02-26",
+      "dato_tid": "2026-02-26T06:05:00+00:00",
+      "message_id": 666875,
+      "type": "ukjent"
+    },
     {
       "ticker": "PEN.OL",
       "issuer_sign": "PEN",
@@ -1309,26 +1329,6 @@
       "dato": "2026-01-27",
       "dato_tid": "2026-01-27T16:11:56.120000+00:00",
       "message_id": 664298,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "AKSO.OL",
-      "issuer_sign": "AKSO",
-      "issuer_name": "Aker Solutions ASA",
-      "tittel": "Aker Solutions ASA: Reporting of transactions made by persons discharging managerial responsibilities",
-      "dato": "2026-01-26",
-      "dato_tid": "2026-01-26T20:03:37.611000+00:00",
-      "message_id": 664229,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "IDEX.OL",
-      "issuer_sign": "IDEX",
-      "issuer_name": "IDEX Biometrics ASA",
-      "tittel": "Mandatory disclosure of trade by primary insiders or close associates in IDEX Biometrics",
-      "dato": "2026-01-26",
-      "dato_tid": "2026-01-26T18:30:03.491000+00:00",
-      "message_id": 664226,
       "type": "ukjent"
     }
   ]
