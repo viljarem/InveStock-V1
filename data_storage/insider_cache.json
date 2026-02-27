@@ -1,6 +1,36 @@
 {
-  "timestamp": 1772178419.7623818,
+  "timestamp": 1772210009.7057426,
   "handler": [
+    {
+      "ticker": "NAVA.OL",
+      "issuer_sign": "NAVA",
+      "issuer_name": "Navamedic ASA",
+      "tittel": "Navamedic ASA: Mandatory notification of trade",
+      "dato": "2026-02-27",
+      "dato_tid": "2026-02-27T12:05:04.379000+00:00",
+      "message_id": 667147,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SMCRT.OL",
+      "issuer_sign": "SMCRT",
+      "issuer_name": "SmartCraft ASA",
+      "tittel": "SmartCraft ASA (SMCRT) - Mandatory notification of trade from primary insiders",
+      "dato": "2026-02-27",
+      "dato_tid": "2026-02-27T10:18:59.573000+00:00",
+      "message_id": 667113,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TRMED.OL",
+      "issuer_sign": "TRMED",
+      "issuer_name": "Thor Medical ASA",
+      "tittel": "Thor Medical ASA - Exercise of share options and resolution to increase share capital",
+      "dato": "2026-02-27",
+      "dato_tid": "2026-02-27T09:39:11.624000+00:00",
+      "message_id": 667109,
+      "type": "ukjent"
+    },
     {
       "ticker": "ZENA.OL",
       "issuer_sign": "ZENA",
@@ -1349,16 +1379,6 @@
       "dato": "2026-01-29",
       "dato_tid": "2026-01-29T07:36:45.618000+00:00",
       "message_id": 664405,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "ENVIP.OL",
-      "issuer_sign": "ENVIP",
-      "issuer_name": "Envipco Holding N.V.",
-      "tittel": "Envipco Mandatory Notification of Trade",
-      "dato": "2026-01-28",
-      "dato_tid": "2026-01-28T16:27:03.050000+00:00",
-      "message_id": 664366,
       "type": "ukjent"
     }
   ]
