@@ -1,6 +1,36 @@
 {
-  "timestamp": 1772124659.477458,
+  "timestamp": 1772178419.7623818,
   "handler": [
+    {
+      "ticker": "ZENA.OL",
+      "issuer_sign": "ZENA",
+      "issuer_name": "Zenith Energy Ltd",
+      "tittel": "Grant of Stock Options",
+      "dato": "2026-02-27",
+      "dato_tid": "2026-02-27T01:06:15.267000+00:00",
+      "message_id": 667033,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AKBM.OL",
+      "issuer_sign": "AKBM",
+      "issuer_name": "Aker BioMarine ASA",
+      "tittel": "Aker BioMarine ASA – Mandatory notification of subscription of shares by primary insiders in Employee Share Purchase Program",
+      "dato": "2026-02-26",
+      "dato_tid": "2026-02-26T21:04:38.997000+00:00",
+      "message_id": 667028,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "OTL.OL",
+      "issuer_sign": "OTL",
+      "issuer_name": "Odfjell Technology Ltd",
+      "tittel": "Odfjell Technology Ltd – Mandatory notification of trade",
+      "dato": "2026-02-26",
+      "dato_tid": "2026-02-26T20:22:24.194000+00:00",
+      "message_id": 667026,
+      "type": "ukjent"
+    },
     {
       "ticker": "VOW.OL",
       "issuer_sign": "VOW",
@@ -1329,46 +1359,6 @@
       "dato": "2026-01-28",
       "dato_tid": "2026-01-28T16:27:03.050000+00:00",
       "message_id": 664366,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "QEC.OL",
-      "issuer_sign": "QEC",
-      "issuer_name": "Questerre Energy Corporation",
-      "tittel": "Insider ownership post corporate reorganization",
-      "dato": "2026-01-28",
-      "dato_tid": "2026-01-28T07:00:00+00:00",
-      "message_id": 664316,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "EISP.OL",
-      "issuer_sign": "EISP",
-      "issuer_name": "Eiendomsspar AS",
-      "tittel": "Eiendomsspar – meldepliktig handel og salg av aksjeopsjon",
-      "dato": "2026-01-27",
-      "dato_tid": "2026-01-27T19:40:16.523000+00:00",
-      "message_id": 664310,
-      "type": "salg"
-    },
-    {
-      "ticker": "INIFY.OL",
-      "issuer_sign": "INIFY",
-      "issuer_name": "INIFY Laboratories AB",
-      "tittel": "Inify Laboratories - mandatory notification of trade",
-      "dato": "2026-01-27",
-      "dato_tid": "2026-01-27T17:51:31.797000+00:00",
-      "message_id": 664304,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "ENVIP.OL",
-      "issuer_sign": "ENVIP",
-      "issuer_name": "Envipco Holding N.V.",
-      "tittel": "Envipco Mandatory Notification of Trade",
-      "dato": "2026-01-27",
-      "dato_tid": "2026-01-27T17:34:03.403000+00:00",
-      "message_id": 664302,
       "type": "ukjent"
     }
   ]
