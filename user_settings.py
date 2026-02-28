@@ -2,7 +2,7 @@
 Brukerinnstillinger — Lagrer og laster brukerpreferanser.
 
 Innstillinger lagres i data_storage/user_settings.json.
-Brukes av scanner, teknisk analyse, portefølje, og chart for å
+Brukes av scanner, teknisk analyse, og chart for å
 huske brukerens valg mellom sesjoner.
 """
 import os
@@ -54,12 +54,6 @@ DEFAULT_SETTINGS = {
     "teknisk_analyse": {
         "default_ticker": None,
         "ml_hist_days": 120,
-    },
-    # Portefølje
-    "portefolje": {
-        "valuta": "NOK",
-        "kurtasje_pct": 0.05,
-        "spread_pct": 0.10,
     },
     # Generelt
     "generelt": {

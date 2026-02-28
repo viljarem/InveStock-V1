@@ -26,13 +26,6 @@ try:
 except ImportError:
     regime_tilgjengelig = False
 
-portfolio_tilgjengelig = False
-try:
-    import portfolio
-    portfolio_tilgjengelig = True
-except ImportError:
-    pass
-
 try:
     import insider_monitor
     insider_tilgjengelig = True
@@ -44,20 +37,6 @@ try:
     pattern_tilgjengelig = True
 except ImportError:
     pattern_tilgjengelig = False
-
-try:
-    import anbefalt_portefolje
-    anbefaling_tilgjengelig = True
-except ImportError:
-    anbefaling_tilgjengelig = False
-
-try:
-    import gemini_analyzer
-    gemini_tilgjengelig = True
-except ImportError as e:
-    gemini_tilgjengelig = False
-except Exception as e:
-    gemini_tilgjengelig = False
 
 try:
     from chart_utils import render_modern_chart, LWC_INSTALLED
@@ -1481,16 +1460,6 @@ def render():
             fmt['Dag%'] = '{:+.2f}'
         styled_df = styled_df.format(fmt)
         
-        # === FANE-SYSTEM ===
-        # Hent portefølje
-        portfolio_tickers = []
-        if portfolio_tilgjengelig:
-            try:
-                pf = portfolio.load_portfolio()
-                portfolio_tickers = list(pf.get('positions', {}).keys())
-            except:
-                pass
-        
         res_df_med_star = res_df.copy()
         
         # Funksjon for å style DataFrame
@@ -1522,65 +1491,26 @@ def render():
                 styled = styled.format(fmt)
             return styled
         
-        # === RESULTAT-TABS ===
-        pf_count = len([t for t in res_df_med_star['Ticker'] if t in portfolio_tickers])
+        # === RESULTATVISNING ===
+        st.markdown(f"**{len(res_df_med_star)} treff**")
+        st.caption("Klikk på en rad for å åpne chart")
+        event = st.dataframe(
+            style_scanner_df(res_df_med_star),
+            width="stretch",
+            hide_index=True,
+            on_select="rerun",
+            selection_mode="single-row",
+            key="scanner_alle"
+        )
         
-        tab_alle, tab_portfolio = st.tabs([
-            f"📋 Alle ({len(res_df_med_star)})",
-            f"💼 Portefølje ({pf_count})"
-        ])
-        
-        # === TAB: ALLE ===
-        with tab_alle:
-            st.caption("Klikk på en rad for å åpne chart")
-            event = st.dataframe(
-                style_scanner_df(res_df_med_star),
-                width="stretch",
-                hide_index=True,
-                on_select="rerun",
-                selection_mode="single-row",
-                key="scanner_alle"
-            )
-            
-            selected = event.selection.rows if event.selection else []
-            if selected and not st.session_state.get('_popup_manually_closed', False):
-                valgt_idx = selected[0]
-                row = res_df_med_star.iloc[valgt_idx]
-                st.session_state['_scanner_popup'] = {
-                    'ticker': row['Ticker'],
-                    'row': row.to_dict(),
-                }
-        
-        # === TAB: PORTEFØLJE ===
-        with tab_portfolio:
-            if not portfolio_tilgjengelig:
-                st.info("Portefølje-modulen er ikke tilgjengelig")
-            elif not portfolio_tickers:
-                st.info("Ingen aksjer i porteføljen ennå")
-            else:
-                portfolio_df = res_df_med_star[res_df_med_star['Ticker'].isin(portfolio_tickers)].reset_index(drop=True)
-                if portfolio_df.empty:
-                    st.info("Ingen aksjer fra porteføljen har aktive signaler")
-                else:
-                    st.caption(f"Viser {len(portfolio_df)} aksjer fra porteføljen din")
-                    
-                    event_pf = st.dataframe(
-                        style_scanner_df(portfolio_df), 
-                        width="stretch", 
-                        hide_index=True,
-                        on_select="rerun",
-                        selection_mode="single-row",
-                        key="scanner_portfolio"
-                    )
-                    
-                    selected_pf = event_pf.selection.rows if event_pf.selection else []
-                    if selected_pf and not st.session_state.get('_popup_manually_closed', False):
-                        valgt_idx = selected_pf[0]
-                        row = portfolio_df.iloc[valgt_idx]
-                        st.session_state['_scanner_popup'] = {
-                            'ticker': row['Ticker'],
-                            'row': row.to_dict(),
-                        }
+        selected = event.selection.rows if event.selection else []
+        if selected and not st.session_state.get('_popup_manually_closed', False):
+            valgt_idx = selected[0]
+            row = res_df_med_star.iloc[valgt_idx]
+            st.session_state['_scanner_popup'] = {
+                'ticker': row['Ticker'],
+                'row': row.to_dict(),
+            }
         
         # === HISTORISK TREFFSIKKERHET ===
         with st.expander("📊 Historisk treffsikkerhet", expanded=False):
@@ -1698,136 +1628,6 @@ def render():
             - MACD bearish crossover
             - >7% drawdown fra 20d topp
             """)
-
-        # === ANBEFALT PORTEFØLJE (3.5) ===
-        if anbefaling_tilgjengelig:
-            with st.expander("💼 Anbefalt portefølje", expanded=False):
-                st.markdown("""
-                <div style="background: rgba(102, 126, 234, 0.1); border-radius: 12px; padding: 12px; margin-bottom: 16px;
-                            border-left: 4px solid #667eea;">
-                    <div style="font-size: 13px; color: rgba(255,255,255,0.8);">
-                        Porteføljeanbefaling basert på aktive scanner-signaler, regime, diversifisering og R:R.
-                        Anbefalingene bygger på eksisterende posisjoner — ikke «kjøp/selg alt på én dag».
-                    </div>
-                </div>
-                """, unsafe_allow_html=True)
-                
-                # Hent brukerens kapital og posisjoner
-                _anb_kapital = st.number_input("Kapital (kr)", value=config.DEFAULT_KAPITAL, step=10000, key="anb_kapital")
-                _anb_kontant = st.number_input("Ledig kontant (kr)", value=int(_anb_kapital * 0.3), step=5000, key="anb_kontant",
-                                                help="Hvor mye har du tilgjengelig for nye kjøp")
-                
-                _anb_config = {}
-                _c1, _c2, _c3 = st.columns(3)
-                with _c1:
-                    _anb_config['maks_handler_per_dag'] = st.selectbox("Maks handler/dag", [1, 2, 3], index=1, key="anb_handler")
-                with _c2:
-                    _anb_config['maks_posisjoner'] = st.selectbox("Maks posisjoner", [6, 8, 10, 12, 15], index=2, key="anb_pos")
-                with _c3:
-                    _anb_config['kurtasje_pct'] = st.number_input("Kurtasje %", value=config.KURTASJE_PCT, step=0.01, key="anb_kurt")
-                
-                # Hent eksisterende portefølje
-                _eks_pos = {}
-                if portfolio_tilgjengelig:
-                    try:
-                        _pf = portfolio.load_portfolio()
-                        _eks_pos = _pf.get('positions', {})
-                    except Exception:
-                        pass
-                
-                # Hent regime
-                _anb_regime = None
-                _regime_info = st.session_state.get('scanner_regime_info')
-                if _regime_info and _regime_info.get('regime'):
-                    _anb_regime = _regime_info['regime']
-                
-                if st.button("Generer anbefaling", type="primary", key="anb_gen"):
-                    with st.spinner("Analyserer portefølje..."):
-                        anb = anbefalt_portefolje.generer_anbefaling(
-                            scanner_resultater=resultater,
-                            eksisterende_posisjoner=_eks_pos,
-                            kapital=_anb_kapital,
-                            kontant=_anb_kontant,
-                            regime=_anb_regime,
-                            config=_anb_config,
-                        )
-                    
-                    st.session_state['_siste_anbefaling'] = anb
-                
-                # Vis siste anbefaling
-                anb = st.session_state.get('_siste_anbefaling')
-                if anb:
-                    allok = anb['allokering']
-                    
-                    # Oppsummering
-                    st.markdown(f"""
-                    <div style="background: linear-gradient(135deg, rgba(0,200,83,0.1), rgba(0,230,118,0.05));
-                                border-radius: 16px; padding: 20px; margin: 12px 0;
-                                border: 1px solid rgba(0,200,83,0.25);">
-                        <div style="font-size: 14px; font-weight: 600; margin-bottom: 8px;">
-                            Anbefaling — {anb['dato']}
-                        </div>
-                        <div style="font-size: 13px; color: rgba(255,255,255,0.85);">
-                            {anb['oppsummering']}
-                        </div>
-                        <div style="font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 8px;">
-                            Regime: {allok['regime']} · 
-                            Investert: {allok['investert_pct']:.0f}% (mål: {allok['target_investert_pct']}%) · 
-                            Kurtasje: {allok['total_kurtasje']:,.0f} kr
-                        </div>
-                    </div>
-                    """, unsafe_allow_html=True)
-                    
-                    # Kjøpsanbefalinger
-                    if anb['kjøp']:
-                        st.markdown("##### 🟢 Kjøp")
-                        for k in anb['kjøp']:
-                            _k_col = st.columns([1, 2, 1, 1])
-                            _k_col[0].markdown(f"**{k['ticker']}**")
-                            _k_col[1].markdown(f"{k['grunn']}")
-                            _k_col[2].markdown(f"{k['antall']} aksjer á {k['pris']:.1f}")
-                            _k_col[3].markdown(f"**{k['verdi']:,.0f} kr** ({k['posisjon_pct']:.1f}%)")
-                    
-                    # Selg/reduser
-                    if anb['selg']:
-                        st.markdown("##### 🔴 Selg / Reduser")
-                        for s in anb['selg']:
-                            emoji = "🔴" if s['handling'] == 'SELG' else "🟠"
-                            st.markdown(f"{emoji} **{s['ticker']}** — {s['handling']}: {s['grunn']}")
-                    
-                    # Hold
-                    if anb['hold']:
-                        st.markdown("##### ⚪ Hold")
-                        hold_tekst = ", ".join(f"{h['ticker']} ({h['grunn'][:30]})" for h in anb['hold'])
-                        st.caption(hold_tekst)
-                    
-                    # Short
-                    if anb['short']:
-                        st.markdown("##### ⬇️ Short-kandidater")
-                        for sh in anb['short']:
-                            st.markdown(f"⬇️ **{sh['ticker']}** — {sh['grunn']}")
-                    
-                    # Kontant-oversikt
-                    _a1, _a2, _a3 = st.columns(3)
-                    _a1.metric("Kontant etter", f"{allok['kontant_etter']:,.0f} kr")
-                    _a2.metric("Investert", f"{allok['investert_pct']:.0f}%")
-                    _a3.metric("Posisjoner", f"{allok['antall_posisjoner']}")
-                    
-                    st.caption("⚠️ Dette er beregningsbaserte anbefalinger, ikke profesjonell rådgivning. "
-                              "Gjør alltid egen research før du handler.")
-
-        # === AI-ANALYSE MED GEMINI FLASH ===
-        if gemini_tilgjengelig and len(res_df) > 0:
-            # Lagre scanner-resultater for AI-analyse
-            st.session_state['scanner_resultater'] = res_df_med_star
-            
-            # Vis AI-analyse UI
-            gemini_analyzer.vis_ai_analyse_ui()
-        elif not gemini_tilgjengelig:
-            with st.expander("🤖 AI-analyse (ikke tilgjengelig)", expanded=False):
-                st.info("AI-analyse krever Gemini API-nøkkel. Se GEMINI_SETUP.md for instruksjoner.")
-        elif len(res_df) == 0:
-            st.info("🤖 Kjør scanner først for AI-analyse")
 
         # Popup utenfor tabs — @st.dialog må kalles fra hoved-script-kroppen
         popup_data = st.session_state.get('_scanner_popup')

@@ -31,7 +31,7 @@ def render():
     st.markdown("## Appens sider")
 
     tab_info = st.tabs([
-        "Markedstemperatur", "Scanner", "Teknisk Analyse", "Portefølje"
+        "Markedstemperatur", "Scanner", "Teknisk Analyse"
     ])
 
     with tab_info[0]:
@@ -94,9 +94,8 @@ def render():
         - Regime-filter (tilpasser signalkrav til markedsregimet)
         - Sektor-konsentrasjonsfilter
 
-        **Tre faner i resultatvisningen:**
+        **Resultat-faner:**
         - Alle treff med klikkbar navigering til Teknisk Analyse
-        - Porteføljefilter (viser kun aksjer du eier)
         - Watchlist med P/L-oversikt, gjennomsnittlig avkastning og metadata
         
         **Backtest-statistikk per strategi:**
@@ -134,7 +133,6 @@ def render():
         - Smart Money Flow — CMF, OBV, divergensanalyse
         - Innsidehandel — siste handler, roller, beløp, score med markører på chart
         - Mønstergjenkjenning — 6 tekniske mønstre basert på prisdata
-        - Anbefalt portefølje — Automatisk generert med regime-tilpasset allokering
 
         **Posisjonskalkulator:**
         - Beregn posisjonsstørrelse basert på kapital og risikotoleranse
@@ -142,29 +140,6 @@ def render():
         - Kelly Criterion for optimal innsats
         """)
 
-    with tab_info[3]:
-        st.markdown("""
-        ### Portefølje
-
-        Spor og administrer posisjoner med avansert analyse.
-
-        **Seks faner:**
-        1. **Oversikt** — alle posisjoner med P/L, alerts, sektorfordeling og nøkkeltall
-        2. **Monte Carlo** — simulering av porteføljen fremover (VaR, CVaR, sannsynligheter)
-        3. **AI Analyse** — automatiske anbefalinger (HOLD / VURDER SALG / SELG)
-        4. **Legg til posisjon** — registrer nye kjøp med validering
-        5. **Selg/Juster** — registrer salg, oppdater stop-loss, trailing stop
-        6. **Historikk** — tidligere handler med statistikk
-
-        **Alert-system med fire nivåer:**
-        - Kritisk: Exit-signal aktivt (2+ kriterier oppfylt)
-        - Høy: Under trailing stop eller betydelig drawdown
-        - Medium: Nærmer seg stop-loss eller teknisk svakhet
-        - Info: Informasjons-alerts (f.eks. overkjøpt)
-
-        **Sektorfordeling:**
-        - Kakediagram og konsentrasjonsvarsler ved over 40 % i én sektor
-        """)
 
 
 

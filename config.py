@@ -27,11 +27,6 @@ SIGNALMODUL_DEFAULT_MIN_KVALITET = "C"
 SIGNALMODUL_DEFAULT_MAX_DAGER = 30
 SIGNALMODUL_MIN_VOL_RATIO = 0.8
 
-# Portefølje-modul
-ENABLE_PORTFOLIO_PAGE = True
-PORTFOLIO_FILE = os.path.join(DATA_DIR, "portfolio.json")
-PORTFOLIO_HISTORY_FILE = os.path.join(DATA_DIR, "portfolio_history.json")
-
 # Exit-signal innstillinger
 EXIT_TRAILING_STOP_PCT = 8.0      # Trailing stop på 8%
 EXIT_MAX_DRAWDOWN_PCT = 15.0      # Maks drawdown før tvungen salg

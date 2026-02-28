@@ -12,14 +12,6 @@ import user_settings
 
 logger = get_logger(__name__)
 
-# Import AI analyzer
-AI_AVAILABLE = False
-try:
-    import gemini_analyzer
-    AI_AVAILABLE = True
-except ImportError:
-    logger.warning("[teknisk_analyse] Gemini analyzer ikke tilgjengelig")
-
 # Import ML model
 ML_AVAILABLE = False
 try:
@@ -102,9 +94,8 @@ def render():
     </div>
     """, unsafe_allow_html=True)
     
-    # === AI ANALYSE ===
-    if AI_AVAILABLE:
-        _vis_ai_teknisk_analyse(ticker, df_full)
+    # === ALGORITMISK TEKNISK ANALYSE ===
+    _vis_ai_teknisk_analyse(ticker, df_full)
     
     # === CHART KONTROLLER ===
     if LWC_AVAILABLE:

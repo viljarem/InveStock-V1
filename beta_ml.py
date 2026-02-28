@@ -22,13 +22,6 @@ warnings.filterwarnings('ignore')
 
 import logic
 
-# Import portfolio for portefølje-integrasjon
-try:
-    import portfolio
-    PORTFOLIO_AVAILABLE = True
-except ImportError:
-    PORTFOLIO_AVAILABLE = False
-
 # Import regime model for markedstemperatur-integrasjon
 try:
     import regime_model
@@ -2137,46 +2130,10 @@ def vis_beta_side(df_full, tickers):
             st.success("Cache tømt!")
             st.rerun()
     
-    # === HURTIGKNAPPER FOR PORTEFØLJE ===
-    portfolio_tickers = []
-    if PORTFOLIO_AVAILABLE:
-        try:
-            pf = portfolio.load_portfolio()
-            portfolio_tickers = list(pf.get('positions', {}).keys())
-        except:
-            pass
-    
-    # Vis hurtigknapper
-    if portfolio_tickers:
-        st.markdown("#### Hurtiganalyse")
-        qc1, qc2 = st.columns(2)
-        
-        with qc1:
-            if st.button(f"Alle ({len(tickers)})", type="primary", use_container_width=True):
-                st.session_state['ml_quick_tickers'] = None  # None = bruk alle
-                st.session_state['ml_run_analysis'] = True
-        
-        with qc2:
-            if portfolio_tickers:
-                # Filtrer portefølje til kun tickers som finnes i data
-                valid_portfolio = [t for t in portfolio_tickers if t in tickers]
-                btn_disabled = len(valid_portfolio) == 0
-                if st.button(f"Portefølje ({len(valid_portfolio)})", 
-                           use_container_width=True, disabled=btn_disabled):
-                    st.session_state['ml_quick_tickers'] = valid_portfolio
-                    st.session_state['ml_run_analysis'] = True
-                if btn_disabled and portfolio_tickers:
-                    st.caption("Ingen portefølje-tickers i datasettet")
-            else:
-                st.button("Portefølje (0)", use_container_width=True, disabled=True)
-                st.caption("Tom portefølje")
-        
-        st.markdown("---")
-    else:
-        # Vis standard knapp hvis ingen lister
-        if st.button("Start AI-Analyse", type="primary"):
-            st.session_state['ml_quick_tickers'] = None
-            st.session_state['ml_run_analysis'] = True
+    # === START ANALYSE ===
+    if st.button("Start AI-Analyse", type="primary"):
+        st.session_state['ml_quick_tickers'] = None
+        st.session_state['ml_run_analysis'] = True
     
     # Start analyse hvis knapp trykket
     if st.session_state.get('ml_run_analysis', False):
@@ -2417,30 +2374,21 @@ def vis_beta_side(df_full, tickers):
         if insights:
             st.caption(" • ".join(insights))
         
-        # === FANER: Alle / Portefølje / Watchlist ===
+        # === FANER: Alle / Watchlist ===
         try:
             from utils import load_watchlist
             watchlist = load_watchlist()
         except Exception:
             watchlist = []
-        portfolio_tickers = []
-        if PORTFOLIO_AVAILABLE:
-            try:
-                pf = portfolio.load_portfolio()
-                portfolio_tickers = list(pf.get('positions', {}).keys())
-            except:
-                pass
         
         # Filtrer DataFrames for hver fane
-        df_portfolio = df_res[df_res['Ticker'].isin(portfolio_tickers)] if portfolio_tickers else pd.DataFrame()
         df_watchlist = df_res[df_res['Ticker'].isin(watchlist)] if watchlist else pd.DataFrame()
         
         # Lag fane-titler med antall
         tab_alle = f"Alle ({len(df_res)})"
-        tab_portfolio = f"Portefølje ({len(df_portfolio)})"
         tab_watchlist = f"Watchlist ({len(df_watchlist)})"
         
-        tab1, tab2, tab3 = st.tabs([tab_alle, tab_portfolio, tab_watchlist])
+        tab1, tab2 = st.tabs([tab_alle, tab_watchlist])
         
         def render_ai_table(df_view, tab_key):
             """Renderer interaktiv AI-tabell — klikk på rad for popup."""
@@ -2510,16 +2458,6 @@ def vis_beta_side(df_full, tickers):
             valgt_alle = render_ai_table(df_res, "alle")
         
         with tab2:
-            if portfolio_tickers:
-                st.markdown(f"##### Dine {len(portfolio_tickers)} posisjoner med AI-score")
-                if not df_portfolio.empty:
-                    valgt_portfolio = render_ai_table(df_portfolio, "portfolio")
-                else:
-                    st.info("Ingen av dine posisjoner har høy nok AI-score for denne skanningen.")
-            else:
-                st.info("Du har ingen posisjoner i porteføljen ennå.")
-        
-        with tab3:
             st.markdown("##### Din Watchlist")
             if watchlist:
                 if not df_watchlist.empty:
@@ -2531,7 +2469,7 @@ def vis_beta_side(df_full, tickers):
                 st.info("Din watchlist er tom. Velg en aksje i 'Alle'-fanen og klikk 'Legg til Watchlist'.")
         
         # Finn valgt ticker fra hvilken som helst fane (popup håndterer resten)
-        valgt_ticker = valgt_alle or (valgt_portfolio if 'valgt_portfolio' in dir() else None) or (valgt_watchlist if 'valgt_watchlist' in dir() else None)
+        valgt_ticker = valgt_alle or (valgt_watchlist if 'valgt_watchlist' in dir() else None)
         
         st.caption("Klikk på en rad for chart og detaljer. AI-prediksjoner gir ingen garanti for fremtidig avkastning.")
 

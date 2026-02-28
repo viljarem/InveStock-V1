@@ -4,7 +4,6 @@ Innstillinger — Brukerpreferanser og standardverdier.
 Lar brukeren justere:
 - Scanner-standarder (kvalitet, dager, volum, R:R)
 - Chart-preferanser (indikatorer, tema)
-- Portefølje-innstillinger (kurtasje, spread)
 - Generelle innstillinger
 """
 import streamlit as st
@@ -217,55 +216,6 @@ def render():
 
     st.markdown("---")
     
-    # === PORTEFØLJE-INNSTILLINGER ===
-    st.markdown("### 💼 Portefølje")
-    st.markdown("Transaksjonskostnader og valuta.")
-    
-    col_p1, col_p2, col_p3 = st.columns(3)
-    
-    with col_p1:
-        ny_kurtasje = st.number_input(
-            "Kurtasje (%)",
-            min_value=0.0,
-            max_value=1.0,
-            value=float(settings['portefolje'].get('kurtasje_pct', 0.05)),
-            step=0.01,
-            format="%.2f",
-            help="Kurtasje per transaksjon i prosent."
-        )
-        if ny_kurtasje != settings['portefolje'].get('kurtasje_pct', 0.05):
-            settings['portefolje']['kurtasje_pct'] = ny_kurtasje
-            changed = True
-    
-    with col_p2:
-        ny_spread = st.number_input(
-            "Spread/slippage (%)",
-            min_value=0.0,
-            max_value=1.0,
-            value=float(settings['portefolje'].get('spread_pct', 0.10)),
-            step=0.01,
-            format="%.2f",
-            help="Estimert spread og slippage i prosent."
-        )
-        if ny_spread != settings['portefolje'].get('spread_pct', 0.10):
-            settings['portefolje']['spread_pct'] = ny_spread
-            changed = True
-    
-    with col_p3:
-        valuta_valg = ["NOK", "USD", "EUR"]
-        current_valuta = settings['portefolje'].get('valuta', 'NOK')
-        idx_valuta = valuta_valg.index(current_valuta) if current_valuta in valuta_valg else 0
-        ny_valuta = st.selectbox(
-            "Valuta",
-            valuta_valg,
-            index=idx_valuta
-        )
-        if ny_valuta != settings['portefolje']['valuta']:
-            settings['portefolje']['valuta'] = ny_valuta
-            changed = True
-    
-    st.markdown("---")
-    
     # === GENERELLE INNSTILLINGER ===
     st.markdown("### 🔧 Generelt")
     
@@ -317,7 +267,6 @@ def render():
         Disse innstillingene brukes som standardverdier når du:
         - Åpner scanneren
         - Viser charts i Teknisk Analyse
-        - Beregner porteføljeavkastning
         
         Du kan fortsatt overstyre innstillingene midlertidig i hver visning.
         
