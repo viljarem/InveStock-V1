@@ -32,18 +32,18 @@ def main():
     suksess = []
     
     try:
-        # 1. Oppdater hovedmarkedsdata (aksjekurser)
-        logger.info("📈 Oppdaterer hovedmarkedsdata...")
+        # 1. Oppdater alle aksjekurser + benchmark + sektor-mapping
+        logger.info("📈 Oppdaterer aksjekurser for alle tickers + benchmark...")
         try:
-            df = data.hent_markedsdata_df(force_refresh=True)
-            if not df.empty:
-                suksess.append("Hovedmarkedsdata")
-                logger.info(f"   ✅ Hentet data for {len(df)} aksjer")
+            result = data.last_ned_data()
+            if result:
+                suksess.append("Aksjekurser (alle tickers + benchmark + sektor)")
+                logger.info("   ✅ Lastet ned aksjekurser, benchmark og sektor-mapping")
             else:
-                feil.append("Hovedmarkedsdata (tom DataFrame)")
-                logger.warning("   ⚠️  Tom DataFrame returnert")
+                feil.append("Aksjekurser (last_ned_data returnerte False)")
+                logger.warning("   ⚠️  last_ned_data returnerte uventet resultat")
         except Exception as e:
-            feil.append(f"Hovedmarkedsdata: {str(e)}")
+            feil.append(f"Aksjekurser: {str(e)}")
             logger.error(f"   ❌ Feil: {e}")
             
         # 2. Oppdater Brent oljepris
@@ -79,7 +79,7 @@ def main():
             tickers = data.hent_oppdaterte_tickers()
             oppdatert_count = 0
             
-            for ticker in tickers[:10]:  # Begrens til første 10 for å ikke overbelaste
+            for ticker in tickers:  # Oppdater alle tickers
                 try:
                     fund_data = fundamental_data.get_fundamental_data(ticker)
                     if fund_data:

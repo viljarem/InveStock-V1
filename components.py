@@ -9,7 +9,7 @@ import streamlit as st
 
 
 # =============================================================================
-# DATAFRAME HIGHLIGHT-FUNKSJONER (brukes av scanner, portefølje etc.)
+# DATAFRAME HIGHLIGHT-FUNKSJONER (brukes av scanner etc.)
 # =============================================================================
 
 def highlight_kvalitet(val):

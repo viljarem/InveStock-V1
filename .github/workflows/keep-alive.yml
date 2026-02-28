@@ -1,44 +1,43 @@
-name: 🔔 Hold Streamlit Cloud Våken
+name: 🔄 Keep Streamlit App Alive
 
 on:
   schedule:
-    # Ping hver 25. minutt (før 30 min timeout)
-    - cron: '*/25 * * * *'
+    # Pinger appen daglig for å forhindre at den sovner
+    # Streamlit Cloud free tier sovner etter ~7 dager uten besøk
+    - cron: '0 12 * * *'  # Kl 13:00 norsk tid (vintertid) / 14:00 (sommertid)
   
-  workflow_dispatch:  # Manuell test
+  workflow_dispatch:  # Manuell kjøring
 
 jobs:
-  ping-app:
+  keep-alive:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     
     steps:
-    - name: 🔔 Ping Streamlit Cloud app
+    - name: 🏓 Ping Streamlit App
+      env:
+        APP_URL: ${{ secrets.STREAMLIT_APP_URL }}
       run: |
-        # Streamlit Cloud URL for InveStock V1
-        APP_URL="https://investock-v1.streamlit.app"
-        
-        echo "🔔 Pinger Streamlit Cloud app..."
-        echo "URL: $APP_URL"
-        
-        # Enkel HTTP GET request for å holde appen våken
-        response=$(curl -s -o /dev/null -w "%{http_code}" --connect-timeout 30 "$APP_URL" || echo "000")
-        
-        if [ "$response" = "200" ]; then
-          echo "✅ App er våken! (HTTP $response)"
-        elif [ "$response" = "000" ]; then
-          echo "⚠️  Timeout eller connection error"
-        else
-          echo "⚠️  App response: HTTP $response"
+        if [ -z "$APP_URL" ]; then
+          echo "⚠️  STREAMLIT_APP_URL secret er ikke satt!"
+          echo "Gå til repo Settings → Secrets → New secret"
+          echo "Navn: STREAMLIT_APP_URL"
+          echo "Verdi: https://din-app.streamlit.app"
+          exit 1
         fi
         
-        echo "🕐 Ping fullført: $(date)"
-    
-    - name: 📊 Status oppsummering
-      run: |
-        echo "================================================="
-        echo "🔔 STREAMLIT CLOUD PING STATUS"
-        echo "================================================="
-        echo "Tidspunkt: $(TZ='Europe/Oslo' date '+%Y-%m-%d %H:%M')"
-        echo "Formål: Holde Streamlit Cloud app våken"
-        echo "Neste ping: Om 25 minutter"
-        echo "================================================="
+        echo "🔄 Pinger $APP_URL..."
+        
+        # Første forsøk — appen kan være i sovemodus og trenge tid til å starte
+        HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 120 "$APP_URL")
+        
+        if [ "$HTTP_STATUS" -eq 200 ] || [ "$HTTP_STATUS" -eq 302 ]; then
+          echo "✅ App er aktiv (HTTP $HTTP_STATUS)"
+        elif [ "$HTTP_STATUS" -eq 503 ]; then
+          echo "💤 App sov, venter på oppstart..."
+          sleep 30
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 120 "$APP_URL")
+          echo "🔄 Nytt forsøk: HTTP $HTTP_STATUS"
+        else
+          echo "⚠️  App svarte med HTTP $HTTP_STATUS"
+        fi

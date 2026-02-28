@@ -2,7 +2,7 @@
 
 **Avansert teknisk analyse for Oslo Bors**
 
-InveStock Pro er et profesjonelt Streamlit-basert analyseverktoy for aksjer pa Oslo Bors. Appen kombinerer klassiske tekniske strategier med maskinlaering, markedsregime-analyse (HMM), Smart Money Flow, innsidehandel-overvaking og AI-basert monsterdetektion.
+InveStock Pro er et profesjonelt Streamlit-basert analyseverktoy for aksjer pa Oslo Bors. Appen kombinerer klassiske tekniske strategier med maskinlaering, markedsregime-analyse (HMM), Smart Money Flow og innsidehandel-overvaking.
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
@@ -66,10 +66,9 @@ Skanner Oslo Bors for aksjer som oppfyller kriteriene til 8 tekniske strategier.
 - Regime-filter (tilpasser signalkrav til markedsregimet)
 - Sektor-konsentrasjonsfilter
 
-**Tre faner i resultatvisningen:**
+**To faner i resultatvisningen:**
 1. Alle treff med klikkbar navigering til Teknisk Analyse
-2. Portefoljefilter (viser kun aksjer du eier)
-3. Watchlist med P/L-oversikt og gjennomsnittlig avkastning
+2. Watchlist med P/L-oversikt og gjennomsnittlig avkastning
 
 **Historisk treffsikkerhet:** Walk-forward backtesting av hver strategi med win rate og snittavkastning.
 
@@ -99,24 +98,6 @@ Detaljert analyse av enkeltticker med TradingView-inspirerte charts.
 - Pattern Vision -- YOLO-basert monsterdetektion og formasjonsscanner
 - Kelly Criterion -- optimal posisjonsstorrelse basert pa din trading-statistikk
 - Posisjonskalkulator med ATR-basert stop-loss
-
-### Portefolje
-
-Spor og administrer posisjoner med avansert analyse.
-
-**Seks faner:**
-1. **Oversikt** -- alle posisjoner med P/L, alerts, sektorfordeling og nokkeltall
-2. **Monte Carlo** -- simulering av portefoljen fremover (VaR, CVaR, sannsynligheter)
-3. **AI Analyse** -- automatiske anbefalinger basert pa AI-score
-4. **Legg til posisjon** -- registrer nye kjop med validering
-5. **Selg/Juster** -- registrer salg, oppdater stop-loss, trailing stop
-6. **Historikk** -- tidligere handler med statistikk (vinnrate, total P/L)
-
-**Alert-system med fire nivaer:**
-- Kritisk: Exit-signal aktivt (2+ kriterier oppfylt)
-- Hoy: Under trailing stop eller betydelig drawdown
-- Medium: Naermer seg stop-loss eller teknisk svakhet
-- Info: Informasjons-alerts (f.eks. overkjopt)
 
 ### Beta-moduler
 
@@ -193,7 +174,6 @@ InveStock DEV/
 |-- logic.py                  Tekniske strategier, indikatorer og exit-signaler
 |-- chart_utils.py            TradingView-inspirerte charts (Plotly)
 |-- config.py                 Konfigurasjon og parametere
-|-- portfolio.py              Portefoljeforvaltning og transaksjonshistorikk
 |-- regime_model.py           Markedsregime-analyse (HMM)
 |-- beta_ml.py                AI/ML-scanner (XGBoost ensemble)
 |-- smart_money.py            Smart Money Flow-analyse (CMF, OBV, SMI)
@@ -210,7 +190,6 @@ InveStock DEV/
 |   |-- markedstemperatur.py   Markedsregime og bredde
 |   |-- scanner.py            Strategi-scanner
 |   |-- teknisk_analyse.py    Detaljert teknisk analyse
-|   |-- portefolje.py         Portefoljestyring
 |   |-- beta_intradag.py      Intradag-scanner
 |   |-- beta_ai_scanner.py    AI-scanner
 |   |-- beta_pattern_vision.py Pattern Vision (YOLO)
@@ -222,9 +201,8 @@ InveStock DEV/
 |   |-- signal_fusion.py
 |   |-- models/model.pt
 |-- tests/                    Testsuite (319 tester)
-|-- data_storage/             Cachede data og portefolje
+|-- data_storage/             Cachede data og watchlist
     |-- tickers.txt
-    |-- portfolio.json
     |-- watchlist.json
     |-- fundamental_cache/
     |-- ml_cache/
