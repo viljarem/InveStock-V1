@@ -1,5 +1,5 @@
 {
-  "timestamp": 1772210009.7057426,
+  "timestamp": 1772303985.784383,
   "handler": [
     {
       "ticker": "NAVA.OL",
@@ -1329,56 +1329,6 @@
       "dato": "2026-01-30",
       "dato_tid": "2026-01-30T08:30:37.728000+00:00",
       "message_id": 664518,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "AKSO.OL",
-      "issuer_sign": "AKSO",
-      "issuer_name": "Aker Solutions ASA",
-      "tittel": "Aker Solutions ASA: Mandatory notification of trade by primary insiders and close associates",
-      "dato": "2026-01-29",
-      "dato_tid": "2026-01-29T17:53:13.229000+00:00",
-      "message_id": 664484,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "LIFE.OL",
-      "issuer_sign": "LIFE",
-      "issuer_name": "Lifecare ASA",
-      "tittel": "Lifecare ASA: Mandatory notification of trade",
-      "dato": "2026-01-29",
-      "dato_tid": "2026-01-29T16:04:02.870000+00:00",
-      "message_id": 664475,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "LIFE.OL",
-      "issuer_sign": "LIFE",
-      "issuer_name": "Lifecare ASA",
-      "tittel": "Lifecare ASA: Mandatory notification of trade - allocation of Underwriting Commission Shares and Warrants",
-      "dato": "2026-01-29",
-      "dato_tid": "2026-01-29T13:45:03.673000+00:00",
-      "message_id": 664460,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "LIFE.OL",
-      "issuer_sign": "LIFE",
-      "issuer_name": "Lifecare ASA",
-      "tittel": "Lifecare ASA: Mandatory notification of trade - allocation of Underwriting Commission Shares and Warrants",
-      "dato": "2026-01-29",
-      "dato_tid": "2026-01-29T13:45:03.534000+00:00",
-      "message_id": 664459,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "DFENS.OL",
-      "issuer_sign": "DFENS",
-      "issuer_name": "Fjord Defence Group ASA",
-      "tittel": "Fjord Defence Group ASA – Mandatory notification of trade ",
-      "dato": "2026-01-29",
-      "dato_tid": "2026-01-29T07:36:45.618000+00:00",
-      "message_id": 664405,
       "type": "ukjent"
     }
   ]
