@@ -1,6 +1,176 @@
 {
-  "timestamp": 1772472326.2949421,
+  "timestamp": 1772558662.6055748,
   "handler": [
+    {
+      "ticker": "BAKKA.OL",
+      "issuer_sign": "BAKKA",
+      "issuer_name": "Bakkafrost P/f",
+      "tittel": "Share Savings Plan Transaction",
+      "dato": "2026-03-03",
+      "dato_tid": "2026-03-03T17:23:51.750000+00:00",
+      "message_id": 667428,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VAR.OL",
+      "issuer_sign": "VAR",
+      "issuer_name": "Vår Energi ASA",
+      "tittel": "Vår Energi ASA's share saving plan allocates shares",
+      "dato": "2026-03-03",
+      "dato_tid": "2026-03-03T16:34:35.417000+00:00",
+      "message_id": 667423,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EQVA.OL",
+      "issuer_sign": "EQVA",
+      "issuer_name": "Eqva ASA",
+      "tittel": "EQVA: Mandatory notification of trade",
+      "dato": "2026-03-03",
+      "dato_tid": "2026-03-03T16:27:59.345000+00:00",
+      "message_id": 667421,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EQVA.OL",
+      "issuer_sign": "EQVA",
+      "issuer_name": "Eqva ASA",
+      "tittel": "EQVA: Mandatory notification of trade",
+      "dato": "2026-03-03",
+      "dato_tid": "2026-03-03T16:20:00+00:00",
+      "message_id": 667420,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AFG.OL",
+      "issuer_sign": "AFG",
+      "issuer_name": "AF Gruppen ASA",
+      "tittel": "Notifiable trade",
+      "dato": "2026-03-03",
+      "dato_tid": "2026-03-03T15:00:00+00:00",
+      "message_id": 667404,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AFG.OL",
+      "issuer_sign": "AFG",
+      "issuer_name": "AF Gruppen ASA",
+      "tittel": "Meldepliktig handel",
+      "dato": "2026-03-03",
+      "dato_tid": "2026-03-03T15:00:00+00:00",
+      "message_id": 667403,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AFG.OL",
+      "issuer_sign": "AFG",
+      "issuer_name": "AF Gruppen ASA",
+      "tittel": "Mandatory Notification (of trade primary insider)",
+      "dato": "2026-03-03",
+      "dato_tid": "2026-03-03T15:00:00+00:00",
+      "message_id": 667402,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AFG.OL",
+      "issuer_sign": "AFG",
+      "issuer_name": "AF Gruppen ASA",
+      "tittel": "Meldepliktig handel",
+      "dato": "2026-03-03",
+      "dato_tid": "2026-03-03T15:00:00+00:00",
+      "message_id": 667401,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AFG.OL",
+      "issuer_sign": "AFG",
+      "issuer_name": "AF Gruppen ASA",
+      "tittel": "AF Gruppen ASA – Mandatory notification of trade for primary insiders",
+      "dato": "2026-03-03",
+      "dato_tid": "2026-03-03T15:00:00+00:00",
+      "message_id": 667400,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AFG.OL",
+      "issuer_sign": "AFG",
+      "issuer_name": "AF Gruppen ASA",
+      "tittel": "AF Gruppen ASA – Meldepliktig handel for primærinnsidere",
+      "dato": "2026-03-03",
+      "dato_tid": "2026-03-03T15:00:00+00:00",
+      "message_id": 667399,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "OTOVO.OL",
+      "issuer_sign": "OTOVO",
+      "issuer_name": "Otovo ASA",
+      "tittel": "Correction: Otovo ASA – Mandatory Notification of Trade ",
+      "dato": "2026-03-03",
+      "dato_tid": "2026-03-03T12:56:26.819000+00:00",
+      "message_id": 667382,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "IWS.OL",
+      "issuer_sign": "IWS",
+      "issuer_name": "Integrated Wind Solutions ASA",
+      "tittel": "Notification of Trade",
+      "dato": "2026-03-02",
+      "dato_tid": "2026-03-02T22:45:57.949000+00:00",
+      "message_id": 667312,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "OTOVO.OL",
+      "issuer_sign": "OTOVO",
+      "issuer_name": "Otovo ASA",
+      "tittel": "Otovo ASA – Mandatory Notification of Trade and Disclosure of Shareholding ",
+      "dato": "2026-03-02",
+      "dato_tid": "2026-03-02T22:15:50.617000+00:00",
+      "message_id": 667311,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "FRO.OL",
+      "issuer_sign": "FRO",
+      "issuer_name": "Frontline plc",
+      "tittel": "FRO – Notification of Trade",
+      "dato": "2026-03-02",
+      "dato_tid": "2026-03-02T21:30:00+00:00",
+      "message_id": 667309,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "DNO.OL",
+      "issuer_sign": "DNO",
+      "issuer_name": "DNO ASA",
+      "tittel": "Mandatory Notification of Trade",
+      "dato": "2026-03-02",
+      "dato_tid": "2026-03-02T20:24:55.038000+00:00",
+      "message_id": 667307,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TRMED.OL",
+      "issuer_sign": "TRMED",
+      "issuer_name": "Thor Medical ASA",
+      "tittel": "Thor Medical ASA - Completed primary insider purchases after option exercise",
+      "dato": "2026-03-02",
+      "dato_tid": "2026-03-02T18:41:39.014000+00:00",
+      "message_id": 667305,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "GJF.OL",
+      "issuer_sign": "GJF",
+      "issuer_name": "Gjensidige Forsikring ASA",
+      "tittel": "Share allocation to executive personnel",
+      "dato": "2026-03-02",
+      "dato_tid": "2026-03-02T18:13:47.898000+00:00",
+      "message_id": 667304,
+      "type": "kjøp"
+    },
     {
       "ticker": "NOAP.OL",
       "issuer_sign": "NOAP",
