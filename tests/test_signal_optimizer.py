@@ -271,6 +271,25 @@ class TestCompositeScore:
         score = so.composite_score(stats)
         assert 0.0 <= score <= 100.0
 
+    def test_mer_handler_gir_høyere_score_enn_færre(self):
+        """Samme ytelse men 30+ handler skal score høyere enn 7 handler."""
+        def lage(n): return {'n': n, 'win_rate': 60, 'profit_factor': 2.0,
+                             'avg_return': 5.0, 'avg_drawdown': -5.0}
+        assert so.composite_score(lage(30)) > so.composite_score(lage(7))
+
+    def test_lav_n_får_redusert_score(self):
+        """Færre enn 10 handler skal ha redusert score (×0.60)."""
+        stats_lav = {'n': 8,  'win_rate': 60, 'profit_factor': 2.0, 'avg_return': 5.0, 'avg_drawdown': -4.0}
+        stats_høy = {'n': 40, 'win_rate': 60, 'profit_factor': 2.0, 'avg_return': 5.0, 'avg_drawdown': -4.0}
+        assert so.composite_score(stats_høy) > so.composite_score(stats_lav)
+
+    def test_n30_gir_full_score_uten_sample_straff(self):
+        """Med n=30 skal ingen sample-straff anvendes (×1.0)."""
+        stats29 = {'n': 29, 'win_rate': 60, 'profit_factor': 2.0, 'avg_return': 5.0, 'avg_drawdown': -4.0}
+        stats30 = {'n': 30, 'win_rate': 60, 'profit_factor': 2.0, 'avg_return': 5.0, 'avg_drawdown': -4.0}
+        # n=30 skal ha høyere score enn n=29 (29 → ×0.85, 30 → ×1.0)
+        assert so.composite_score(stats30) > so.composite_score(stats29)
+
 
 # ─── _split_walk_forward ─────────────────────────────────────────────────────
 

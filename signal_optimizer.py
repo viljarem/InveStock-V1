@@ -286,8 +286,13 @@ def composite_score(stats: dict) -> float:
       - Profit factor (capped 3): 35 %
       - Avg return (0–20 %):      25 %
 
-    Straff:
+    Justeringer:
       - Færre enn 5 trades: 0
+      - Statistisk reliabilitetsfaktor basert på antall handler:
+          n < 10  → ×0.60  (lite data, stort konfidensintervall)
+          n < 20  → ×0.75
+          n < 30  → ×0.85
+          n ≥ 30  → ×1.00  (tilstrekkelig for statistikk)
       - Gjennomsnittlig drawdown < -15 %: halveres
     """
     if stats is None or stats.get('n', 0) < 5:
@@ -298,6 +303,15 @@ def composite_score(stats: dict) -> float:
     ret = min(max(stats.get('avg_return', 0), 0), 20) / 20   # 0–1
 
     score = (wr * 40 + pf * 35 + ret * 25)
+
+    # Statistisk reliabilitets-vekting etter antall handler
+    n = stats.get('n', 0)
+    if n < 10:
+        score *= 0.60
+    elif n < 20:
+        score *= 0.75
+    elif n < 30:
+        score *= 0.85
 
     if stats.get('avg_drawdown', 0) < -15:
         score *= 0.5

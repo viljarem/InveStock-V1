@@ -277,7 +277,68 @@ def _vis_sensitivitet(alle_komboer: list[dict]) -> None:
     )
 
 
-# ─── Metodikk-forklaring ─────────────────────────────────────────────────────
+def _vis_profit_factor_banner(pf: float, n: int, params_str: str) -> None:
+    """Viser et fremhevet profit-factor banner øverst på siden."""
+    if pf >= 2.0:
+        bg = "linear-gradient(135deg, rgba(0,200,83,0.14) 0%, rgba(0,230,118,0.06) 100%)"
+        border = "rgba(0,200,83,0.3)"
+        farge = "#00c853"
+        vurdering = "Sterk strategi ✅"
+    elif pf >= 1.5:
+        bg = "linear-gradient(135deg, rgba(255,167,38,0.14) 0%, rgba(255,193,7,0.06) 100%)"
+        border = "rgba(255,167,38,0.3)"
+        farge = "#ffa726"
+        vurdering = "Lønnsom strategi ✅"
+    elif pf > 1.0:
+        bg = "linear-gradient(135deg, rgba(255,167,38,0.08) 0%, rgba(255,193,7,0.04) 100%)"
+        border = "rgba(255,167,38,0.2)"
+        farge = "#ffb74d"
+        vurdering = "Marginalt lønnsom ⚠️"
+    else:
+        bg = "linear-gradient(135deg, rgba(239,83,80,0.10) 0%, rgba(183,28,28,0.04) 100%)"
+        border = "rgba(239,83,80,0.3)"
+        farge = "#ef5350"
+        vurdering = "Ulønnsom ❌"
+
+    st.markdown(f"""
+    <div style="background: {bg}; border: 1px solid {border}; border-radius: 14px;
+                padding: 20px 28px; margin-bottom: 18px;" role="region" aria-label="Profit Factor resultat">
+        <div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+            <div>
+                <div style="font-size: 11px; color: rgba(255,255,255,0.45); text-transform: uppercase;
+                            letter-spacing: 1px; margin-bottom: 4px;">Profit Factor (out-of-sample)</div>
+                <div style="font-size: 52px; font-weight: 800; color: {farge};
+                            line-height: 1.1; letter-spacing: -1px;"
+                     aria-label="Profit Factor {pf:.2f}">{pf:.2f}</div>
+                <div style="font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 4px;">{vurdering}</div>
+            </div>
+            <div style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 28px;">
+                <div style="font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 8px;">
+                    Profit Factor forklaring
+                </div>
+                <div style="font-size: 12px; color: rgba(255,255,255,0.75); line-height: 1.8;">
+                    <b>PF = sum(gevinster) / sum(tap)</b><br>
+                    &gt; 2.0 → Utmerket strategi<br>
+                    1.5–2.0 → God strategi<br>
+                    1.0–1.5 → Marginalt lønnsom<br>
+                    &lt; 1.0 → Taper penger
+                </div>
+            </div>
+            <div style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 28px;">
+                <div style="font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 8px;">
+                    Optimale parametere
+                </div>
+                <div style="font-size: 11px; color: rgba(255,255,255,0.75); line-height: 1.8; font-family: monospace;">
+                    {params_str.replace(' / ', '<br>')}
+                </div>
+                <div style="font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 6px;">
+                    Basert på {n} handler (out-of-sample)
+                </div>
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
 
 def _vis_metodikk() -> None:
     with st.expander("ℹ️ Metodikk — OsloKjøp-optimalisering", expanded=False):
@@ -464,7 +525,13 @@ def render() -> None:
 
     beste_params = opt_resultat['beste_params']
 
-    # ── 1. Beste parametere ──────────────────────────────────────────────
+    # ── 1. Profit factor banner (always shown first) ──────────────────────
+    pf_test = opt_resultat.get('test_metrics', {}).get('profit_factor', 0)
+    n_test  = opt_resultat.get('test_metrics', {}).get('n', 0)
+    if pf_test > 0:
+        _vis_profit_factor_banner(pf_test, n_test, str(beste_params))
+
+    # ── 2. Beste parametere ──────────────────────────────────────────────
     st.markdown("### 🏆 Optimale parametere")
     p = beste_params
     st.markdown(f"""
@@ -487,7 +554,7 @@ def render() -> None:
     </div>
     """, unsafe_allow_html=True)
 
-    # ── 2. Ytelsesmetrikk (trening vs. test) ─────────────────────────────
+    # ── 3. Ytelsesmetrikk (trening vs. test) ─────────────────────────────
     fane_trening, fane_test = st.tabs(["📚 Treningsresultat", "🧪 Test (out-of-sample)"])
 
     with fane_trening:
@@ -507,7 +574,7 @@ def render() -> None:
 
     st.markdown("---")
 
-    # ── 3. Egenkapitalkurve ──────────────────────────────────────────────
+    # ── 4. Egenkapitalkurve ──────────────────────────────────────────────
     st.markdown("### 📈 Egenkapitalkurve")
 
     @st.cache_data(ttl=600, show_spinner=False)
@@ -551,13 +618,13 @@ def render() -> None:
 
     st.markdown("---")
 
-    # ── 4. Parameter-sensitivitet ────────────────────────────────────────
+    # ── 5. Parameter-sensitivitet ────────────────────────────────────────
     if opt_resultat.get('alle_kombinasjoner'):
         _vis_sensitivitet(opt_resultat['alle_kombinasjoner'])
         st.markdown("---")
 
-    # ── 5. Aktive signaler nå ────────────────────────────────────────────
+    # ── 6. Aktive signaler nå ────────────────────────────────────────────
     _vis_aktive_signaler(df_clean, unike_tickers, beste_params)
 
-    # ── 6. Metodikk ──────────────────────────────────────────────────────
+    # ── 7. Metodikk ──────────────────────────────────────────────────────
     _vis_metodikk()
