@@ -1,6 +1,46 @@
 {
-  "timestamp": 1772558662.6055748,
+  "timestamp": 1772644308.60089,
   "handler": [
+    {
+      "ticker": "EQNR.OL",
+      "issuer_sign": "EQNR",
+      "issuer_name": "Equinor ASA",
+      "tittel": "Equinor ASA: Notifiable trading",
+      "dato": "2026-03-04",
+      "dato_tid": "2026-03-04T11:08:06.658000+00:00",
+      "message_id": 667484,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EQNR.OL",
+      "issuer_sign": "EQNR",
+      "issuer_name": "Equinor ASA",
+      "tittel": "Equinor ASA: Meldepliktig handel",
+      "dato": "2026-03-04",
+      "dato_tid": "2026-03-04T11:08:06.653000+00:00",
+      "message_id": 667483,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "HAFNI.OL",
+      "issuer_sign": "HAFNI",
+      "issuer_name": "Hafnia Limited",
+      "tittel": "HAFNIA LIMITED: Exercise of options and sale of shares by primary insiders",
+      "dato": "2026-03-04",
+      "dato_tid": "2026-03-04T07:00:07.363000+00:00",
+      "message_id": 667456,
+      "type": "salg"
+    },
+    {
+      "ticker": "VEND.OL",
+      "issuer_sign": "VEND",
+      "issuer_name": "Vend Marketplaces ASA",
+      "tittel": "Vend Marketplaces ASA: Mandatory notification of trade by primary insider",
+      "dato": "2026-03-03",
+      "dato_tid": "2026-03-03T17:27:54.770000+00:00",
+      "message_id": 667430,
+      "type": "ukjent"
+    },
     {
       "ticker": "BAKKA.OL",
       "issuer_sign": "BAKKA",
@@ -1579,26 +1619,6 @@
       "dato": "2026-02-03",
       "dato_tid": "2026-02-03T10:00:03.843000+00:00",
       "message_id": 664720,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "PARB.OL",
-      "issuer_sign": "PARB",
-      "issuer_name": "Pareto Bank ASA",
-      "tittel": "Meldepliktig handel",
-      "dato": "2026-02-02",
-      "dato_tid": "2026-02-02T11:20:03.813000+00:00",
-      "message_id": 664618,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "ANDF.OL",
-      "issuer_sign": "ANDF",
-      "issuer_name": "Andfjord Salmon Group AS",
-      "tittel": "Andfjord Salmon - Grant of options to primary insiders",
-      "dato": "2026-02-02",
-      "dato_tid": "2026-02-02T07:42:07.240000+00:00",
-      "message_id": 664591,
       "type": "ukjent"
     }
   ]
