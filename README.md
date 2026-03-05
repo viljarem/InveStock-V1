@@ -6,7 +6,7 @@ InveStock Pro er et profesjonelt Streamlit-basert analyseverktoy for aksjer pa O
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
-![Tests](https://img.shields.io/badge/Tests-319_passing-brightgreen.svg)
+![Tests](https://img.shields.io/badge/Tests-361_passing-brightgreen.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 ---
@@ -134,6 +134,50 @@ Eksperimentelle funksjoner under aktiv utvikling.
 | Mellom (2-8 u) | Ichimoku Breakout | Pris bryter opp gjennom Kumo-skyen |
 | Mellom (2-8 u) | VCP (Minervini) | Stage 2 opptrend med krympende volatilitet |
 | Lang (3-12 mnd) | Golden Cross | SMA 50 krysser over SMA 200 med stigende snitt |
+| Kort-mellom (5-20 d) | **OsloKjøp** ⭐ | RSI-pullback i bekreftet opptrend — grid-søk-optimalisert |
+
+---
+
+## OsloKjøp — Optimalisert Strategi
+
+**OsloKjøp** er den eneste fullt optimaliserte strategien i InveStock Pro. Parameterne ble funnet via grid-søk over 72 kombinasjoner med walk-forward validering (70/30 kronologisk split) mot 112 likvide Oslo Børs-tickers over 10 år.
+
+### Optimale parametere
+
+| Parameter | Verdi | Beskrivelse |
+|-----------|-------|-------------|
+| RSI(14) terskel | **< 30** | Oversold-terskel (lokal tilbakefall) |
+| Trend-SMA | **200** | Langsiktig trend-bekreftelse |
+| Volum-faktor | **× 1.5** | Volum > 1.5 × 20d-snitt |
+| Trailing stop | **1.5 × ATR14** | Dynamisk stop basert på volatilitet |
+| Profit target | **3.0 × ATR14** | Asymmetrisk risk/reward |
+| Maks holdedager | **20 dager** | Tvangsutgang etter 20 handelsdager |
+
+### Backtestresultater (112 tickers, 10 år)
+
+| Metrikk | Full historikk | Out-of-sample (30%) |
+|---------|---------------|---------------------|
+| **Profit Factor** | **2.40** ✅ | **5.74** ✅ |
+| Win Rate | 55.7% | 65.0% |
+| Snitt avkastning/trade | +2.88% | +3.45% |
+| Sharpe ratio | 1.53 | 2.23 |
+| Antall handler | 79 | 20 |
+
+> **Profit Factor 2.40** betyr at for hver krone tapt tjenes 2.40 kroner i gevinst. PF > 2.0 regnes som utmerket.
+
+### Kjøpsbetingelser (alle må være oppfylt)
+
+```
+1. Pris > SMA(200)              — langsiktig opptrend aktiv
+2. SMA(200) > SMA(200)[20d]     — SMA stigende (trend akselererer)
+3. RSI(14) < 30                 — lokal oversold (pullback)
+4. max(RSI, siste 20d) > 50     — RSI var sunn (ikke breakdown)
+5. Volum > 1.5 × SMA(volum,20)  — institusjonell interesse
+```
+
+### TradingView Pine Script
+
+Strategien kan eksporteres direkte til TradingView Pine Script v5 fra **Signal Optimizer**-siden i appen. Klikk «Eksporter til TradingView Pine Script» for å kopiere koden.
 
 ---
 

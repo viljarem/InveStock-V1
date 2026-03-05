@@ -1,0 +1,24 @@
+{
+  "params": {
+    "rsi_period": 14,
+    "rsi_threshold": 30,
+    "trend_sma": 200,
+    "vol_factor": 1.5,
+    "atr_stop": 1.5,
+    "atr_target": 3.0,
+    "holding": 20
+  },
+  "metrics": {
+    "n": 20,
+    "win_rate": 65.0,
+    "avg_return": 3.45,
+    "profit_factor": 5.74,
+    "avg_drawdown": -5.01,
+    "avg_dager": 11.6,
+    "sharpe": 2.23,
+    "train_score": 59.66,
+    "test_score": 55.52,
+    "total_handler": 79,
+    "full_profit_factor": 2.4
+  }
+}

@@ -90,7 +90,7 @@ if beta_eksisterer:
 
 # === Sidefiler ===
 from views import hjem, markedstemperatur, scanner, teknisk_analyse
-from views import beta_ai_scanner, innstillinger
+from views import beta_ai_scanner, innstillinger, signal_optimizer
 
 # Beta-moduler som krever ekstra avhengigheter
 try:
@@ -127,7 +127,7 @@ with st.sidebar:
     st.title("InveStock Pro")
 
     # Dynamisk menyvalg basert på tilgjengelighet av moduler
-    meny_opsjoner = ["Hjem", "Markedstemperatur", "Scanner", "Teknisk Analyse"]
+    meny_opsjoner = ["Hjem", "Markedstemperatur", "Scanner", "Teknisk Analyse", "Signal Optimizer"]
     if beta_tilgjengelig:
         meny_opsjoner.append("Beta: AI Scanner")
     if insider_signal_tilgjengelig:
@@ -234,6 +234,9 @@ elif side_valg == "Scanner":
 
 elif side_valg == "Teknisk Analyse":
     teknisk_analyse.render()
+
+elif side_valg == "Signal Optimizer":
+    signal_optimizer.render()
 
 elif side_valg == "Beta: AI Scanner":
     beta_ai_scanner.render()
