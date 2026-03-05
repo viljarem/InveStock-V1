@@ -1,6 +1,66 @@
 {
-  "timestamp": 1772644308.60089,
+  "timestamp": 1772735351.7700686,
   "handler": [
+    {
+      "ticker": "MVE.OL",
+      "issuer_sign": "MVE",
+      "issuer_name": "MatvareExpressen AS",
+      "tittel": "Meldepliktig handel for primærinnsidere",
+      "dato": "2026-03-05",
+      "dato_tid": "2026-03-05T16:00:00+00:00",
+      "message_id": 667670,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NAPA.OL",
+      "issuer_sign": "NAPA",
+      "issuer_name": "Napatech A/S",
+      "tittel": "Napatech A/S: Mandatory notification of trade",
+      "dato": "2026-03-05",
+      "dato_tid": "2026-03-05T15:52:25.549000+00:00",
+      "message_id": 667669,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VEND.OL",
+      "issuer_sign": "VEND",
+      "issuer_name": "Vend Marketplaces ASA",
+      "tittel": "Vend Marketplaces ASA: Mandatory notification of trade by primary insider",
+      "dato": "2026-03-05",
+      "dato_tid": "2026-03-05T14:02:04.007000+00:00",
+      "message_id": 667657,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade",
+      "dato": "2026-03-05",
+      "dato_tid": "2026-03-05T09:40:03.706000+00:00",
+      "message_id": 667561,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ABG.OL",
+      "issuer_sign": "ABG",
+      "issuer_name": "ABG Sundal Collier Holding ASA",
+      "tittel": "ABG – Mandatory notification of trades",
+      "dato": "2026-03-05",
+      "dato_tid": "2026-03-05T07:32:36.275000+00:00",
+      "message_id": 667548,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOHAL.OL",
+      "issuer_sign": "NOHAL",
+      "issuer_name": "Nordic Halibut AS",
+      "tittel": "Nordic Halibut AS – Mandatory notification of trade – grant of share options to primary insiders",
+      "dato": "2026-03-05",
+      "dato_tid": "2026-03-05T06:00:00+00:00",
+      "message_id": 667532,
+      "type": "ukjent"
+    },
     {
       "ticker": "EQNR.OL",
       "issuer_sign": "EQNR",
@@ -1569,56 +1629,6 @@
       "dato": "2026-02-04",
       "dato_tid": "2026-02-04T10:51:25.302000+00:00",
       "message_id": 664829,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "CADLR.OL",
-      "issuer_sign": "CADLR",
-      "issuer_name": "Cadeler A/S",
-      "tittel": "CADELER A/S: REPORTING ON TRANSACTIONS IN CADELER A/S SHARES BY PERSONS DISCHARGING MANAGERIAL RESPONSIBILITIES AND PERSONS CLOSELY ASSOCIATED WITH THEM",
-      "dato": "2026-02-03",
-      "dato_tid": "2026-02-03T17:14:29.328000+00:00",
-      "message_id": 664776,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "DFDS.OL",
-      "issuer_sign": "DFDS",
-      "issuer_name": "DFDS A/S",
-      "tittel": "MANAGERS' TRANSACTIONS",
-      "dato": "2026-02-03",
-      "dato_tid": "2026-02-03T16:00:00.908000+00:00",
-      "message_id": 664774,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "DNO.OL",
-      "issuer_sign": "DNO",
-      "issuer_name": "DNO ASA",
-      "tittel": "Mandatory Notification of Trade",
-      "dato": "2026-02-03",
-      "dato_tid": "2026-02-03T11:58:39.689000+00:00",
-      "message_id": 664731,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "ENDUR.OL",
-      "issuer_sign": "ENDUR",
-      "issuer_name": "Endúr ASA",
-      "tittel": "Endúr ASA – Employee share purchase program, share capital increase and mandatory notifications of trade",
-      "dato": "2026-02-03",
-      "dato_tid": "2026-02-03T11:42:12.615000+00:00",
-      "message_id": 664730,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "BRUT.OL",
-      "issuer_sign": "BRUT",
-      "issuer_name": "Bruton Limited",
-      "tittel": "Bruton Limited (BRUT)   Mandatory notification of trades",
-      "dato": "2026-02-03",
-      "dato_tid": "2026-02-03T10:00:03.843000+00:00",
-      "message_id": 664720,
       "type": "ukjent"
     }
   ]
