@@ -523,3 +523,47 @@ class TestStandardParams:
         p1 = so.standard_params()
         p2 = so.standard_params()
         assert p1 is not p2  # Nye instanser, ikke samme objekt
+
+
+# ─── TilPinescript ───────────────────────────────────────────────────────────
+
+class TestTilPinescript:
+    def test_returnerer_streng(self):
+        p = so.OsloKjopParams()
+        kode = so.til_pinescript(p)
+        assert isinstance(kode, str)
+        assert len(kode) > 100
+
+    def test_inneholder_version_5(self):
+        kode = so.til_pinescript(so.OsloKjopParams())
+        assert "//@version=5" in kode
+
+    def test_parameterverdier_er_i_koden(self):
+        p = so.OsloKjopParams(rsi_threshold=30, trend_sma=200, vol_factor=1.5,
+                               atr_stop=1.5, atr_target=3.0, holding=20)
+        kode = so.til_pinescript(p)
+        assert "30" in kode
+        assert "200" in kode
+        assert "1.5" in kode
+        assert "3.0" in kode
+        assert "20" in kode
+
+    def test_inneholder_strategi_entry_og_exit(self):
+        kode = so.til_pinescript(so.OsloKjopParams())
+        assert "strategy.entry" in kode
+        assert "strategy.close" in kode
+
+    def test_inneholder_kjopsbetingelsene(self):
+        kode = so.til_pinescript(so.OsloKjopParams())
+        assert "rsi_val" in kode
+        assert "trend_sma" in kode
+        assert "vol_sma" in kode
+
+    def test_tilpassede_parametere_reflekteres(self):
+        p = so.OsloKjopParams(rsi_threshold=35, trend_sma=100, vol_factor=2.0,
+                               atr_stop=1.0, atr_target=2.0, holding=15)
+        kode = so.til_pinescript(p)
+        assert "35" in kode
+        assert "100" in kode
+        assert "2.0" in kode
+        assert "15" in kode

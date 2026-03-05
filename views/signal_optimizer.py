@@ -340,7 +340,23 @@ def _vis_profit_factor_banner(pf: float, n: int, params_str: str) -> None:
     """, unsafe_allow_html=True)
 
 
-def _vis_metodikk() -> None:
+def _vis_pinescript_eksport(params: so.OsloKjopParams) -> None:
+    """Viser PineScript-eksport av strategien i et ekspanderbart panel."""
+    with st.expander("📋 Eksporter til TradingView Pine Script", expanded=False):
+        st.markdown("""
+        Kopier koden under og lim inn i TradingView Pine Editor
+        (**Chart → Pine Editor → Ny → Lim inn → Legg til i chart**).
+        Strategien implementerer nøyaktig samme logikk som backtesteren.
+        """)
+        pine_kode = so.til_pinescript(params)
+        st.code(pine_kode, language="javascript")
+        st.caption(
+            f"Generert for parametere: {params}  •  "
+            "Kommisjon: 0.075% per side  •  Slippage: 2 ticks"
+        )
+
+
+
     with st.expander("ℹ️ Metodikk — OsloKjøp-optimalisering", expanded=False):
         st.markdown("""
 ### OsloKjøp — Signallogikk
@@ -626,5 +642,8 @@ def render() -> None:
     # ── 6. Aktive signaler nå ────────────────────────────────────────────
     _vis_aktive_signaler(df_clean, unike_tickers, beste_params)
 
-    # ── 7. Metodikk ──────────────────────────────────────────────────────
+    # ── 7. PineScript-eksport ─────────────────────────────────────────────
+    _vis_pinescript_eksport(beste_params)
+
+    # ── 8. Metodikk ──────────────────────────────────────────────────────
     _vis_metodikk()
