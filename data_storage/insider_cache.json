@@ -1,6 +1,106 @@
 {
-  "timestamp": 1772735351.7700686,
+  "timestamp": 1772816906.8008795,
   "handler": [
+    {
+      "ticker": "AKRBP.OL",
+      "issuer_sign": "AKRBP",
+      "issuer_name": "Aker BP ASA",
+      "tittel": "Notice of transaction by PDMR",
+      "dato": "2026-03-06",
+      "dato_tid": "2026-03-06T15:48:02.256000+00:00",
+      "message_id": 667749,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NORDH.OL",
+      "issuer_sign": "NORDH",
+      "issuer_name": "Nordhealth AS",
+      "tittel": "Mandatory Notifications of Trade by Primary Insiders",
+      "dato": "2026-03-06",
+      "dato_tid": "2026-03-06T14:54:49.423000+00:00",
+      "message_id": 667745,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade",
+      "dato": "2026-03-06",
+      "dato_tid": "2026-03-06T13:14:03.836000+00:00",
+      "message_id": 667737,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "BWLPG.OL",
+      "issuer_sign": "BWLPG",
+      "issuer_name": "BW LPG Limited",
+      "tittel": "BW LPG Limited: Management Share Option Plan “LTIP 2022” – Award and Exercise of Share Options ",
+      "dato": "2026-03-06",
+      "dato_tid": "2026-03-06T09:43:13.926000+00:00",
+      "message_id": 667712,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade",
+      "dato": "2026-03-06",
+      "dato_tid": "2026-03-06T08:01:03.544000+00:00",
+      "message_id": 667708,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "FRO.OL",
+      "issuer_sign": "FRO",
+      "issuer_name": "Frontline plc",
+      "tittel": "FRO – Notification of trade ",
+      "dato": "2026-03-06",
+      "dato_tid": "2026-03-06T07:45:00+00:00",
+      "message_id": 667703,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ABL.OL",
+      "issuer_sign": "ABL",
+      "issuer_name": "ABL Group ASA",
+      "tittel": "ABL Group ASA - Mandatory notification of trade",
+      "dato": "2026-03-06",
+      "dato_tid": "2026-03-06T06:39:37.561000+00:00",
+      "message_id": 667695,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "STB.OL",
+      "issuer_sign": "STB",
+      "issuer_name": "Storebrand ASA",
+      "tittel": "STOREBRAND ASA: Notice of transactions by PDMR (correction)",
+      "dato": "2026-03-05",
+      "dato_tid": "2026-03-05T21:19:31.071000+00:00",
+      "message_id": 667685,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "STB.OL",
+      "issuer_sign": "STB",
+      "issuer_name": "Storebrand ASA",
+      "tittel": "STOREBRAND ASA: Meldepliktig handel for primærinnsider (korreksjon)",
+      "dato": "2026-03-05",
+      "dato_tid": "2026-03-05T21:19:30.914000+00:00",
+      "message_id": 667684,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "STECH.OL",
+      "issuer_sign": "STECH",
+      "issuer_name": "Soiltech ASA",
+      "tittel": "Mandatory notification of Trade by Primary Insider",
+      "dato": "2026-03-05",
+      "dato_tid": "2026-03-05T19:20:42.053000+00:00",
+      "message_id": 667676,
+      "type": "ukjent"
+    },
     {
       "ticker": "MVE.OL",
       "issuer_sign": "MVE",
@@ -1599,36 +1699,6 @@
       "dato": "2026-02-05",
       "dato_tid": "2026-02-05T06:45:00.879000+00:00",
       "message_id": 664888,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "ENSU.OL",
-      "issuer_sign": "ENSU",
-      "issuer_name": "Ensurge Micropower ASA",
-      "tittel": "Ensurge Micropower ASA - Mandatory Notice of Trade for Primary Insiders",
-      "dato": "2026-02-04",
-      "dato_tid": "2026-02-04T15:15:00+00:00",
-      "message_id": 664864,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "DNB.OL",
-      "issuer_sign": "DNB",
-      "issuer_name": "DNB Bank ASA",
-      "tittel": "Trade subject to notification for primary insiders",
-      "dato": "2026-02-04",
-      "dato_tid": "2026-02-04T10:51:25.343000+00:00",
-      "message_id": 664830,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "DNB.OL",
-      "issuer_sign": "DNB",
-      "issuer_name": "DNB Bank ASA",
-      "tittel": "Meldepliktig handel for primærinnsidere",
-      "dato": "2026-02-04",
-      "dato_tid": "2026-02-04T10:51:25.302000+00:00",
-      "message_id": 664829,
       "type": "ukjent"
     }
   ]
