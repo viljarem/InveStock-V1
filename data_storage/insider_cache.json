@@ -1,6 +1,86 @@
 {
-  "timestamp": 1773077225.99372,
+  "timestamp": 1773163582.1754496,
   "handler": [
+    {
+      "ticker": "CAPSL.OL",
+      "issuer_sign": "CAPSL",
+      "issuer_name": "Capsol Technologies ASA",
+      "tittel": "Capsol Technologies ASA: Mandatory notification of trade - Chairman and member of the board buys shares in Capsol",
+      "dato": "2026-03-10",
+      "dato_tid": "2026-03-10T16:25:45.964000+00:00",
+      "message_id": 667942,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "2020.OL",
+      "issuer_sign": "2020",
+      "issuer_name": "2020 Bulkers Ltd.",
+      "tittel": "2020 Bulkers Ltd. (2020): Mandatory notification of trade",
+      "dato": "2026-03-10",
+      "dato_tid": "2026-03-10T16:25:02.806000+00:00",
+      "message_id": 667941,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade",
+      "dato": "2026-03-10",
+      "dato_tid": "2026-03-10T12:38:03.419000+00:00",
+      "message_id": 667919,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ROGS.OL",
+      "issuer_sign": "ROGS",
+      "issuer_name": "Rogaland Sparebank",
+      "tittel": "ROGS: Meldepliktig handel – primærinnsider - KORREKSJON",
+      "dato": "2026-03-10",
+      "dato_tid": "2026-03-10T08:22:33.808000+00:00",
+      "message_id": 667883,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade",
+      "dato": "2026-03-10",
+      "dato_tid": "2026-03-10T07:15:03.512000+00:00",
+      "message_id": 667878,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ROGS.OL",
+      "issuer_sign": "ROGS",
+      "issuer_name": "Rogaland Sparebank",
+      "tittel": "ROGS: Meldepliktig handel – primærinnsider",
+      "dato": "2026-03-09",
+      "dato_tid": "2026-03-09T20:14:48.971000+00:00",
+      "message_id": 667857,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "STECH.OL",
+      "issuer_sign": "STECH",
+      "issuer_name": "Soiltech ASA",
+      "tittel": "Mandatory notification of Trade by Primary Insider",
+      "dato": "2026-03-09",
+      "dato_tid": "2026-03-09T19:47:56.768000+00:00",
+      "message_id": 667855,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TGS.OL",
+      "issuer_sign": "TGS",
+      "issuer_name": "TGS ASA",
+      "tittel": "TGS - Vesting of 2023 Restricted Share Unit Award and Delivery of Shares",
+      "dato": "2026-03-09",
+      "dato_tid": "2026-03-09T19:32:17.656000+00:00",
+      "message_id": 667854,
+      "type": "kjøp"
+    },
     {
       "ticker": "CAPSL.OL",
       "issuer_sign": "CAPSL",
