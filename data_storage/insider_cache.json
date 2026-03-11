@@ -1,6 +1,96 @@
 {
-  "timestamp": 1773163582.1754496,
+  "timestamp": 1773250177.8781059,
   "handler": [
+    {
+      "ticker": "HDLY.OL",
+      "issuer_sign": "HDLY",
+      "issuer_name": "Huddly AS",
+      "tittel": "Huddly AS – Mandatory notification of trade – Subscription and share lending in the Private Placement ",
+      "dato": "2026-03-11",
+      "dato_tid": "2026-03-11T16:31:12.302000+00:00",
+      "message_id": 668057,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "MVE.OL",
+      "issuer_sign": "MVE",
+      "issuer_name": "MatvareExpressen AS",
+      "tittel": "Meldepliktig handel for primærinnsidere",
+      "dato": "2026-03-11",
+      "dato_tid": "2026-03-11T16:00:00+00:00",
+      "message_id": 668054,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "RANA.OL",
+      "issuer_sign": "RANA",
+      "issuer_name": "Rana Gruber ASA",
+      "tittel": "Rana Gruber ASA – Mandatory notification of transactions by primary insiders and close associates",
+      "dato": "2026-03-11",
+      "dato_tid": "2026-03-11T15:36:06.568000+00:00",
+      "message_id": 668048,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Correction: Lifecare ASA: Mandatory notification of trade",
+      "dato": "2026-03-11",
+      "dato_tid": "2026-03-11T14:29:03.587000+00:00",
+      "message_id": 668035,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade",
+      "dato": "2026-03-11",
+      "dato_tid": "2026-03-11T13:28:03.022000+00:00",
+      "message_id": 668032,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "MORG.OL",
+      "issuer_sign": "MORG",
+      "issuer_name": "Sparebanken Møre",
+      "tittel": "Sparebanken Møre - Allocation of equity capial certificates to primary insider",
+      "dato": "2026-03-11",
+      "dato_tid": "2026-03-11T11:51:40.599000+00:00",
+      "message_id": 667991,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "MORG.OL",
+      "issuer_sign": "MORG",
+      "issuer_name": "Sparebanken Møre",
+      "tittel": "Sparebanken Møre - Tildeling av egenkapitalbevis til primærinnsider",
+      "dato": "2026-03-11",
+      "dato_tid": "2026-03-11T11:51:40.598000+00:00",
+      "message_id": 667990,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "ENH.OL",
+      "issuer_sign": "ENH",
+      "issuer_name": "SED Energy Holdings Plc",
+      "tittel": "Energy Holdings: Exercise of options and sale of shares by primary insider",
+      "dato": "2026-03-10",
+      "dato_tid": "2026-03-10T18:00:03.350000+00:00",
+      "message_id": 667948,
+      "type": "salg"
+    },
+    {
+      "ticker": "AKRBP.OL",
+      "issuer_sign": "AKRBP",
+      "issuer_name": "Aker BP ASA",
+      "tittel": "Notice of transaction by PDMR",
+      "dato": "2026-03-10",
+      "dato_tid": "2026-03-10T17:42:35.167000+00:00",
+      "message_id": 667945,
+      "type": "ukjent"
+    },
     {
       "ticker": "CAPSL.OL",
       "issuer_sign": "CAPSL",
@@ -1689,36 +1779,6 @@
       "dato": "2026-02-11",
       "dato_tid": "2026-02-11T12:04:52.741000+00:00",
       "message_id": 665398,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "OSUN.OL",
-      "issuer_sign": "OSUN",
-      "issuer_name": "Ocean Sun AS",
-      "tittel": "Ocean Sun AS – Long term incentive program",
-      "dato": "2026-02-09",
-      "dato_tid": "2026-02-09T14:36:54.662000+00:00",
-      "message_id": 665191,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "VEND.OL",
-      "issuer_sign": "VEND",
-      "issuer_name": "Vend Marketplaces ASA",
-      "tittel": "Vend Marketplaces ASA: Mandatory notification of trade by close associate of primary insider",
-      "dato": "2026-02-09",
-      "dato_tid": "2026-02-09T14:15:53.314000+00:00",
-      "message_id": 665190,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "DNO.OL",
-      "issuer_sign": "DNO",
-      "issuer_name": "DNO ASA",
-      "tittel": "Mandatory Notification of Trade",
-      "dato": "2026-02-09",
-      "dato_tid": "2026-02-09T11:41:18.787000+00:00",
-      "message_id": 665163,
       "type": "ukjent"
     }
   ]
