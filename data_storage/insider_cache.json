@@ -1,6 +1,86 @@
 {
-  "timestamp": 1773250177.8781059,
+  "timestamp": 1773336516.7016475,
   "handler": [
+    {
+      "ticker": "VAR.OL",
+      "issuer_sign": "VAR",
+      "issuer_name": "Vår Energi ASA",
+      "tittel": "Vår Energi ASA: Notification of trade by primary insider",
+      "dato": "2026-03-12",
+      "dato_tid": "2026-03-12T12:34:31.888000+00:00",
+      "message_id": 668109,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "BOUV.OL",
+      "issuer_sign": "BOUV",
+      "issuer_name": "Bouvet ASA",
+      "tittel": "Bouvet ASA   Mandatory Notification of Trade",
+      "dato": "2026-03-12",
+      "dato_tid": "2026-03-12T11:30:03.577000+00:00",
+      "message_id": 668107,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "BOUV.OL",
+      "issuer_sign": "BOUV",
+      "issuer_name": "Bouvet ASA",
+      "tittel": "Bouvet ASA   Meldepliktig handel",
+      "dato": "2026-03-12",
+      "dato_tid": "2026-03-12T11:30:03.553000+00:00",
+      "message_id": 668106,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ZAL.OL",
+      "issuer_sign": "ZAL",
+      "issuer_name": "Zalaris ASA",
+      "tittel": "Exercise of employee share options under share incentive program",
+      "dato": "2026-03-12",
+      "dato_tid": "2026-03-12T10:32:45.032000+00:00",
+      "message_id": 668101,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "GENT.OL",
+      "issuer_sign": "GENT",
+      "issuer_name": "Gentian Diagnostics ASA",
+      "tittel": "Gentian Diagnostics ASA – Mandatory notification of subscription of shares by primary insiders in Employee Share Purchase Program",
+      "dato": "2026-03-12",
+      "dato_tid": "2026-03-12T09:36:18.902000+00:00",
+      "message_id": 668095,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "ONCIN.OL",
+      "issuer_sign": "ONCIN",
+      "issuer_name": "Oncoinvent ASA",
+      "tittel": "Oncoinvent ASA: Grant of share options to the CEO",
+      "dato": "2026-03-11",
+      "dato_tid": "2026-03-11T21:34:36.428000+00:00",
+      "message_id": 668069,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TEL.OL",
+      "issuer_sign": "TEL",
+      "issuer_name": "Telenor ASA",
+      "tittel": "Meldepliktig handel primærinnsidere",
+      "dato": "2026-03-11",
+      "dato_tid": "2026-03-11T20:42:49.809000+00:00",
+      "message_id": 668068,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TEL.OL",
+      "issuer_sign": "TEL",
+      "issuer_name": "Telenor ASA",
+      "tittel": "Trade by primary insiders",
+      "dato": "2026-03-11",
+      "dato_tid": "2026-03-11T20:42:49.784000+00:00",
+      "message_id": 668067,
+      "type": "ukjent"
+    },
     {
       "ticker": "HDLY.OL",
       "issuer_sign": "HDLY",
