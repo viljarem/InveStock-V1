@@ -1,6 +1,96 @@
 {
-  "timestamp": 1773336516.7016475,
+  "timestamp": 1773421736.2043984,
   "handler": [
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade",
+      "dato": "2026-03-13",
+      "dato_tid": "2026-03-13T15:49:03.754000+00:00",
+      "message_id": 668336,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SB1NO.OL",
+      "issuer_sign": "SB1NO",
+      "issuer_name": "SpareBank 1 Sør-Norge ASA",
+      "tittel": "Trade subject to notification ",
+      "dato": "2026-03-13",
+      "dato_tid": "2026-03-13T15:00:00+00:00",
+      "message_id": 668328,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SB1NO.OL",
+      "issuer_sign": "SB1NO",
+      "issuer_name": "SpareBank 1 Sør-Norge ASA",
+      "tittel": "Meldepliktig handel ",
+      "dato": "2026-03-13",
+      "dato_tid": "2026-03-13T15:00:00+00:00",
+      "message_id": 668327,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "MEDI.OL",
+      "issuer_sign": "MEDI",
+      "issuer_name": "Medistim ASA",
+      "tittel": "Intertrade Shipping AS purchases Medistim shares",
+      "dato": "2026-03-13",
+      "dato_tid": "2026-03-13T13:14:11.488000+00:00",
+      "message_id": 668316,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "NORCO.OL",
+      "issuer_sign": "NORCO",
+      "issuer_name": "Norconsult ASA",
+      "tittel": "Norconsult: Mandatory notification of trade by primary insider",
+      "dato": "2026-03-13",
+      "dato_tid": "2026-03-13T12:12:57.243000+00:00",
+      "message_id": 668282,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VAR.OL",
+      "issuer_sign": "VAR",
+      "issuer_name": "Vår Energi ASA",
+      "tittel": "Vår Energi ASA: Notification of trade by primary insider",
+      "dato": "2026-03-13",
+      "dato_tid": "2026-03-13T10:38:54.123000+00:00",
+      "message_id": 668278,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ARR.OL",
+      "issuer_sign": "ARR",
+      "issuer_name": "Arribatec Group ASA",
+      "tittel": "Arribatec Group ASA: Mandatory notification of trade",
+      "dato": "2026-03-13",
+      "dato_tid": "2026-03-13T09:35:34.605000+00:00",
+      "message_id": 668274,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade",
+      "dato": "2026-03-13",
+      "dato_tid": "2026-03-13T07:48:03.126000+00:00",
+      "message_id": 668262,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "CAPSL.OL",
+      "issuer_sign": "CAPSL",
+      "issuer_name": "Capsol Technologies ASA",
+      "tittel": "Capsol Technologies ASA: Mandatory notification of trade - Shares purchased by employees in Employee Share Purchase Program 2026.",
+      "dato": "2026-03-12",
+      "dato_tid": "2026-03-12T18:51:19.305000+00:00",
+      "message_id": 668233,
+      "type": "kjøp"
+    },
     {
       "ticker": "VAR.OL",
       "issuer_sign": "VAR",
@@ -1829,36 +1919,6 @@
       "dato": "2026-02-12",
       "dato_tid": "2026-02-12T06:31:03.058000+00:00",
       "message_id": 665548,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "SBO.OL",
-      "issuer_sign": "SBO",
-      "issuer_name": "Selvaag Bolig ASA",
-      "tittel": "Selvaag Bolig ASA: Mandatory notification of trades by primary insiders",
-      "dato": "2026-02-11",
-      "dato_tid": "2026-02-11T14:15:03.730000+00:00",
-      "message_id": 665423,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "SBO.OL",
-      "issuer_sign": "SBO",
-      "issuer_name": "Selvaag Bolig ASA",
-      "tittel": "Selvaag Bolig ASA: Meldepliktig handel for primærinnsidere",
-      "dato": "2026-02-11",
-      "dato_tid": "2026-02-11T14:15:03.493000+00:00",
-      "message_id": 665422,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "MULTI.OL",
-      "issuer_sign": "MULTI",
-      "issuer_name": "Multiconsult ASA",
-      "tittel": "Mandatory notification of trade - primary insider",
-      "dato": "2026-02-11",
-      "dato_tid": "2026-02-11T12:04:52.741000+00:00",
-      "message_id": 665398,
       "type": "ukjent"
     }
   ]
