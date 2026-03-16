@@ -1,6 +1,56 @@
 {
-  "timestamp": 1773421736.2043984,
+  "timestamp": 1773682618.4413645,
   "handler": [
+    {
+      "ticker": "VAR.OL",
+      "issuer_sign": "VAR",
+      "issuer_name": "Vår Energi ASA",
+      "tittel": "Vår Energi ASA: Notification of trade by primary insider",
+      "dato": "2026-03-16",
+      "dato_tid": "2026-03-16T16:55:26.084000+00:00",
+      "message_id": 668500,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EQNR.OL",
+      "issuer_sign": "EQNR",
+      "issuer_name": "Equinor ASA",
+      "tittel": "Equinor ASA: Meldepliktig handel",
+      "dato": "2026-03-16",
+      "dato_tid": "2026-03-16T11:37:07.614000+00:00",
+      "message_id": 668399,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EQNR.OL",
+      "issuer_sign": "EQNR",
+      "issuer_name": "Equinor ASA",
+      "tittel": "Equinor ASA: Notifiable trading",
+      "dato": "2026-03-16",
+      "dato_tid": "2026-03-16T11:37:07.595000+00:00",
+      "message_id": 668398,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ABTEC.OL",
+      "issuer_sign": "ABTEC",
+      "issuer_name": "Aqua Bio Technology ASA",
+      "tittel": "Aqua Bio Technology ASA: Primary insider notifications",
+      "dato": "2026-03-16",
+      "dato_tid": "2026-03-16T06:30:04.033000+00:00",
+      "message_id": 668359,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "LIFE.OL",
+      "issuer_sign": "LIFE",
+      "issuer_name": "Lifecare ASA",
+      "tittel": "Lifecare ASA: Mandatory notification of trade",
+      "dato": "2026-03-13",
+      "dato_tid": "2026-03-13T22:37:03.156000+00:00",
+      "message_id": 668351,
+      "type": "ukjent"
+    },
     {
       "ticker": "LIFE.OL",
       "issuer_sign": "LIFE",
@@ -1549,376 +1599,6 @@
       "dato": "2026-02-16",
       "dato_tid": "2026-02-16T05:00:03.814000+00:00",
       "message_id": 665896,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "CRNA.OL",
-      "issuer_sign": "CRNA",
-      "issuer_name": "Circio Holding ASA",
-      "tittel": "Circio announces allocation of stock options to key employees",
-      "dato": "2026-02-14",
-      "dato_tid": "2026-02-14T08:57:03.116000+00:00",
-      "message_id": 665891,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "QEC.OL",
-      "issuer_sign": "QEC",
-      "issuer_name": "Questerre Energy Corporation",
-      "tittel": "Mandatory notification of trade",
-      "dato": "2026-02-14",
-      "dato_tid": "2026-02-14T03:26:07.371000+00:00",
-      "message_id": 665890,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "ROGS.OL",
-      "issuer_sign": "ROGS",
-      "issuer_name": "Rogaland Sparebank",
-      "tittel": "Meldepliktig handel - Viderefordeling av egenkapitalbevis i spareprogram for ansatte",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T17:55:16.576000+00:00",
-      "message_id": 665885,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "ROGS.OL",
-      "issuer_sign": "ROGS",
-      "issuer_name": "Rogaland Sparebank",
-      "tittel": "Meldepliktig handel - Viderefordeling av egenkapitalbevis i spareprogram for ansatte",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T17:30:00+00:00",
-      "message_id": 665884,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "PEXIP.OL",
-      "issuer_sign": "PEXIP",
-      "issuer_name": "Pexip Holding ASA",
-      "tittel": "Mandatory notification of trade by Primary Insider",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T14:51:27.379000+00:00",
-      "message_id": 665874,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "SCATC.OL",
-      "issuer_sign": "SCATC",
-      "issuer_name": "Scatec ASA",
-      "tittel": "Exercise of employee share options and share capital increase",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T12:08:04.505000+00:00",
-      "message_id": 665837,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "EQNR.OL",
-      "issuer_sign": "EQNR",
-      "issuer_name": "Equinor ASA",
-      "tittel": "Equinor ASA: Meldepliktig handel",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T10:51:47.798000+00:00",
-      "message_id": 665827,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "EQNR.OL",
-      "issuer_sign": "EQNR",
-      "issuer_name": "Equinor ASA",
-      "tittel": "Equinor ASA: Notifiable trading",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T10:51:47.729000+00:00",
-      "message_id": 665826,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "SPOL.OL",
-      "issuer_sign": "SPOL",
-      "issuer_name": "SpareBank 1 Østlandet",
-      "tittel": "SPOL: Acquisition of equity certificates by primary insider",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T10:04:15.181000+00:00",
-      "message_id": 665823,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "SPOL.OL",
-      "issuer_sign": "SPOL",
-      "issuer_name": "SpareBank 1 Østlandet",
-      "tittel": "SPOL: Kjøp av egenkapitalbevis av primærinnsider",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T10:03:51.418000+00:00",
-      "message_id": 665822,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "MORG.OL",
-      "issuer_sign": "MORG",
-      "issuer_name": "Sparebanken Møre",
-      "tittel": "Sparebanken Møre – Allocation of equity capital certificates to primary insiders/ closely associated persons",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T10:03:15.098000+00:00",
-      "message_id": 665821,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "MORG.OL",
-      "issuer_sign": "MORG",
-      "issuer_name": "Sparebanken Møre",
-      "tittel": "Sparebanken Møre – Tildeling av egenkapitalbevis til primærinnsidere/nærstående",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T10:03:15.027000+00:00",
-      "message_id": 665820,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "SPOL.OL",
-      "issuer_sign": "SPOL",
-      "issuer_name": "SpareBank 1 Østlandet",
-      "tittel": "SPOL: Acquisition of equity certificates by primary insider",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T10:01:46.873000+00:00",
-      "message_id": 665819,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "SPOL.OL",
-      "issuer_sign": "SPOL",
-      "issuer_name": "SpareBank 1 Østlandet",
-      "tittel": "SPOL: Kjøp av egenkapitalbevis av primærinnsider",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T10:01:46.848000+00:00",
-      "message_id": 665818,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "EAM.OL",
-      "issuer_sign": "EAM",
-      "issuer_name": "EAM Solar AS",
-      "tittel": "Meldepliktig handel for primærinnsider",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T08:41:44.508000+00:00",
-      "message_id": 665814,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "EAM.OL",
-      "issuer_sign": "EAM",
-      "issuer_name": "EAM Solar AS",
-      "tittel": "Mandatory notification of trade",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T08:41:44.508000+00:00",
-      "message_id": 665813,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "GENT.OL",
-      "issuer_sign": "GENT",
-      "issuer_name": "Gentian Diagnostics ASA",
-      "tittel": "Mandatory notification of trade",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T08:26:47.238000+00:00",
-      "message_id": 665812,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "GOD.OL",
-      "issuer_sign": "GOD",
-      "issuer_name": "Goodtech ASA",
-      "tittel": "Goodtech ASA: Employee share purchase program",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T06:39:36.069000+00:00",
-      "message_id": 665780,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "ABTEC.OL",
-      "issuer_sign": "ABTEC",
-      "issuer_name": "Aqua Bio Technology ASA",
-      "tittel": "Aqua Bio Technology ASA: Primary insider notifications",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T06:30:06.200000+00:00",
-      "message_id": 665779,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "QEC.OL",
-      "issuer_sign": "QEC",
-      "issuer_name": "Questerre Energy Corporation",
-      "tittel": "Mandatory notification of trade",
-      "dato": "2026-02-13",
-      "dato_tid": "2026-02-13T00:34:50.414000+00:00",
-      "message_id": 665739,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "PEXIP.OL",
-      "issuer_sign": "PEXIP",
-      "issuer_name": "Pexip Holding ASA",
-      "tittel": "Exercise of RSUs and Share Options including primary insiders",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T19:14:20.694000+00:00",
-      "message_id": 665732,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "KIT.OL",
-      "issuer_sign": "KIT",
-      "issuer_name": "Kitron ASA",
-      "tittel": "Kitron: Allocation of options",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T16:38:18.760000+00:00",
-      "message_id": 665728,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "KIT.OL",
-      "issuer_sign": "KIT",
-      "issuer_name": "Kitron ASA",
-      "tittel": "Kitron: Allokering av opsjoner",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T16:38:18.597000+00:00",
-      "message_id": 665727,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "B2I.OL",
-      "issuer_sign": "B2I",
-      "issuer_name": "B2 Impact ASA",
-      "tittel": "B2 Impact ASA: Exercise of Employee Share Options",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T15:55:03.037000+00:00",
-      "message_id": 665716,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "NORCO.OL",
-      "issuer_sign": "NORCO",
-      "issuer_name": "Norconsult ASA",
-      "tittel": "Norconsult: Mandatory notification of trade by primary insider",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T15:48:23.469000+00:00",
-      "message_id": 665714,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "GENT.OL",
-      "issuer_sign": "GENT",
-      "issuer_name": "Gentian Diagnostics ASA",
-      "tittel": "Mandatory notification of trade",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T15:09:05.843000+00:00",
-      "message_id": 665709,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "ORK.OL",
-      "issuer_sign": "ORK",
-      "issuer_name": "Orkla ASA",
-      "tittel": "Orkla ASA: Mandatory notification of trade   primary insiders",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T14:50:03.369000+00:00",
-      "message_id": 665708,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "KOG.OL",
-      "issuer_sign": "KOG",
-      "issuer_name": "Kongsberg Gruppen ASA",
-      "tittel": "Mandatory notification of trade ",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T14:30:00+00:00",
-      "message_id": 665704,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "KOG.OL",
-      "issuer_sign": "KOG",
-      "issuer_name": "Kongsberg Gruppen ASA",
-      "tittel": "Meldepliktig handel primærinnsider",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T14:30:00+00:00",
-      "message_id": 665703,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "TEL.OL",
-      "issuer_sign": "TEL",
-      "issuer_name": "Telenor ASA",
-      "tittel": "MELDEPLIKTIG HANDEL - PRIMÆRINNSIDER",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T13:14:16.916000+00:00",
-      "message_id": 665689,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "TEL.OL",
-      "issuer_sign": "TEL",
-      "issuer_name": "Telenor ASA",
-      "tittel": "TRADE BY PRIMARY INSIDER",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T13:14:16.891000+00:00",
-      "message_id": 665688,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "NTG.OL",
-      "issuer_sign": "NTG",
-      "issuer_name": "Nordic Technology Group AS",
-      "tittel": "NORDIC TECHNOLOGY GROUP AS   Mandatory notifications of trade in connection with Private Placement",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T11:45:04.312000+00:00",
-      "message_id": 665674,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "SBNOR.OL",
-      "issuer_sign": "SBNOR",
-      "issuer_name": "Sparebanken Norge",
-      "tittel": "SBNOR: Mandatory notification of trade for primary insider",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T11:36:09.700000+00:00",
-      "message_id": 665672,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "SBNOR.OL",
-      "issuer_sign": "SBNOR",
-      "issuer_name": "Sparebanken Norge",
-      "tittel": "SBNOR: Meldepliktig handel for primærinnsider",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T11:36:09.673000+00:00",
-      "message_id": 665671,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "NORBT.OL",
-      "issuer_sign": "NORBT",
-      "issuer_name": "NORBIT ASA",
-      "tittel": "NORBIT - Transaction by Primary Insider",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T11:17:19.572000+00:00",
-      "message_id": 665602,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "ATEA.OL",
-      "issuer_sign": "ATEA",
-      "issuer_name": "Atea ASA",
-      "tittel": "Mandatory notification of trade",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T07:59:02.649000+00:00",
-      "message_id": 665576,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "MVW.OL",
-      "issuer_sign": "MVW",
-      "issuer_name": "M Vest Water AS",
-      "tittel": "M Vest Water Secures NOK 10 million Convertible Loan",
-      "dato": "2026-02-12",
-      "dato_tid": "2026-02-12T06:31:03.058000+00:00",
-      "message_id": 665548,
       "type": "ukjent"
     }
   ]
