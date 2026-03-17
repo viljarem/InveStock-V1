@@ -1,6 +1,106 @@
 {
-  "timestamp": 1773682618.4413645,
+  "timestamp": 1773769050.3081157,
   "handler": [
+    {
+      "ticker": "ELO.OL",
+      "issuer_sign": "ELO",
+      "issuer_name": "Elopak ASA",
+      "tittel": "Elopak ASA: Mandatory notification of trade by close associate of primary insider",
+      "dato": "2026-03-17",
+      "dato_tid": "2026-03-17T17:06:03.093000+00:00",
+      "message_id": 668626,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VAR.OL",
+      "issuer_sign": "VAR",
+      "issuer_name": "Vår Energi ASA",
+      "tittel": "Vår Energi ASA: Notification of trade by primary insider",
+      "dato": "2026-03-17",
+      "dato_tid": "2026-03-17T16:55:48.232000+00:00",
+      "message_id": 668625,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "OTL.OL",
+      "issuer_sign": "OTL",
+      "issuer_name": "Odfjell Technology Ltd",
+      "tittel": "OTL: MANDATORY NOTIFICATION OF TRADE BY PRIMARY INSIDER",
+      "dato": "2026-03-17",
+      "dato_tid": "2026-03-17T15:05:18.803000+00:00",
+      "message_id": 668614,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AKRBP.OL",
+      "issuer_sign": "AKRBP",
+      "issuer_name": "Aker BP ASA",
+      "tittel": "Notice of transaction by PDMR",
+      "dato": "2026-03-17",
+      "dato_tid": "2026-03-17T15:00:16.578000+00:00",
+      "message_id": 668613,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TORM.OL",
+      "issuer_sign": "TORM",
+      "issuer_name": "TORM plc",
+      "tittel": "Report of transactions in TORM plc securities by directors and executive officers and their closely associated persons",
+      "dato": "2026-03-17",
+      "dato_tid": "2026-03-17T08:06:37.697000+00:00",
+      "message_id": 668540,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "HAFNI.OL",
+      "issuer_sign": "HAFNI",
+      "issuer_name": "Hafnia Limited",
+      "tittel": "HAFNIA LIMITED: Award of share options to primary insiders",
+      "dato": "2026-03-17",
+      "dato_tid": "2026-03-17T06:40:10.318000+00:00",
+      "message_id": 668519,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "HAFNI.OL",
+      "issuer_sign": "HAFNI",
+      "issuer_name": "Hafnia Limited",
+      "tittel": "HAFNIA LIMITED: Mandatory Notification of Trade - Exercise of existing Restricted Share Units (RSUs)",
+      "dato": "2026-03-17",
+      "dato_tid": "2026-03-17T06:30:08.762000+00:00",
+      "message_id": 668518,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ABTEC.OL",
+      "issuer_sign": "ABTEC",
+      "issuer_name": "Aqua Bio Technology ASA",
+      "tittel": "Aqua Bio Technology ASA: Primary insider notification",
+      "dato": "2026-03-16",
+      "dato_tid": "2026-03-16T22:33:02.984000+00:00",
+      "message_id": 668508,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TRMED.OL",
+      "issuer_sign": "TRMED",
+      "issuer_name": "Thor Medical ASA",
+      "tittel": "Thor Medical ASA - Primary insider notification - Redelivery and transfer of shares",
+      "dato": "2026-03-16",
+      "dato_tid": "2026-03-16T18:48:22.684000+00:00",
+      "message_id": 668503,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PRS.OL",
+      "issuer_sign": "PRS",
+      "issuer_name": "Prosafe SE",
+      "tittel": "Prosafe SE: Grants of Restricted Stock Units",
+      "dato": "2026-03-16",
+      "dato_tid": "2026-03-16T18:30:44.452000+00:00",
+      "message_id": 668502,
+      "type": "ukjent"
+    },
     {
       "ticker": "VAR.OL",
       "issuer_sign": "VAR",
