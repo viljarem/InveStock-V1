@@ -1,6 +1,96 @@
 {
-  "timestamp": 1773769050.3081157,
+  "timestamp": 1773855600.4092412,
   "handler": [
+    {
+      "ticker": "MEDI.OL",
+      "issuer_sign": "MEDI",
+      "issuer_name": "Medistim ASA",
+      "tittel": "Intertrade Shipping AS purchases Medistim shares",
+      "dato": "2026-03-18",
+      "dato_tid": "2026-03-18T15:46:55.121000+00:00",
+      "message_id": 668742,
+      "type": "kjøp"
+    },
+    {
+      "ticker": "AFG.OL",
+      "issuer_sign": "AFG",
+      "issuer_name": "AF Gruppen ASA",
+      "tittel": "Meldepliktig handel - Utøvelse av ansatteopsjoner i AF Gruppen ASA",
+      "dato": "2026-03-18",
+      "dato_tid": "2026-03-18T15:10:28.834000+00:00",
+      "message_id": 668740,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AFG.OL",
+      "issuer_sign": "AFG",
+      "issuer_name": "AF Gruppen ASA",
+      "tittel": "Mandatory notification of trade - Exercise of employee share options in AF Gruppen ASA",
+      "dato": "2026-03-18",
+      "dato_tid": "2026-03-18T15:10:28.820000+00:00",
+      "message_id": 668739,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AKRBP.OL",
+      "issuer_sign": "AKRBP",
+      "issuer_name": "Aker BP ASA",
+      "tittel": "Notice of transaction by PDMR",
+      "dato": "2026-03-18",
+      "dato_tid": "2026-03-18T13:38:39.514000+00:00",
+      "message_id": 668721,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "BALT.OL",
+      "issuer_sign": "BALT",
+      "issuer_name": "Baltic Sea Properties AS",
+      "tittel": "Mandatory notification of trade primary insiders - Baltic Sea Properties AS",
+      "dato": "2026-03-18",
+      "dato_tid": "2026-03-18T13:08:39.404000+00:00",
+      "message_id": 668713,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "OKEA.OL",
+      "issuer_sign": "OKEA",
+      "issuer_name": "OKEA ASA",
+      "tittel": "OKEA ASA - Mandatory notification of trade",
+      "dato": "2026-03-18",
+      "dato_tid": "2026-03-18T13:00:57.697000+00:00",
+      "message_id": 668711,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "POL.OL",
+      "issuer_sign": "POL",
+      "issuer_name": "Polaris Media ASA",
+      "tittel": "Polaris Media ASA (POL): Meldepliktig handel for primærinnsider",
+      "dato": "2026-03-18",
+      "dato_tid": "2026-03-18T11:35:02.478000+00:00",
+      "message_id": 668685,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ATEA.OL",
+      "issuer_sign": "ATEA",
+      "issuer_name": "Atea ASA",
+      "tittel": "Grant of share options to primary insiders in Atea ASA",
+      "dato": "2026-03-18",
+      "dato_tid": "2026-03-18T08:00:13.617000+00:00",
+      "message_id": 668667,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AKRBP.OL",
+      "issuer_sign": "AKRBP",
+      "issuer_name": "Aker BP ASA",
+      "tittel": "Notice of transaction by PDMR",
+      "dato": "2026-03-17",
+      "dato_tid": "2026-03-17T18:47:11.220000+00:00",
+      "message_id": 668629,
+      "type": "ukjent"
+    },
     {
       "ticker": "ELO.OL",
       "issuer_sign": "ELO",
@@ -1629,76 +1719,6 @@
       "dato": "2026-02-18",
       "dato_tid": "2026-02-18T11:35:26.795000+00:00",
       "message_id": 666097,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "BRG.OL",
-      "issuer_sign": "BRG",
-      "issuer_name": "Borregaard ASA",
-      "tittel": "Borregaard ASA: Reporting of transactions in Borregaard ASA's share options by person discharging managerial responsibilities",
-      "dato": "2026-02-16",
-      "dato_tid": "2026-02-16T16:39:15.766000+00:00",
-      "message_id": 665997,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "NAS.OL",
-      "issuer_sign": "NAS",
-      "issuer_name": "Norwegian Air Shuttle ASA",
-      "tittel": "Norwegian Air Shuttle ASA (NAS) – Mandatory notification of trade, Employee Share Savings Plan",
-      "dato": "2026-02-16",
-      "dato_tid": "2026-02-16T16:10:00+00:00",
-      "message_id": 665994,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "ZAP.OL",
-      "issuer_sign": "ZAP",
-      "issuer_name": "Zaptec ASA",
-      "tittel": "Zaptec ASA: Allocation of shares to primary insiders",
-      "dato": "2026-02-16",
-      "dato_tid": "2026-02-16T15:44:19.080000+00:00",
-      "message_id": 665993,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "NORCO.OL",
-      "issuer_sign": "NORCO",
-      "issuer_name": "Norconsult ASA",
-      "tittel": "Norconsult: Mandatory notification of trade by primary insider",
-      "dato": "2026-02-16",
-      "dato_tid": "2026-02-16T13:39:54.372000+00:00",
-      "message_id": 665986,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "BRG.OL",
-      "issuer_sign": "BRG",
-      "issuer_name": "Borregaard ASA",
-      "tittel": "Borregaard ASA: Reporting of transactions in Borregaard ASA's shares made by person discharging managerial responsibilities",
-      "dato": "2026-02-16",
-      "dato_tid": "2026-02-16T11:31:03.215000+00:00",
-      "message_id": 665959,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "ATEA.OL",
-      "issuer_sign": "ATEA",
-      "issuer_name": "Atea ASA",
-      "tittel": "Mandatory notification of trade",
-      "dato": "2026-02-16",
-      "dato_tid": "2026-02-16T08:46:41.526000+00:00",
-      "message_id": 665945,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "B2I.OL",
-      "issuer_sign": "B2I",
-      "issuer_name": "B2 Impact ASA",
-      "tittel": "B2 Impact ASA: Exercise of Employee Share Options",
-      "dato": "2026-02-16",
-      "dato_tid": "2026-02-16T05:00:03.814000+00:00",
-      "message_id": 665896,
       "type": "ukjent"
     }
   ]
