@@ -1,6 +1,126 @@
 {
-  "timestamp": 1773855600.4092412,
+  "timestamp": 1773941651.8650794,
   "handler": [
+    {
+      "ticker": "AIX.OL",
+      "issuer_sign": "AIX",
+      "issuer_name": "Ayfie International AS",
+      "tittel": "Mandatory notification of trade",
+      "dato": "2026-03-19",
+      "dato_tid": "2026-03-19T17:28:07.747000+00:00",
+      "message_id": 668900,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "GIGA.OL",
+      "issuer_sign": "GIGA",
+      "issuer_name": "Gigante Salmon AS",
+      "tittel": "Gigante Salmon AS: PMDR transaction ",
+      "dato": "2026-03-19",
+      "dato_tid": "2026-03-19T16:32:51.793000+00:00",
+      "message_id": 668898,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PARB.OL",
+      "issuer_sign": "PARB",
+      "issuer_name": "Pareto Bank ASA",
+      "tittel": "Meldepliktig handel",
+      "dato": "2026-03-19",
+      "dato_tid": "2026-03-19T15:45:00+00:00",
+      "message_id": 668892,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "EQVA.OL",
+      "issuer_sign": "EQVA",
+      "issuer_name": "Eqva ASA",
+      "tittel": "EQVA: Mandatory notification of trade",
+      "dato": "2026-03-19",
+      "dato_tid": "2026-03-19T15:31:33.732000+00:00",
+      "message_id": 668891,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PROT.OL",
+      "issuer_sign": "PROT",
+      "issuer_name": "Protector Forsikring ASA",
+      "tittel": "Mandatory notification of trade - Protector Forsikring ASA",
+      "dato": "2026-03-19",
+      "dato_tid": "2026-03-19T15:30:02.599000+00:00",
+      "message_id": 668890,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "HDLY.OL",
+      "issuer_sign": "HDLY",
+      "issuer_name": "Huddly AS",
+      "tittel": "Huddly AS – Mandatory notification of trade – Share lending re-delivery",
+      "dato": "2026-03-19",
+      "dato_tid": "2026-03-19T15:01:39.308000+00:00",
+      "message_id": 668885,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VAR.OL",
+      "issuer_sign": "VAR",
+      "issuer_name": "Vår Energi ASA",
+      "tittel": "Vår Energi ASA: Notification of trade by primary insider",
+      "dato": "2026-03-19",
+      "dato_tid": "2026-03-19T14:56:24.051000+00:00",
+      "message_id": 668884,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "FFSB.OL",
+      "issuer_sign": "FFSB",
+      "issuer_name": "Flekkefjord Sparebank",
+      "tittel": "Meldepliktig handel primærinnsidere",
+      "dato": "2026-03-19",
+      "dato_tid": "2026-03-19T12:07:01.694000+00:00",
+      "message_id": 668814,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VAR.OL",
+      "issuer_sign": "VAR",
+      "issuer_name": "Vår Energi ASA",
+      "tittel": "Vår Energi ASA: Notification of trade by primary insider",
+      "dato": "2026-03-19",
+      "dato_tid": "2026-03-19T09:02:22.760000+00:00",
+      "message_id": 668792,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VAR.OL",
+      "issuer_sign": "VAR",
+      "issuer_name": "Vår Energi ASA",
+      "tittel": "Vår Energi ASA: Notification of trade by primary insider",
+      "dato": "2026-03-19",
+      "dato_tid": "2026-03-19T08:57:37.604000+00:00",
+      "message_id": 668789,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VAR.OL",
+      "issuer_sign": "VAR",
+      "issuer_name": "Vår Energi ASA",
+      "tittel": "Vår Energi ASA: Notification of trade by primary insider",
+      "dato": "2026-03-19",
+      "dato_tid": "2026-03-19T06:00:15.581000+00:00",
+      "message_id": 668766,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SMCRT.OL",
+      "issuer_sign": "SMCRT",
+      "issuer_name": "SmartCraft ASA",
+      "tittel": "SmartCraft ASA (SMCRT) - Mandatory notification of trade from primary insiders",
+      "dato": "2026-03-18",
+      "dato_tid": "2026-03-18T21:57:22.160000+00:00",
+      "message_id": 668761,
+      "type": "ukjent"
+    },
     {
       "ticker": "MEDI.OL",
       "issuer_sign": "MEDI",
