@@ -1,6 +1,136 @@
 {
-  "timestamp": 1773941651.8650794,
+  "timestamp": 1774026713.0170007,
   "handler": [
+    {
+      "ticker": "BCS.OL",
+      "issuer_sign": "BCS",
+      "issuer_name": "Bergen Carbon Solutions AS",
+      "tittel": "BCS: primary insider stock options grants",
+      "dato": "2026-03-20",
+      "dato_tid": "2026-03-20T14:30:51.713000+00:00",
+      "message_id": 669018,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "HSPG.OL",
+      "issuer_sign": "HSPG",
+      "issuer_name": "Høland og Setskog Sparebank",
+      "tittel": "Meldepliktig handel",
+      "dato": "2026-03-20",
+      "dato_tid": "2026-03-20T14:25:15.843000+00:00",
+      "message_id": 669017,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AFISH.OL",
+      "issuer_sign": "AFISH",
+      "issuer_name": "Arctic Fish Holding AS",
+      "tittel": "Mandatory Notification of Trade of Primary Insider",
+      "dato": "2026-03-20",
+      "dato_tid": "2026-03-20T14:05:56.353000+00:00",
+      "message_id": 669014,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PEN.OL",
+      "issuer_sign": "PEN",
+      "issuer_name": "Panoro Energy ASA",
+      "tittel": "Panoro Energy ASA - Mandatory notification of trade in connection with Private Placement",
+      "dato": "2026-03-20",
+      "dato_tid": "2026-03-20T12:44:08.908000+00:00",
+      "message_id": 668985,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NOD.OL",
+      "issuer_sign": "NOD",
+      "issuer_name": "Nordic Semiconductor ASA",
+      "tittel": "NOD: Reporting of transactions made by persons discharging managerial responsibilities in Nordic Semiconductor ASA’s shares",
+      "dato": "2026-03-20",
+      "dato_tid": "2026-03-20T11:55:00+00:00",
+      "message_id": 668972,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "AKSO.OL",
+      "issuer_sign": "AKSO",
+      "issuer_name": "Aker Solutions ASA",
+      "tittel": "Aker Solutions ASA: Reporting of transactions made by persons discharging managerial responsibilities",
+      "dato": "2026-03-20",
+      "dato_tid": "2026-03-20T11:35:19.553000+00:00",
+      "message_id": 668971,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NBX.OL",
+      "issuer_sign": "NBX",
+      "issuer_name": "Norwegian Block Exchange AS",
+      "tittel": "Norwegian Block Exchange issues share options to employees and board members for 2025",
+      "dato": "2026-03-20",
+      "dato_tid": "2026-03-20T09:00:07.884000+00:00",
+      "message_id": 668954,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VEI.OL",
+      "issuer_sign": "VEI",
+      "issuer_name": "Veidekke ASA",
+      "tittel": "Veidekke: Transfer of shares to senior executives and key personnel in connection with the company's long-term bonus scheme",
+      "dato": "2026-03-20",
+      "dato_tid": "2026-03-20T07:00:13.993000+00:00",
+      "message_id": 668927,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VEI.OL",
+      "issuer_sign": "VEI",
+      "issuer_name": "Veidekke ASA",
+      "tittel": "Veidekke: Overføring av aksjer til ledende ansatte og nøkkelpersonell i forbindelse med selskapets langsiktige bonusordning",
+      "dato": "2026-03-20",
+      "dato_tid": "2026-03-20T07:00:12.689000+00:00",
+      "message_id": 668925,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "HDLY.OL",
+      "issuer_sign": "HDLY",
+      "issuer_name": "Huddly AS",
+      "tittel": "Huddly AS – Mandatory notification of trade",
+      "dato": "2026-03-20",
+      "dato_tid": "2026-03-20T06:51:09.944000+00:00",
+      "message_id": 668919,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VAR.OL",
+      "issuer_sign": "VAR",
+      "issuer_name": "Vår Energi ASA",
+      "tittel": "Vår Energi ASA: Notification of trade by primary insider",
+      "dato": "2026-03-20",
+      "dato_tid": "2026-03-20T06:00:09.386000+00:00",
+      "message_id": 668911,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PROT.OL",
+      "issuer_sign": "PROT",
+      "issuer_name": "Protector Forsikring ASA",
+      "tittel": "Mandatory notification of trade - Protector Forsikring ASA",
+      "dato": "2026-03-19",
+      "dato_tid": "2026-03-19T20:59:02.843000+00:00",
+      "message_id": 668906,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "BEWI.OL",
+      "issuer_sign": "BEWI",
+      "issuer_name": "BEWi ASA",
+      "tittel": "BEWI - Mandatory notification of trade",
+      "dato": "2026-03-19",
+      "dato_tid": "2026-03-19T18:49:19.202000+00:00",
+      "message_id": 668902,
+      "type": "ukjent"
+    },
     {
       "ticker": "AIX.OL",
       "issuer_sign": "AIX",
@@ -1819,26 +1949,6 @@
       "dato": "2026-02-18",
       "dato_tid": "2026-02-18T19:32:51.512000+00:00",
       "message_id": 666156,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "ABTEC.OL",
-      "issuer_sign": "ABTEC",
-      "issuer_name": "Aqua Bio Technology ASA",
-      "tittel": "Aqua Bio Technology ASA: Primary insider notification",
-      "dato": "2026-02-18",
-      "dato_tid": "2026-02-18T16:40:03.509000+00:00",
-      "message_id": 666145,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "NOD.OL",
-      "issuer_sign": "NOD",
-      "issuer_name": "Nordic Semiconductor ASA",
-      "tittel": "NOD: Reporting of transactions made by persons discharging managerial responsibilities in Nordic Semiconductor ASA’s shares",
-      "dato": "2026-02-18",
-      "dato_tid": "2026-02-18T11:35:26.795000+00:00",
-      "message_id": 666097,
       "type": "ukjent"
     }
   ]
