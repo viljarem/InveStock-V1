@@ -1,6 +1,26 @@
 {
-  "timestamp": 1774026713.0170007,
+  "timestamp": 1774286908.5327523,
   "handler": [
+    {
+      "ticker": "VAR.OL",
+      "issuer_sign": "VAR",
+      "issuer_name": "Vår Energi ASA",
+      "tittel": "Vår Energi ASA: Notification of trade by primary insiders",
+      "dato": "2026-03-23",
+      "dato_tid": "2026-03-23T13:10:39.714000+00:00",
+      "message_id": 669108,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ANDF.OL",
+      "issuer_sign": "ANDF",
+      "issuer_name": "Andfjord Salmon Group AS",
+      "tittel": "Andfjord Salmon AS - Primary insider notification",
+      "dato": "2026-03-23",
+      "dato_tid": "2026-03-23T08:29:54.975000+00:00",
+      "message_id": 669066,
+      "type": "ukjent"
+    },
     {
       "ticker": "BCS.OL",
       "issuer_sign": "BCS",
@@ -1820,136 +1840,6 @@
       "dato_tid": "2026-02-23T07:00:17.986000+00:00",
       "message_id": 666437,
       "type": "kjøp"
-    },
-    {
-      "ticker": "VISTN.OL",
-      "issuer_sign": "VISTN",
-      "issuer_name": "Vistin Pharma ASA",
-      "tittel": "Vistin Pharma ASA: Mandatory notification of trade",
-      "dato": "2026-02-20",
-      "dato_tid": "2026-02-20T18:31:26.236000+00:00",
-      "message_id": 666416,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "PEXIP.OL",
-      "issuer_sign": "PEXIP",
-      "issuer_name": "Pexip Holding ASA",
-      "tittel": "Mandatory notification of trade by Primary Insiders",
-      "dato": "2026-02-20",
-      "dato_tid": "2026-02-20T13:55:31.941000+00:00",
-      "message_id": 666403,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "RING.OL",
-      "issuer_sign": "RING",
-      "issuer_name": "SpareBank 1 Ringerike Hadeland",
-      "tittel": "RING: Meldepliktig handel for primærinnsidere",
-      "dato": "2026-02-20",
-      "dato_tid": "2026-02-20T13:48:32.964000+00:00",
-      "message_id": 666402,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "NONG.OL",
-      "issuer_sign": "NONG",
-      "issuer_name": "SpareBank 1 Nord-Norge",
-      "tittel": "NONG: Meldepliktig handel - primærinnsider",
-      "dato": "2026-02-20",
-      "dato_tid": "2026-02-20T12:35:33.786000+00:00",
-      "message_id": 666390,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "NONG.OL",
-      "issuer_sign": "NONG",
-      "issuer_name": "SpareBank 1 Nord-Norge",
-      "tittel": "NONG: Mandatory notification of trade - primary insider",
-      "dato": "2026-02-20",
-      "dato_tid": "2026-02-20T12:35:33.778000+00:00",
-      "message_id": 666389,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "ABG.OL",
-      "issuer_sign": "ABG",
-      "issuer_name": "ABG Sundal Collier Holding ASA",
-      "tittel": "ABG - Share transactions",
-      "dato": "2026-02-20",
-      "dato_tid": "2026-02-20T07:00:00+00:00",
-      "message_id": 666346,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "ENSU.OL",
-      "issuer_sign": "ENSU",
-      "issuer_name": "Ensurge Micropower ASA",
-      "tittel": "Ensurge Micropower ASA - Mandatory Notice of Trade for Primary Insiders",
-      "dato": "2026-02-19",
-      "dato_tid": "2026-02-19T19:40:00+00:00",
-      "message_id": 666330,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "TEL.OL",
-      "issuer_sign": "TEL",
-      "issuer_name": "Telenor ASA",
-      "tittel": "TRADE BY PRIMARY INSIDER",
-      "dato": "2026-02-19",
-      "dato_tid": "2026-02-19T10:06:33.787000+00:00",
-      "message_id": 666202,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "TEL.OL",
-      "issuer_sign": "TEL",
-      "issuer_name": "Telenor ASA",
-      "tittel": "MELDEPLIKTIG HANDEL - PRIMÆRINNSIDER",
-      "dato": "2026-02-19",
-      "dato_tid": "2026-02-19T10:06:33.785000+00:00",
-      "message_id": 666201,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "GENT.OL",
-      "issuer_sign": "GENT",
-      "issuer_name": "Gentian Diagnostics ASA",
-      "tittel": "Mandatory notification of trade",
-      "dato": "2026-02-19",
-      "dato_tid": "2026-02-19T09:21:08.313000+00:00",
-      "message_id": 666196,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "SPIR.OL",
-      "issuer_sign": "SPIR",
-      "issuer_name": "Spir Group ASA",
-      "tittel": "Mandatory Notification of Trade",
-      "dato": "2026-02-18",
-      "dato_tid": "2026-02-18T20:09:18.487000+00:00",
-      "message_id": 666158,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "STB.OL",
-      "issuer_sign": "STB",
-      "issuer_name": "Storebrand ASA",
-      "tittel": "STOREBRAND ASA: Notice of transactions by PDMRs",
-      "dato": "2026-02-18",
-      "dato_tid": "2026-02-18T19:32:51.523000+00:00",
-      "message_id": 666157,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "STB.OL",
-      "issuer_sign": "STB",
-      "issuer_name": "Storebrand ASA",
-      "tittel": "STOREBRAND ASA: Meldepliktig handel for primærinnsidere",
-      "dato": "2026-02-18",
-      "dato_tid": "2026-02-18T19:32:51.512000+00:00",
-      "message_id": 666156,
-      "type": "ukjent"
     }
   ]
 }
