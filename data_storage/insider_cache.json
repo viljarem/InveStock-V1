@@ -1,6 +1,46 @@
 {
-  "timestamp": 1774286908.5327523,
+  "timestamp": 1774373576.5136383,
   "handler": [
+    {
+      "ticker": "BRUT.OL",
+      "issuer_sign": "BRUT",
+      "issuer_name": "Bruton Limited",
+      "tittel": "Bruton Limited (BRUT)   Grant of Share Options and PDMR Filings",
+      "dato": "2026-03-24",
+      "dato_tid": "2026-03-24T15:35:03.653000+00:00",
+      "message_id": 669199,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VEI.OL",
+      "issuer_sign": "VEI",
+      "issuer_name": "Veidekke ASA",
+      "tittel": "Veidekke: Transfer of shares to senior executives and key personnel in connection with the company's long-term bonus scheme",
+      "dato": "2026-03-24",
+      "dato_tid": "2026-03-24T14:23:03.734000+00:00",
+      "message_id": 669190,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "VEI.OL",
+      "issuer_sign": "VEI",
+      "issuer_name": "Veidekke ASA",
+      "tittel": "Veidekke: Overføring av aksjer til ledende ansatte og nøkkelpersonell i forbindelse med selskapets langsiktige bonusordning",
+      "dato": "2026-03-24",
+      "dato_tid": "2026-03-24T14:19:33.537000+00:00",
+      "message_id": 669189,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "PEN.OL",
+      "issuer_sign": "PEN",
+      "issuer_name": "Panoro Energy ASA",
+      "tittel": "Panoro Energy - Exercise and Cash Settlement of Share Options",
+      "dato": "2026-03-23",
+      "dato_tid": "2026-03-23T17:39:52.154000+00:00",
+      "message_id": 669126,
+      "type": "ukjent"
+    },
     {
       "ticker": "VAR.OL",
       "issuer_sign": "VAR",
