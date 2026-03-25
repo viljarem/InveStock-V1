@@ -1,6 +1,76 @@
 {
-  "timestamp": 1774373576.5136383,
+  "timestamp": 1774460219.1421297,
   "handler": [
+    {
+      "ticker": "BORR.OL",
+      "issuer_sign": "BORR",
+      "issuer_name": "Borr Drilling Limited",
+      "tittel": "Borr Drilling Limited – Notification of PDMR Transaction",
+      "dato": "2026-03-25",
+      "dato_tid": "2026-03-25T09:39:42.984000+00:00",
+      "message_id": 669259,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ROGS.OL",
+      "issuer_sign": "ROGS",
+      "issuer_name": "Rogaland Sparebank",
+      "tittel": "Meldepliktig handel for primærinnsider",
+      "dato": "2026-03-25",
+      "dato_tid": "2026-03-25T08:40:59.863000+00:00",
+      "message_id": 669254,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ACED.OL",
+      "issuer_sign": "ACED",
+      "issuer_name": "Ace Digital AS",
+      "tittel": "ACED: Mandatory notification of trade by primary insider",
+      "dato": "2026-03-25",
+      "dato_tid": "2026-03-25T07:30:00+00:00",
+      "message_id": 669245,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "JIN.OL",
+      "issuer_sign": "JIN",
+      "issuer_name": "Jinhui Shipping and Transport. Ltd",
+      "tittel": "MANDATORY NOTIFICATION OF TRADE BY PRIMARY INSIDERS",
+      "dato": "2026-03-25",
+      "dato_tid": "2026-03-25T04:02:59.600000+00:00",
+      "message_id": 669223,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "FRO.OL",
+      "issuer_sign": "FRO",
+      "issuer_name": "Frontline plc",
+      "tittel": "FRO – Notification of Trade",
+      "dato": "2026-03-24",
+      "dato_tid": "2026-03-24T21:30:00+00:00",
+      "message_id": 669222,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "GENO.OL",
+      "issuer_sign": "GENO",
+      "issuer_name": "General Oceans ASA",
+      "tittel": "Mandatory notification of trade from primary insiders and close associates",
+      "dato": "2026-03-24",
+      "dato_tid": "2026-03-24T21:12:28.948000+00:00",
+      "message_id": 669220,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "OTOVO.OL",
+      "issuer_sign": "OTOVO",
+      "issuer_name": "Otovo ASA",
+      "tittel": "Otovo ASA – Mandatory Notification of Trade and Disclosure of Shareholding ",
+      "dato": "2026-03-24",
+      "dato_tid": "2026-03-24T17:41:30.618000+00:00",
+      "message_id": 669213,
+      "type": "ukjent"
+    },
     {
       "ticker": "BRUT.OL",
       "issuer_sign": "BRUT",
@@ -1780,106 +1850,6 @@
       "dato_tid": "2026-02-24T08:51:39.288000+00:00",
       "message_id": 666553,
       "type": "ukjent"
-    },
-    {
-      "ticker": "STECH.OL",
-      "issuer_sign": "STECH",
-      "issuer_name": "Soiltech ASA",
-      "tittel": "Mandatory notification of Trade by Primary Insider",
-      "dato": "2026-02-23",
-      "dato_tid": "2026-02-23T17:01:25.841000+00:00",
-      "message_id": 666510,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "SALM.OL",
-      "issuer_sign": "SALM",
-      "issuer_name": "SalMar ASA",
-      "tittel": "SalMar - Mandatory notification of trade",
-      "dato": "2026-02-23",
-      "dato_tid": "2026-02-23T16:20:23.817000+00:00",
-      "message_id": 666507,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "SALM.OL",
-      "issuer_sign": "SALM",
-      "issuer_name": "SalMar ASA",
-      "tittel": "SalMar - Meldepliktig handel",
-      "dato": "2026-02-23",
-      "dato_tid": "2026-02-23T16:20:23.810000+00:00",
-      "message_id": 666506,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "KIT.OL",
-      "issuer_sign": "KIT",
-      "issuer_name": "Kitron ASA",
-      "tittel": "Kitron ASA - Notification of Primary insider transaction",
-      "dato": "2026-02-23",
-      "dato_tid": "2026-02-23T15:34:36.626000+00:00",
-      "message_id": 666504,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "PEXIP.OL",
-      "issuer_sign": "PEXIP",
-      "issuer_name": "Pexip Holding ASA",
-      "tittel": "Mandatory notification of trade by Primary Insiders – Pexip Holding ASA",
-      "dato": "2026-02-23",
-      "dato_tid": "2026-02-23T13:45:13.388000+00:00",
-      "message_id": 666491,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "BRG.OL",
-      "issuer_sign": "BRG",
-      "issuer_name": "Borregaard ASA",
-      "tittel": "Borregaard ASA: Reporting of transactions in Borregaard ASA's shares made by person discharging managerial responsibilities",
-      "dato": "2026-02-23",
-      "dato_tid": "2026-02-23T12:22:00.739000+00:00",
-      "message_id": 666468,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "PEXIP.OL",
-      "issuer_sign": "PEXIP",
-      "issuer_name": "Pexip Holding ASA",
-      "tittel": "Grant of Share Options to primary insiders",
-      "dato": "2026-02-23",
-      "dato_tid": "2026-02-23T10:58:12.912000+00:00",
-      "message_id": 666461,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "PEXIP.OL",
-      "issuer_sign": "PEXIP",
-      "issuer_name": "Pexip Holding ASA",
-      "tittel": "Mandatory notification of trade by Primary Insiders",
-      "dato": "2026-02-23",
-      "dato_tid": "2026-02-23T09:31:31.667000+00:00",
-      "message_id": 666456,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "VEI.OL",
-      "issuer_sign": "VEI",
-      "issuer_name": "Veidekke ASA",
-      "tittel": "Veidekke: Aksjer til alle ansatte 2026 og opsjonsinnløsning ledende ansatte",
-      "dato": "2026-02-23",
-      "dato_tid": "2026-02-23T07:00:18.023000+00:00",
-      "message_id": 666438,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "VEI.OL",
-      "issuer_sign": "VEI",
-      "issuer_name": "Veidekke ASA",
-      "tittel": "Veidekke: Shares purchased by employees in 2026 and Exercise of employee share options by Key employees",
-      "dato": "2026-02-23",
-      "dato_tid": "2026-02-23T07:00:17.986000+00:00",
-      "message_id": 666437,
-      "type": "kjøp"
     }
   ]
 }
