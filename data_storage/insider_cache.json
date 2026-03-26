@@ -1,6 +1,86 @@
 {
-  "timestamp": 1774460219.1421297,
+  "timestamp": 1774546665.4850547,
   "handler": [
+    {
+      "ticker": "ROGS.OL",
+      "issuer_sign": "ROGS",
+      "issuer_name": "Rogaland Sparebank",
+      "tittel": "Meldepliktig handel for primærinnsider",
+      "dato": "2026-03-26",
+      "dato_tid": "2026-03-26T17:24:35.557000+00:00",
+      "message_id": 669489,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "XPLRA.OL",
+      "issuer_sign": "XPLRA",
+      "issuer_name": "Xplora Technologies AS",
+      "tittel": "Xplora Technologies AS: Mandatory notification of trade - Redelivery of borrowed shares",
+      "dato": "2026-03-26",
+      "dato_tid": "2026-03-26T13:20:02.979000+00:00",
+      "message_id": 669462,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "NORDH.OL",
+      "issuer_sign": "NORDH",
+      "issuer_name": "Nordhealth AS",
+      "tittel": "Nordhealth AS - Mandatory Notifications of Trade by Primary Insiders",
+      "dato": "2026-03-26",
+      "dato_tid": "2026-03-26T12:48:09.046000+00:00",
+      "message_id": 669432,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "SCATC.OL",
+      "issuer_sign": "SCATC",
+      "issuer_name": "Scatec ASA",
+      "tittel": "Scatec ASA: Mandatory notification of trade by primary insider",
+      "dato": "2026-03-26",
+      "dato_tid": "2026-03-26T10:20:03.976000+00:00",
+      "message_id": 669410,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ELO.OL",
+      "issuer_sign": "ELO",
+      "issuer_name": "Elopak ASA",
+      "tittel": "Elopak ASA: Mandatory notification of trade - settlement of PSUs",
+      "dato": "2026-03-26",
+      "dato_tid": "2026-03-26T09:10:05.893000+00:00",
+      "message_id": 669399,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ODF.OL",
+      "issuer_sign": "ODF",
+      "issuer_name": "Odfjell SE",
+      "tittel": "Odfjell SE: Meldepliktig handel",
+      "dato": "2026-03-26",
+      "dato_tid": "2026-03-26T08:52:01.763000+00:00",
+      "message_id": 669395,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "ODF.OL",
+      "issuer_sign": "ODF",
+      "issuer_name": "Odfjell SE",
+      "tittel": "Odfjell SE: Mandatory notification of trade",
+      "dato": "2026-03-26",
+      "dato_tid": "2026-03-26T08:47:01.984000+00:00",
+      "message_id": 669394,
+      "type": "ukjent"
+    },
+    {
+      "ticker": "TECH.OL",
+      "issuer_sign": "TECH",
+      "issuer_name": "Techstep ASA",
+      "tittel": "Techstep ASA: Mandatory notification of trade",
+      "dato": "2026-03-25",
+      "dato_tid": "2026-03-25T21:00:41.811000+00:00",
+      "message_id": 669331,
+      "type": "ukjent"
+    },
     {
       "ticker": "BORR.OL",
       "issuer_sign": "BORR",
@@ -1769,86 +1849,6 @@
       "dato": "2026-02-25",
       "dato_tid": "2026-02-25T08:25:37.449000+00:00",
       "message_id": 666684,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "ENTRA.OL",
-      "issuer_sign": "ENTRA",
-      "issuer_name": "Entra ASA",
-      "tittel": "Entra ASA: Allocation of shares to PDMRs under the Long-Term Incentive Programme",
-      "dato": "2026-02-24",
-      "dato_tid": "2026-02-24T16:16:07.914000+00:00",
-      "message_id": 666616,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "SMCRT.OL",
-      "issuer_sign": "SMCRT",
-      "issuer_name": "SmartCraft ASA",
-      "tittel": "SmartCraft ASA (SMCRT) - Mandatory notification of trade from primary insiders",
-      "dato": "2026-02-24",
-      "dato_tid": "2026-02-24T15:20:11.066000+00:00",
-      "message_id": 666607,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "VEND.OL",
-      "issuer_sign": "VEND",
-      "issuer_name": "Vend Marketplaces ASA",
-      "tittel": "Vend Marketplaces ASA: Mandatory notification of trades - Long-term incentive plans",
-      "dato": "2026-02-24",
-      "dato_tid": "2026-02-24T15:10:51.795000+00:00",
-      "message_id": 666605,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "MORG.OL",
-      "issuer_sign": "MORG",
-      "issuer_name": "Sparebanken Møre",
-      "tittel": "Sparebanken Møre – Tildeling egenkapitalbevis primærinnsidere",
-      "dato": "2026-02-24",
-      "dato_tid": "2026-02-24T11:27:28.418000+00:00",
-      "message_id": 666567,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "MORG.OL",
-      "issuer_sign": "MORG",
-      "issuer_name": "Sparebanken Møre",
-      "tittel": "Sparebanken Møre – Trade subject to notification for primary insiders",
-      "dato": "2026-02-24",
-      "dato_tid": "2026-02-24T11:27:28.361000+00:00",
-      "message_id": 666566,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "PEXIP.OL",
-      "issuer_sign": "PEXIP",
-      "issuer_name": "Pexip Holding ASA",
-      "tittel": "Mandatory notification of trade by Primary Insiders",
-      "dato": "2026-02-24",
-      "dato_tid": "2026-02-24T09:56:20.362000+00:00",
-      "message_id": 666557,
-      "type": "ukjent"
-    },
-    {
-      "ticker": "VEI.OL",
-      "issuer_sign": "VEI",
-      "issuer_name": "Veidekke ASA",
-      "tittel": "Veidekke: Shares purchased by employees in 2026 and Exercise of employee share options by Key employees",
-      "dato": "2026-02-24",
-      "dato_tid": "2026-02-24T08:55:09.492000+00:00",
-      "message_id": 666554,
-      "type": "kjøp"
-    },
-    {
-      "ticker": "VEI.OL",
-      "issuer_sign": "VEI",
-      "issuer_name": "Veidekke ASA",
-      "tittel": "Veidekke: Aksjer til alle ansatte 2026 og opsjonsinnløsning ledende ansatte",
-      "dato": "2026-02-24",
-      "dato_tid": "2026-02-24T08:51:39.288000+00:00",
-      "message_id": 666553,
       "type": "ukjent"
     }
   ]
