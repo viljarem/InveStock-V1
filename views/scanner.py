@@ -11,6 +11,7 @@ from shared_cache import cached_beregn_tekniske_indikatorer, hent_signaler_cache
 from components import highlight_kvalitet, highlight_rs, highlight_exit, highlight_utvikling, highlight_false_breakout, highlight_rr
 import user_settings
 from log_config import get_logger
+import pine_signal as ps
 
 _scanner_logger = get_logger(__name__)
 
@@ -288,6 +289,216 @@ def _vis_scanner_popup():
             st.stop()
 
 
+# ── Pine Signal highlight-hjelpere ──────────────────────────────────────────
+
+def _highlight_pine_signal(val: str) -> str:
+    """Fargekoder Pine Signal-kolonnen."""
+    farge = ps.SIGNAL_FARGE.get(val, '')
+    if not farge:
+        return ''
+    return f'color: {farge}; font-weight: 600'
+
+
+def _highlight_pine_score(val) -> str:
+    """Fargekoder Pine Score [-1, +1]."""
+    try:
+        v = float(val)
+    except (ValueError, TypeError):
+        return ''
+    if v >= 0.60:
+        return 'color: #00c853; font-weight: 700'
+    if v >= 0.20:
+        return 'color: #66bb6a; font-weight: 600'
+    if v <= -0.60:
+        return 'color: #b71c1c; font-weight: 700'
+    if v <= -0.20:
+        return 'color: #ef5350; font-weight: 600'
+    return 'color: #ffa726'
+
+
+# ── Pine Signal render-funksjon ──────────────────────────────────────────────
+
+def _render_pine_signal_modus(df_clean: pd.DataFrame, unike_tickers: list) -> None:
+    """
+    Rendrer Pine Signal-modus: TradingView-stil sammensatt kjøpssignal-scanner
+    for alle aksjer på Oslo Børs.
+
+    Kombiner 7 oscillatorer + 13 glidende gjennomsnitt til ett signal
+    (Sterkt Kjøp / Kjøp / Nøytral / Selg / Sterkt Selg) per aksje.
+    """
+    st.markdown("""
+    <div style="background: linear-gradient(135deg, #0d2137 0%, #0a1628 100%);
+                border-radius: 14px; padding: 18px 22px; margin-bottom: 18px;
+                border: 1px solid rgba(102,126,234,0.2);">
+        <div style="font-size: 15px; font-weight: 700; color: #a8b4f0; margin-bottom: 4px;">
+            🌲 Pine Signal — TradingView-stil sammensatt signal
+        </div>
+        <div style="font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.5;">
+            Kombinerer <b>7 oscillatorer</b> (RSI, MACD, Stochastic, CCI, Momentum, AO, Bull/Bear Power)
+            og <b>opptil 13 glidende gjennomsnitt</b> (EMA/SMA 10–200) til ett samlet signal per aksje.
+            Samme metodikk som TradingView sin «Technical Analysis»-sammendrag.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ── Filtre ──────────────────────────────────────────────────────────────
+    fc1, fc2, fc3 = st.columns([2, 1, 1])
+    with fc1:
+        filter_signal = st.multiselect(
+            "Vis signal",
+            options=[ps.STERKT_KJOP, ps.KJOP, ps.NØYTRAL, ps.SELG, ps.STERKT_SELG],
+            default=[ps.STERKT_KJOP, ps.KJOP],
+            help="Filtrer på ønsket signal-type"
+        )
+    with fc2:
+        min_kjop = st.slider("Min Kjøp-signaler", 0, 20, 0,
+                             help="Minimum antall kjøpssignaler (av ~20 totalt)")
+    with fc3:
+        sorter_pine = st.selectbox(
+            "Sorter etter",
+            ["Score (høy→lav)", "Kjøp (flest)", "Selg (flest)"],
+            index=0,
+        )
+
+    # ── Skann-knapp og cache ─────────────────────────────────────────────
+    cache_key = 'pine_signal_cache'
+    pine_df_cached = st.session_state.get(cache_key)
+
+    col_knapp, col_info = st.columns([1, 3])
+    with col_knapp:
+        skann_nå = st.button("🔍 Kjør Pine Scan", type="primary", use_container_width=True)
+    with col_info:
+        if pine_df_cached is not None:
+            st.caption(f"Viser cachet scan ({len(pine_df_cached)} aksjer). Klikk «Kjør Pine Scan» for å oppdatere.")
+        else:
+            st.caption("Klikk «Kjør Pine Scan» for å analysere alle aksjer med Pine-metoden.")
+
+    if skann_nå:
+        with st.spinner(f"Analyserer {len(unike_tickers)} aksjer med Pine Signal-metoden…"):
+            df_dict: dict[str, pd.DataFrame] = {}
+            for ticker in unike_tickers:
+                df_t = df_clean[df_clean['Ticker'] == ticker]
+                if len(df_t) < 50:
+                    continue
+                try:
+                    df_ind = cached_beregn_tekniske_indikatorer(df_t)
+                    df_dict[ticker] = df_ind
+                except Exception:
+                    pass
+            pine_df_cached = ps.skann_pine_signaler(df_dict)
+        st.session_state[cache_key] = pine_df_cached
+
+    if pine_df_cached is None or pine_df_cached.empty:
+        st.info("Trykk «Kjør Pine Scan» for å starte analysen.")
+        _render_pine_forklaring()
+        return
+
+    # ── Filtrer og sorter ────────────────────────────────────────────────
+    vis_df = pine_df_cached.copy()
+    if filter_signal:
+        vis_df = vis_df[vis_df['Signal'].isin(filter_signal)]
+    if min_kjop > 0:
+        vis_df = vis_df[vis_df['Kjøp'] >= min_kjop]
+
+    if sorter_pine == "Score (høy→lav)":
+        vis_df = vis_df.sort_values('Score', ascending=False)
+    elif sorter_pine == "Kjøp (flest)":
+        vis_df = vis_df.sort_values('Kjøp', ascending=False)
+    else:
+        vis_df = vis_df.sort_values('Selg', ascending=False)
+
+    vis_df = vis_df.reset_index(drop=True)
+
+    # ── Sammendrag-metrics ───────────────────────────────────────────────
+    total = len(pine_df_cached)
+    n_sk  = (pine_df_cached['Signal'] == ps.STERKT_KJOP).sum()
+    n_k   = (pine_df_cached['Signal'] == ps.KJOP).sum()
+    n_n   = (pine_df_cached['Signal'] == ps.NØYTRAL).sum()
+    n_s   = (pine_df_cached['Signal'] == ps.SELG).sum()
+    n_ss  = (pine_df_cached['Signal'] == ps.STERKT_SELG).sum()
+
+    m1, m2, m3, m4, m5 = st.columns(5)
+    m1.metric("🟢 Sterkt Kjøp", n_sk)
+    m2.metric("🟩 Kjøp",        n_k)
+    m3.metric("🟡 Nøytral",     n_n)
+    m4.metric("🔴 Selg",        n_s)
+    m5.metric("⛔ Sterkt Selg", n_ss)
+
+    st.markdown(f"**{len(vis_df)} av {total} aksjer** vises (filtrert)")
+
+    # ── Legg til selskapsnavn for bedre lesbarhet ────────────────────────
+    if hasattr(data, 'ticker_til_navn'):
+        vis_df.insert(1, 'Selskap', vis_df['Ticker'].apply(
+            lambda t: data.ticker_til_navn(t) or t.replace('.OL', '')))
+    
+    # Legg til emoji foran signal
+    vis_df['Signal'] = vis_df['Signal'].apply(
+        lambda s: f"{ps.SIGNAL_EMOJI.get(s, '')} {s}"
+    )
+
+    # ── Tabell ───────────────────────────────────────────────────────────
+    styled = vis_df.style
+    # Fargekod Signal-kolonnen (fjern emoji for oppslag)
+    def _hl_sig(val: str) -> str:
+        signal_text = val.split(' ', 1)[-1] if ' ' in val else val
+        return _highlight_pine_signal(signal_text)
+
+    styled = styled.map(_hl_sig, subset=['Signal'])
+    styled = styled.map(_highlight_pine_score, subset=['Score'])
+    styled = styled.format({'Score': '{:+.3f}', 'Osc Score': '{:+.3f}', 'MA Score': '{:+.3f}'})
+
+    st.dataframe(styled, hide_index=True, width="stretch",
+                 use_container_width=True)
+
+    # ── Eksport ──────────────────────────────────────────────────────────
+    csv = vis_df.to_csv(index=False).encode('utf-8')
+    st.download_button(
+        "⬇️ Last ned CSV",
+        data=csv,
+        file_name="pine_signal_oslo_bors.csv",
+        mime="text/csv",
+    )
+
+    _render_pine_forklaring()
+
+
+def _render_pine_forklaring() -> None:
+    """Viser kort metodikk-forklaring for Pine Signal-modus."""
+    with st.expander("ℹ️ Metodikk — Pine Signal", expanded=False):
+        st.markdown(f"""
+### Hvordan Pine Signal beregnes
+
+Hvert subsignal gir **+1 (Kjøp)**, **0 (Nøytral)** eller **−1 (Selg)**.
+Samlet score = gjennomsnitt av alle subsignaler → normalisert **[-1, +1]**.
+
+| Terskel | Signal |
+|---------|--------|
+| score ≥ +0.60 | {ps.SIGNAL_EMOJI[ps.STERKT_KJOP]} **Sterkt Kjøp** |
+| score ≥ +0.20 | {ps.SIGNAL_EMOJI[ps.KJOP]} **Kjøp** |
+| −0.19 til +0.19 | {ps.SIGNAL_EMOJI[ps.NØYTRAL]} **Nøytral** |
+| score ≤ −0.20 | {ps.SIGNAL_EMOJI[ps.SELG]} **Selg** |
+| score ≤ −0.60 | {ps.SIGNAL_EMOJI[ps.STERKT_SELG]} **Sterkt Selg** |
+
+#### Oscillatorer (7 subsignaler)
+| Indikator | Kjøp-betingelse | Selg-betingelse |
+|-----------|-----------------|-----------------|
+| RSI(14) | RSI < 30 (oversold) | RSI > 70 (overkjøpt) |
+| MACD(12,26,9) | MACD > Signal-linje | MACD < Signal-linje |
+| Stochastic %K/%D(14,3) | Begge < 20 eller K > D | Begge > 80 eller K < D |
+| CCI(20) | CCI < −100 | CCI > +100 |
+| Momentum(10) | Momentum > 0 | Momentum < 0 |
+| Awesome Oscillator | AO > 0 og stigende | AO < 0 og fallende |
+| Bull/Bear Power | High og Low begge > EMA13 | High og Low begge < EMA13 |
+
+#### Glidende gjennomsnitt (opptil 13 subsignaler)
+Pris **over** EMA/SMA = Kjøp, pris **under** = Selg.
+Perioder: EMA 10/20/30/50/100/200 og SMA 10/20/30/50/100/150/200.
+
+> **Merk:** Pine Signal er et *teknisk* hjelpemiddel.
+> Bruk alltid fundamentalanalyse og risikostyring i tillegg.
+        """)
+
+
 def render():
     df_clean = st.session_state['df_clean']
     unike_tickers = st.session_state['unike_tickers']
@@ -378,17 +589,24 @@ def render():
         with modus_col1:
             scanner_modus = st.radio(
                 "Modus",
-                ["📊 Signaler", "📐 Mønstre"],
+                ["📊 Signaler", "📐 Mønstre", "🌲 Pine Signal"],
                 horizontal=True,
                 label_visibility="collapsed"
             )
         bruk_mønster_modus = (scanner_modus == "📐 Mønstre")
+        bruk_pine_modus = (scanner_modus == "🌲 Pine Signal")
     else:
         bruk_mønster_modus = False
+        bruk_pine_modus = False
     
     # Last brukerpreferanser
     _prefs = user_settings.load_settings().get('scanner', {})
     
+    # === PINE SIGNAL MODUS — komplett TradingView-stil skanner ===
+    if bruk_pine_modus:
+        _render_pine_signal_modus(df_clean, unike_tickers)
+        return
+
     # === HOVEDFILTER-PANEL ===
     if not bruk_mønster_modus:
         # SIGNAL-MODUS
